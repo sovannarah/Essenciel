@@ -1,0 +1,142 @@
+#header {
+    height: 24vw;
+    display: flex;
+    background-color: green;
+    flex-direction: column;
+    position: relative;
+    background-image: url("../../assets/png-x2/header-banner.png");
+    background-size: cover;
+}
+
+#ctn-header {
+    height: 62%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ctn-logo {
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ctn-logo h1, #ctn-logo a {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-size: 1vw;
+    font-weight: 900;
+}
+
+#ctn-index {
+    display: flex;
+    height: 55%;
+}
+
+#ctn-index-title {
+    width: 32%;
+    display: flex;
+}
+
+#ctn-index-title h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 2.2vw;
+    text-shadow: rgba(0,0,0,0.4) 1px 0 20px;
+}
+
+#ctn-index-price {
+    width: 68%;
+    height: 115%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info-price {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #3e3e3e;
+    width: 24%;
+    position: relative;
+}
+
+.info-price h3 {
+    margin-top: auto;
+    margin-bottom: 0;
+    color: #ec703c;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.info-price .price {
+    margin-bottom: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.euro {
+    font-size: 0.9vw;
+    margin-bottom: auto;
+}
+
+.bg-option {
+    color: #eba790;
+    font-size: 1vw;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#menu {
+    height: 38%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+#menu ul {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#menu li {
+    display: flex;
+    width: 13.5%;
+    height: 100%;
+}
+
+#menu a {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+#ctn-action-header {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -16%;
+    height: 38%;
+    display: flex;
+    background-color: #4bbfcc;
+    width: 38%;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.3);
+}
+
+#ctn-action-header span {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 17%;
+    font-size: 1.1vw;
+    font-weight: bold;
+}

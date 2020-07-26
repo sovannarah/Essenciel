@@ -1,0 +1,17 @@
+{
+    "name": "sova/essenciel",
+    "authors": [
+        {
+            "name": "Sovannara Hem",
+            "email": "sovannara.hem@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "require": {
+      "ext-json": "*"
+    }
+}

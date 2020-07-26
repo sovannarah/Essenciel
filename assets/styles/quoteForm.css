@@ -1,0 +1,106 @@
+#quoteFormHeader {
+    text-align: center;
+    height: 22vw;
+    background-image: url("../../assets/png-x2/banner-left.png");
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+#quoteFormHeader h1 {
+    margin: auto;
+    color: white;
+    font-size: 1.8vw;
+}
+
+#quoteFormHeader h1::before {
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    top: 5vw;
+    background-color: white;
+}
+
+#quoteFormHeader h1::after {
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    bottom: 5vw;
+    background-color: white;
+}
+
+#quoteFormHeader div {
+    background-color: #f8f8f8;
+    position: absolute;
+    bottom: 0;
+    width: 37%;
+    height: 23%;
+    display: flex;
+}
+
+#quoteFormHeader span {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+
+#ctnQuoteForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#ctnInput {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+#ctnInput button {
+    width: 25%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3vw solid #dddddd;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+#ctnInput button span {
+    color: #eb703d;
+}
+
+#btnSubmitQuote {
+    color: white;
+    height: 10vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 37% !important;
+    background-color: #4bbfcc;
+    font-size: 1.1vw;
+    font-weight: bold;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+#ctnRedirectContact {
+    height: 12vw;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1vw;
+    display: flex;
+    color: black;
+}
+
+#ctnRedirectContact a {
+    margin: auto;
+}

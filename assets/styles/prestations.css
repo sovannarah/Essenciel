@@ -1,0 +1,173 @@
+.prestation-row {
+    display: flex;
+}
+
+#prestations-banner {
+    margin-top: 9.5vw;
+    margin-bottom: 4vw;
+    display: flex;
+    width: 100%;
+    height: 23vw;
+}
+
+#prestations-banner div {
+    display: flex;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+#prestations-banner-1 {
+    background-image: url("../../assets/png-x2/banner-left-prestation.png");
+    background-size: cover;
+}
+
+#prestations-banner-2 {
+    background-image: url("../../assets/png-x2/banner-right-prestation.png");
+    background-size: cover;
+}
+
+#prestations-banner h1{
+    margin: auto;
+    font-size: 1.8vw;
+    font-weight: 900;
+    color: white;
+    text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
+}
+
+#prestations-banner h1::before{
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    top: 5vw;
+    background-color: white;
+}
+
+#prestations-banner h1::after{
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    bottom: 5vw;
+    background-color: white;
+}
+
+
+.prestation-row-main-content {
+    width: 64%;
+    max-width: 64%;
+    display: flex;
+    flex-direction: column;
+    height: 32vw;
+    max-height: 32vw;
+    justify-content: center;
+}
+.prestation-row-main-content ul {
+    list-style: none;
+    width: 70%;
+    max-width: 70%;
+    word-break: break-word;
+    margin-left: 17%;
+    margin-right: auto;
+    padding: 0;
+}
+
+.prestation-row-main-content ul li {
+    font-size: 1vw;
+    /*margin-bottom: 1vw;*/
+    margin-left: 6.5vw;
+    position: relative;
+    line-height: 2.5vw;
+}
+
+.prestation-row-main-content ul li::before {
+    content: "";
+    background-color: #c4e2e4;
+    font-weight: bold;
+    display: inline-block;
+    width: 5vw;
+    height: 0.22vw;
+    font-size: 10px;
+    border-radius: 0;
+    margin-left: -6.5vw;
+    top: 1.5vw;
+    position: absolute;
+}
+
+.prestation-row-main-content h2 {
+    font-size: 1.5vw;
+    font-weight: 900;
+    margin-left: 17.3vw;
+    /*margin-bottom: 3vw;*/
+}
+
+.prestation-row-img-content {
+    width: 36%;
+    max-width: 36%;
+    height: 32vw;
+    max-height: 32vw;
+    display: flex;
+    position: relative;
+}
+
+.prestation-row-img-content::before {
+    content: "";
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    top: 0;
+    position: absolute;
+}
+
+.prestation-side-left .prestation-row-img-content::before  {
+    right: 0;
+}
+
+.prestation-row-img-content img {
+    width: 87%;
+    height: auto;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.prestation-row-img-content a {
+    position: absolute;
+    /*right: 0;*/
+    bottom: 0;
+    width: 80%;
+    height: 33%;
+    background-color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    display: flex;
+    color: black;
+    cursor: pointer;
+}
+
+.prestation-side-left a {
+    right: 0;
+}
+
+.prestation-side-right .prestation-row-img-content img {
+    margin-left: auto;
+    right: 0;
+}
+
+.prestation-row-img-content span {
+    margin: 12% auto auto 15%;
+}
+
+.prestation-side-right {
+    flex-direction: row-reverse;
+}
+
+#ctnPrices {
+    margin-top: 6vw;
+    margin-bottom: 8vw;
+}

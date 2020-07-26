@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.php" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1f8OHVdnyhOTIDMDHQrZGROLKYH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/src/Router" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/Components/Header" />
+      <recent name="$PROJECT_DIR$/Component" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/index.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="prestations.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/Pages/Prestations/prestations.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Essenciel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.prestations.php" />
+        <item itemvalue="PHPUnit.Essenciel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="" />
+      <created>1595596165730</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595596165730</updated>
+      <workItem from="1595596166747" duration="9352000" />
+      <workItem from="1595655393952" duration="92000" />
+      <workItem from="1595655487459" duration="51722000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2500" y="1316" width="824" height="691" key="#CLI_Interpreters" timestamp="1595655344029">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2500" y="1316" width="824" height="691" key="#CLI_Interpreters/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595655344029" />
+    <state x="2561" y="1260" width="700" height="759" key="#PHP" timestamp="1595655325293">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2561" y="1260" width="700" height="759" key="#PHP/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595655325293" />
+    <state x="2698" y="1391" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595655483458">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2698" y="1391" width="424" height="491" key="FileChooserDialogImpl/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595655483458" />
+    <state width="1804" height="340" key="GridCell.Tab.0.bottom" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.0.bottom/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.0.center" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.0.center/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.0.left" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.0.left/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.0.right" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.0.right/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.1.center" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.center/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.1.left" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.left/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.1.right" timestamp="1595763382891">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.right/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382891" />
+    <state width="1804" height="340" key="GridCell.Tab.2.bottom" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.2.bottom/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.2.center" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.2.center/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.2.left" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.2.left/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.2.right" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.2.right/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.3.bottom" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.3.bottom/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.3.center" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.3.center/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.3.left" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.3.left/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state width="1804" height="340" key="GridCell.Tab.3.right" timestamp="1595763382892">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.3.right/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595763382892" />
+    <state x="2693" y="1353" width="489" height="575" key="NewPhpClassDialog" timestamp="1595605350838">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2693" y="1353" width="489" height="575" key="NewPhpClassDialog/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595605350838" />
+    <state x="2710" y="1559" width="399" height="156" key="NewPhpFileDialog" timestamp="1595606918523">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2710" y="1559" width="399" height="156" key="NewPhpFileDialog/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595606918523" />
+    <state x="2404" y="1268" width="1022" height="737" key="SettingsEditor" timestamp="1595655199620">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2404" y="1268" width="1022" height="737" key="SettingsEditor/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595655199620" />
+    <state x="2579" y="792" key="run.anything.popup" timestamp="1595794731087">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2579" y="792" key="run.anything.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595794731087" />
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1595796601503">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595796601503" />
+    <state x="2640" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595596298241">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2640" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1595596298241" />
+  </component>
+</project>

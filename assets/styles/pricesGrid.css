@@ -1,0 +1,108 @@
+#pricesGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#ctnPricesGrid {
+    width: 100%;
+    display: flex;
+    margin: 2vw 0;
+}
+#ctnPricesGrid span {
+    color: #ec6f40;
+}
+
+#pricesGrid table {
+    background-color: white;
+    width: 53.5vw;
+    color: #4abfcb;
+    box-shadow: 0 0 20px 7px lightgray;
+}
+
+#pricesGrid th {
+    height: 10vw;
+    text-align: center;
+    font-size: 1.2vw;
+
+}
+
+#pricesGrid td {
+    font-size: 1.2vw;
+
+}
+
+#pricesGrid tr {
+    height: 8.5vw;
+    text-align: center;
+    -webkit-box-shadow: 0 8px 30px -30px black;
+    -moz-box-shadow: 0 8px 30px -30px black;
+    box-shadow: 0 8px 30px -30px black;
+}
+
+.txt-black {
+    color: black;
+    font-weight: bold;
+}
+
+#row-0 {
+    height: 10vw;
+    display: flex;
+}
+
+#row-1 {
+    background-color: #e6f1f3;
+    box-shadow: inset 16vw -5vw 30px #e6f1f3, inset 0 8px 60px -50px black;
+}
+
+#row-0 p {
+    font-weight: bold;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: auto;
+    font-size: 1.6vw;
+    margin-bottom: auto;
+}
+
+.prices-row {
+    height: 8.5vw;
+    display: flex;
+    box-shadow: inset 16vw -5vw 30px #f8f8f8 , inset 0 8px 60px -50px black;
+}
+
+.prices-row p {
+    width: 38%;
+    font-size: 1.1vw;
+    margin: auto 12% auto auto;
+}
+
+#prices-col-0 {
+    width: 35.5vw;
+}
+
+#ctnPricesRedirect {
+    width: 100%;
+    display: flex;
+}
+
+#ctnPricesRedirect a {
+    height: 10vw;
+    width: calc(63% / 2);
+    display: flex;
+    cursor: pointer;
+}
+
+#ctnPricesRedirect span {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    font-size: 1vw;
+    margin-left: 23%;
+}
+
+#redirectQuote {
+    color: white;
+    width: 37% !important;
+    background-color: #4bbfcc;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}

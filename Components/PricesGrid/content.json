@@ -1,0 +1,28 @@
+[
+  {
+    "firstRow": [
+      "Crémation <br /> sans cérémonie",
+      "Crémation <br /> avec cérémonie",
+      "Inhumation <br /> caveau existant",
+      "Inhumation <br /> pleine terre"
+    ],
+    "secondRow": [
+      "1890 €",
+      "2190 €",
+      "2190 €",
+      "2490 €"
+    ],
+    "thirdRow": [
+      "+ 1300 €",
+      "+ 1300 €",
+      "+ 1300 €",
+      "+ 1300 €"
+    ],
+    "forthRow": [
+      "+ 300 €",
+      "+ 300 €",
+      "+ 300 €",
+      "+ 300 €"
+    ]
+  }
+]

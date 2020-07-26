@@ -1,0 +1,229 @@
+#conceptRow-1 {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#conceptRowInfo {
+    position: absolute;
+    bottom: 0;
+    right: 9vw;
+    text-align: right;
+}
+
+#conceptRowInfo label {
+    font-weight: bold;
+    font-size: 1.6vw;
+    margin-bottom: 0;
+}
+
+#conceptRowInfo p {
+    font-weight: bold;
+    font-size: 1.6vw;
+    color: #ec6f3e;
+    margin: 0;
+}
+
+#conceptRow-Image {
+    height: 32vw;
+    width: 50%;
+    position: relative;
+    display: flex;
+}
+
+#conceptRow-Image div {
+    background-image: url("../../assets/png-x2/lieu-ou-se-situe-le-defunt-img.png");
+    background-size: cover;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 72%;
+    position: relative;
+    display: flex;
+}
+
+#conceptRow-Image h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-left: 22%;
+}
+
+#conceptRow-Image h2::before {
+    content: "";
+    height: 0.4vw;
+    width: 5vw;
+    position: absolute;
+    background-color: white;
+    top: 4vw;
+}
+
+#conceptRow-Image h2::after {
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    position: absolute;
+    left: 22%;
+    background-color: white;
+    bottom: 4vw;
+}
+
+#conceptRow-Image::before {
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 74%;
+    position: absolute;
+}
+
+#conceptRowContent {
+    display: flex;
+    width: 50%;
+}
+
+#conceptRowContent div {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15%;
+}
+
+#conceptRowContent span {
+    color: #ec6f3e;
+}
+
+#conceptRowContent h3 {
+    font-size: 1.6vw;
+}
+
+#conceptRowContent p {
+    font-size: 1.1vw;
+    color: #868686;
+}
+
+#concept-banner {
+    display: flex;
+    width: 100%;
+    height: 23vw;
+}
+
+#concept-banner div {
+    display: flex;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+#concept-banner-1 {
+    background-image: url("../../assets/png-x2/banner-left.png");
+    background-size: cover;
+}
+
+#concept-banner-2 {
+    background-image: url("../../assets/png-x2/banner-right.png");
+    background-size: cover;
+}
+
+#concept-banner h1 {
+    margin: auto;
+    font-size: 1.8vw;
+    font-weight: 900;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.7) 1px 0 20px;
+}
+
+#concept-banner h1::before {
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    top: 5vw;
+    background-color: white;
+}
+
+#concept-banner h1::after {
+    content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    bottom: 5vw;
+    background-color: white;
+}
+
+#commitmentsRow {
+    display: flex;
+    width: 100%;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+#commitmentsRow-1 {
+    background-color: white;
+    height: 32vw;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#commitmentsRow-1 h3 {
+    margin-left: 30%;
+}
+
+#commitmentsRow-1 a {
+    margin-left: 30%;
+}
+
+#commitmentsRow-1 h3 span {
+    color: #ec6f3e;
+}
+
+#ctnCommitmentsList {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#ctnCommitmentsList ul {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+    margin-top: 8%;
+    list-style: none;
+    /*justify-content: space-between;*/
+    position: relative;
+    left: -15%;
+}
+#ctnCommitmentsList li {
+    width: 30%;
+    margin-right: 3%;
+    height: 50%;
+    display: flex;
+    font-size: 1vw;
+    flex-direction: column;
+    color: #868686;
+}
+
+#ctnCommitmentsList li span {
+    color: #4bbecb;
+    font-weight: bold;
+    font-size: 1.6vw;
+    margin-bottom: 1.5vw;
+    position: relative;
+}
+
+#ctnCommitmentsList li span::after {
+    content: "";
+    width: 30%;
+    height: 0.3vw;
+    top: 52%;
+    left: 17%;
+    background-color: #c5e1e4;
+    position: absolute;
+}
