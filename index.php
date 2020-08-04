@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="assets/styles/footer.css" />
         <link rel="stylesheet" href="assets/styles/about.css" />
         <link rel="stylesheet" href="assets/styles/concept.css" />
+        <link rel="stylesheet" href="assets/styles/help.css" />
         <link rel="stylesheet" href="index.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet" />
     </head>
     <body>
         <?php

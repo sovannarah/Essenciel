@@ -12,13 +12,11 @@
 }
 
 #conceptRowInfo label {
-    font-weight: bold;
     font-size: 1.6vw;
     margin-bottom: 0;
 }
 
 #conceptRowInfo p {
-    font-weight: bold;
     font-size: 1.6vw;
     color: #ec6f3e;
     margin: 0;
@@ -47,7 +45,6 @@
     margin-bottom: auto;
     color: white;
     font-size: 1.8vw;
-    font-weight: bold;
     margin-left: 22%;
 }
 
@@ -128,7 +125,6 @@
 #concept-banner h1 {
     margin: auto;
     font-size: 1.8vw;
-    font-weight: 900;
     color: white;
     text-shadow: rgba(0, 0, 0, 0.7) 1px 0 20px;
 }
@@ -173,6 +169,7 @@
 
 #commitmentsRow-1 h3 {
     margin-left: 30%;
+    font-size: 1.6vw;
 }
 
 #commitmentsRow-1 a {
@@ -207,14 +204,13 @@
     display: flex;
     font-size: 1vw;
     flex-direction: column;
-    color: #868686;
+    color: dimgray;
 }
 
 #ctnCommitmentsList li span {
     color: #4bbecb;
-    font-weight: bold;
     font-size: 1.6vw;
-    margin-bottom: 1.5vw;
+    margin-bottom: 0.5vw;
     position: relative;
 }
 
@@ -226,4 +222,63 @@
     left: 17%;
     background-color: #c5e1e4;
     position: absolute;
+}
+
+.trotrr {
+    font-size: 0.9vw;
+    text-align: right;
+    color: #868686;
+    margin-right: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#concept-slider {
+    display: flex;
+}
+
+.col-slide-concept {
+    position: relative;
+    height: auto;
+}
+
+.elem-slide-concept {
+    height: 5vw;
+    width: 33vw;
+    margin-bottom: 3vw;
+    display: flex;
+    margin-right: 5vw;
+    position: relative;
+    justify-content: space-between;
+}
+
+.elem-slide-concept p {
+ width: 50%;
+    font-size: 1vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.elem-slide-concept-1 {
+    left: 59%;
+}
+
+.elem-slide-concept-2 {
+    left: 117%;
+}
+
+.pt-cl {
+    padding-top: 2vw;
+}
+
+
+.ctn-img-slide-concept {
+    max-height: 100%;
+    height: 100%;
+    width: 38%;
+}
+.ctn-img-slide-concept img {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
 }

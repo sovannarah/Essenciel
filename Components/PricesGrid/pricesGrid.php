@@ -20,7 +20,7 @@
             foreach ($contents as $content) {
                 foreach ($content as $key => $value) {
                     ?>
-                    <tr>
+                    <tr class="<?php if ($key === "firstRow") { echo "thead";} ?>">
                     <?php
                     foreach ($value as $elem) {
                         ?>

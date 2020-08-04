@@ -12,7 +12,7 @@
 #aboutBanner-1::before {
     content: "";
     height: 100%;
-    width: 31%;
+    width: 37%;
     background-color: white;
     position: absolute;
 }
@@ -30,14 +30,13 @@
 }
 
 #aboutBanner-1 span {
-    margin: auto;
-    font-weight: bold;
+    font-size: 1.1vw;
+    margin-left: 6vw;
 }
 
 #aboutBanner-1 h1 {
     margin: auto;
-    font-size: 1.7vw;
-    font-weight: bold;
+    font-size: 1.8vw;
     position: relative;
 }
 
@@ -98,7 +97,6 @@
 
 #ctnLocateLabel p {
     margin: auto;
-    font-weight: bold;
     font-size: 1.6vw;
 }
 
@@ -126,13 +124,11 @@
     padding: 0;
     list-style: none;
     font-size: 1.4vw;
-    font-weight: bold;
     color: dimgray;
 }
 
 #ctnLocateList li span {
     color: #4bbecb;
-    font-weight: bold;
     font-size: 1.6vw;
     margin-bottom: 1.5vw;
     position: relative;
@@ -184,7 +180,6 @@
     margin-bottom: auto;
     color: white;
     font-size: 1.8vw;
-    font-weight: bold;
     margin-left: 22%;
 }
 

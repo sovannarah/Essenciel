@@ -48,7 +48,6 @@
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    font-weight: bold;
     font-size: 1.2vw;
 }
 
@@ -72,7 +71,6 @@
     border: none;
     border-bottom: 0.3vw solid #dddddd;
     cursor: pointer;
-    font-size: 1vw;
 }
 
 #ctnInput button span {
@@ -88,14 +86,12 @@
     width: 37% !important;
     background-color: #4bbfcc;
     font-size: 1.1vw;
-    font-weight: bold;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
 }
 
 #ctnRedirectContact {
     height: 12vw;
     text-align: center;
-    font-weight: bold;
     font-size: 1.1vw;
     display: flex;
     color: black;

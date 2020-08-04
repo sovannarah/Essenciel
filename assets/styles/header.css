@@ -21,12 +21,18 @@
     justify-content: space-between;
 }
 
+#ctn-logo img {
+    height: 2.4vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+}
+
 #ctn-logo h1, #ctn-logo a {
     margin-top: auto;
     margin-bottom: auto;
     color: white;
     font-size: 1vw;
-    font-weight: 900;
 }
 
 #ctn-index {
@@ -39,9 +45,8 @@
     display: flex;
 }
 
-#ctn-index-title h2 {
+#ctn-index-title h1 {
     color: white;
-    font-weight: 900;
     font-size: 2.2vw;
     text-shadow: rgba(0,0,0,0.4) 1px 0 20px;
 }
@@ -68,13 +73,11 @@
     margin-bottom: 0;
     color: #ec703c;
     font-size: 1vw;
-    font-weight: bold;
 }
 
 .info-price .price {
     margin-bottom: auto;
     color: white;
-    font-weight: bold;
     font-size: 1.2vw;
     display: flex;
     margin-left: auto;
@@ -138,5 +141,4 @@
     margin-bottom: auto;
     margin-left: 17%;
     font-size: 1.1vw;
-    font-weight: bold;
 }

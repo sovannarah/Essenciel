@@ -30,7 +30,6 @@
 #prestations-banner h1{
     margin: auto;
     font-size: 1.8vw;
-    font-weight: 900;
     color: white;
     text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
 }
@@ -88,7 +87,6 @@
 .prestation-row-main-content ul li::before {
     content: "";
     background-color: #c4e2e4;
-    font-weight: bold;
     display: inline-block;
     width: 5vw;
     height: 0.22vw;
@@ -101,7 +99,6 @@
 
 .prestation-row-main-content h2 {
     font-size: 1.5vw;
-    font-weight: 900;
     margin-left: 17.3vw;
     /*margin-bottom: 3vw;*/
 }
@@ -144,7 +141,6 @@
     height: 33%;
     background-color: white;
     font-size: 1vw;
-    font-weight: bold;
     display: flex;
     color: black;
     cursor: pointer;

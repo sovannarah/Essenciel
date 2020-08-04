@@ -1,12 +1,12 @@
 <header id="header">
     <div id="ctn-header">
         <div id="ctn-logo">
-            <h1>Logotype</h1>
+            <img src="http://localhost/Essenciel/assets/png-x2/logo.png" alt="" />
             <a href="">Être contacté</a>
         </div>
         <div id="ctn-index">
             <div id="ctn-index-title">
-                <h2>Nos prestations</h2>
+                <h1>Nos prestations</h1>
             </div>
             <div id="ctn-index-price">
                 <div class="info-price">

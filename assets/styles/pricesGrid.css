@@ -24,7 +24,6 @@
     height: 10vw;
     text-align: center;
     font-size: 1.2vw;
-
 }
 
 #pricesGrid td {
@@ -35,14 +34,42 @@
 #pricesGrid tr {
     height: 8.5vw;
     text-align: center;
-    -webkit-box-shadow: 0 8px 30px -30px black;
-    -moz-box-shadow: 0 8px 30px -30px black;
-    box-shadow: 0 8px 30px -30px black;
+    border: 1px solid red;
+    position: relative;
+}
+
+#pricesGrid tr:before {
+    position:absolute;
+    content:"";
+    height: 0.5vw;
+    margin-top: 6.8%;
+    width: 40%;
+    margin-left: 7%;
+    background:white;
+    border-radius: 600%;
+    box-shadow: 0px 0.8vw 1vw 0.5vw #DCDCDC;
+}
+
+#pricesGrid tr:after {
+    position: absolute;
+    content:"";
+    height: 2vw;
+    margin-top: 6.4%;
+    width: 52%;
+    margin-left: -53%;
+    background:white;
+}
+
+.thead:before {
+    margin-top: 8.6% !important;
+}
+
+.thead:after {
+    margin-top: 8% !important;
 }
 
 .txt-black {
     color: black;
-    font-weight: bold;
 }
 
 #row-0 {
@@ -56,7 +83,6 @@
 }
 
 #row-0 p {
-    font-weight: bold;
     width: 50%;
     margin-left: 30%;
     margin-top: auto;
@@ -95,7 +121,6 @@
 #ctnPricesRedirect span {
     margin-top: auto;
     margin-bottom: auto;
-    font-weight: bold;
     font-size: 1vw;
     margin-left: 23%;
 }
