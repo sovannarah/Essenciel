@@ -1,6 +1,8 @@
+
+
 <div>
     <div id="conceptRow-1">
-        <div id="conceptRow-Image">
+        <div id="conceptRow-Image" class="banner-simple-left">
             <div>
                 <h2>Nous voulons sortir de la logique <br/> consumériste du milieu funéraire <br/> qui est
                     insupportable.</h2>
@@ -18,31 +20,41 @@
             <p>Nos tarifs sont fixes <br/>et sont définitifs.</p>
         </div>
     </div>
-    <div id="concept-slider">
-        <?php
-        $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
-        $elemPerCol = 3;
-        for ($i = 0; $i < count($contents[0]->slider) / $elemPerCol; $i++) {
-            $paddingTop = $i%2 == 1 ? ' ' : ' pt-cl';
-            echo "<div class='col-slide-concept col-slide-concept-" . $i . $paddingTop . "'>";
-            $y = 0;
-            for ($x = $elemPerCol * $i; $x < count($contents[0]->slider) - ($elemPerCol - $i * $elemPerCol); $x++) {
-                ?>
-                <div class="elem-slide-concept elem-slide-concept-<?php echo $y; ?>">
-                    <div class="ctn-img-slide-concept">
-                        <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $contents[0]->slider[$x]->img; ?>.png"
-                             alt=""/>
-                    </div>
-                    <p><?php echo $contents[0]->slider[$x]->txt; ?></p>
-                </div>
+
+    <div id="container-concept-slider">
+        <div id="ctn-dot-slider">
+            <?php
+            $contents = json_decode(file_get_contents(__DIR__ . "/content.json")); ?>
+            <button class="dot-slide-concept active-concept-slider" onclick="sliderConceptAnim()">•</button>
+            <button class="dot-slide-concept" onclick="sliderConceptAnim()">•</button>
+        </div>
+        <div id="hide-concept-slider">
+            <div id="concept-slider">
                 <?php
-                $y++;
-            }
-            echo "</div>";
-        }
-        ?>
+                $elemPerCol = 3;
+                for ($i = 0; $i < count($contents[0]->slider) / $elemPerCol; $i++) {
+                    $paddingTop = $i % 2 == 1 ? ' ' : ' pt-cl';
+                    echo "<div class='col-slide-concept col-slide-concept-" . $i . $paddingTop . "'>";
+                    $y = 0;
+                    for ($x = $elemPerCol * $i; $x < count($contents[0]->slider) - ($elemPerCol - $i * $elemPerCol); $x++) {
+                        ?>
+                        <div class="elem-slide-concept elem-slide-concept-<?php echo $y; ?>">
+                            <div class="ctn-img-slide-concept">
+                                <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $contents[0]->slider[$x]->img; ?>.png"
+                                     alt=""/>
+                            </div>
+                            <p><?php echo $contents[0]->slider[$x]->txt; ?></p>
+                        </div>
+                        <?php
+                        $y++;
+                    }
+                    echo "</div>";
+                }
+                ?>
+            </div>
+        </div>
     </div>
-    <div id="concept-banner">
+    <div id="concept-banner" class="banner-double-img">
         <div id="concept-banner-1">
             <h1>Gérer l'organisation d'obsèques <br/> depuis chez vous</h1>
         </div>

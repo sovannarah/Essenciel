@@ -5,8 +5,8 @@
             <span>Découvrez l'ensemble <br/> de nos prestations</span>
         </a>
     </div>
-    <div id="aboutBanner">
-        <h2>Un service dédié aux familles <br/> endeuillés confrontées à un décès</h2>
+    <div id="aboutBanner" class="banner-simple">
+        <h1>Un service dédié aux familles <br/> endeuillés confrontées à un décès</h1>
     </div>
     <div id="ctnLocate">
         <div id="ctnLocateLabel">
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div id="orgRow">
-        <div id="orgRowCtnImage">
+        <div id="orgRowCtnImage" class="banner-simple-left">
             <div>
                 <h2>Nous organisons <br/> des obsèques simples <br/> et digne</h2>
             </div>

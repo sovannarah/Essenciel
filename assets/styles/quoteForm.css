@@ -1,47 +1,5 @@
 #quoteFormHeader {
-    text-align: center;
-    height: 22vw;
     background-image: url("../../assets/png-x2/banner-left.png");
-    background-size: cover;
-    position: relative;
-    display: flex;
-}
-
-#quoteFormHeader h1 {
-    margin: auto;
-    color: white;
-    font-size: 1.8vw;
-}
-
-#quoteFormHeader h1::before {
-    content: "";
-    height: 0.3vw;
-    width: 5vw;
-    left: 50%;
-    transform: translateX(calc(-5vw / 2));
-    position: absolute;
-    top: 5vw;
-    background-color: white;
-}
-
-#quoteFormHeader h1::after {
-    content: "";
-    height: 0.3vw;
-    width: 5vw;
-    left: 50%;
-    transform: translateX(calc(-5vw / 2));
-    position: absolute;
-    bottom: 5vw;
-    background-color: white;
-}
-
-#quoteFormHeader div {
-    background-color: #f8f8f8;
-    position: absolute;
-    bottom: 0;
-    width: 37%;
-    height: 23%;
-    display: flex;
 }
 
 #quoteFormHeader span {
@@ -59,7 +17,7 @@
 
 #ctnInput {
     display: flex;
-    width: 50%;
+    width: 49%;
     justify-content: space-between;
     padding-right: 2%;
 }
@@ -71,6 +29,8 @@
     border: none;
     border-bottom: 0.3vw solid #dddddd;
     cursor: pointer;
+    outline: none;
+    font-size: 1.1vw;
 }
 
 #ctnInput button span {
@@ -78,15 +38,7 @@
 }
 
 #btnSubmitQuote {
-    color: white;
     height: 10vw;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    width: 37% !important;
-    background-color: #4bbfcc;
-    font-size: 1.1vw;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
 }
 
 #ctnRedirectContact {
@@ -99,4 +51,19 @@
 
 #ctnRedirectContact a {
     margin: auto;
+}
+
+.select-choice {
+    color: #4abfcb;
+    border-bottom: 0.3vw solid #4abfcb !important;
+}
+
+/*.select-choice:before {*/
+/*    content: "";*/
+/*    background-image: url("http://localhost/Essenciel/assets/png-x2/");*/
+/*}*/
+
+
+.select-choice span {
+    color: #4abfcb!important;
 }

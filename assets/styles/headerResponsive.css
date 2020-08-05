@@ -1,0 +1,10 @@
+@media all and  (max-width: 576px) {
+
+    #ctn-index {
+        flex-wrap: wrap;
+    }
+
+    /*#ctn-index div {*/
+    /*    width: 100%;*/
+    /*}*/
+}

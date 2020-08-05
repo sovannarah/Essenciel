@@ -1,75 +1,31 @@
 .prestation-row {
     display: flex;
+    width: 100%;
 }
 
 #prestations-banner {
     margin-top: 9.5vw;
     margin-bottom: 4vw;
-    display: flex;
-    width: 100%;
-    height: 23vw;
-}
-
-#prestations-banner div {
-    display: flex;
-    width: 50%;
-    text-align: center;
-    position: relative;
 }
 
 #prestations-banner-1 {
     background-image: url("../../assets/png-x2/banner-left-prestation.png");
-    background-size: cover;
 }
 
 #prestations-banner-2 {
     background-image: url("../../assets/png-x2/banner-right-prestation.png");
-    background-size: cover;
 }
-
-#prestations-banner h1{
-    margin: auto;
-    font-size: 1.8vw;
-    color: white;
-    text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
-}
-
-#prestations-banner h1::before{
-    content: "";
-    height: 0.3vw;
-    width: 5vw;
-    left: 50%;
-    transform: translateX(calc(-5vw / 2));
-    position: absolute;
-    top: 5vw;
-    background-color: white;
-}
-
-#prestations-banner h1::after{
-    content: "";
-    height: 0.3vw;
-    width: 5vw;
-    left: 50%;
-    transform: translateX(calc(-5vw / 2));
-    position: absolute;
-    bottom: 5vw;
-    background-color: white;
-}
-
 
 .prestation-row-main-content {
     width: 64%;
-    max-width: 64%;
     display: flex;
     flex-direction: column;
     height: 32vw;
-    max-height: 32vw;
     justify-content: center;
 }
 .prestation-row-main-content ul {
     list-style: none;
     width: 70%;
-    max-width: 70%;
     word-break: break-word;
     margin-left: 17%;
     margin-right: auto;
@@ -78,7 +34,6 @@
 
 .prestation-row-main-content ul li {
     font-size: 1vw;
-    /*margin-bottom: 1vw;*/
     margin-left: 6.5vw;
     position: relative;
     line-height: 2.5vw;
@@ -104,8 +59,8 @@
 }
 
 .prestation-row-img-content {
-    width: 36%;
-    max-width: 36%;
+    width: 35vw;
+    max-width: 35vw;
     height: 32vw;
     max-height: 32vw;
     display: flex;
@@ -115,7 +70,7 @@
 .prestation-row-img-content::before {
     content: "";
     background-color: white;
-    width: 80%;
+    width: 28vw;
     height: 80%;
     top: 0;
     position: absolute;
@@ -126,8 +81,8 @@
 }
 
 .prestation-row-img-content img {
-    width: 87%;
-    height: auto;
+    width: 30.5vw;
+    height: 20.3vw;
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
@@ -137,8 +92,8 @@
     position: absolute;
     /*right: 0;*/
     bottom: 0;
-    width: 80%;
-    height: 33%;
+    width: 28vw;
+    height: 10.5vw;
     background-color: white;
     font-size: 1vw;
     display: flex;
@@ -156,7 +111,8 @@
 }
 
 .prestation-row-img-content span {
-    margin: 12% auto auto 15%;
+    margin: 3vw auto auto 5vw;
+    font-weight: bold;
 }
 
 .prestation-side-right {
@@ -167,3 +123,15 @@
     margin-top: 6vw;
     margin-bottom: 8vw;
 }
+
+
+/*@media screen and (max-width: 640px) {*/
+
+/*    .prestation-row {*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+
+/*    .prestation-row div {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/

@@ -1,0 +1,24 @@
+@media all and  (max-width: 576px) {
+
+    h1 {
+        font-size: 4.5vw!important;
+    }
+    h2 {
+        font-size: 4vw!important;
+    }
+
+    .banner-double-img {
+        flex-wrap: wrap;
+    }
+
+    .banner-double-img div {
+        width: 100%;
+        height: 45vw;
+    }
+
+    .banner-simple {
+        height: 45vw;
+    }
+}
+
+

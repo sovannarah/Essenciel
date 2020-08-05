@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "key": "A",
+        "text": "En établissement <br />de soins."
+    },
+    {
+        "id": 1,
+        "key": "B",
+        "text": "À domicile <br /> / en maison de retraite."
+    },
+    {
+        "id": 2,
+        "key": "C",
+        "text": "À l’institut <br />médico légal."
+    }
+]

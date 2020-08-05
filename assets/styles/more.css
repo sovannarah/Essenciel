@@ -1,0 +1,71 @@
+#ctn-quote-input h2:after  {
+    left: -3vw!important;
+    width: 45vw;
+}
+
+#ctn-quote-input h2 {
+    margin-bottom: 5vw;
+}
+
+.row-mor-def {
+    margin-bottom: 1.1vw;
+}
+.row-mor-def h5 {
+    color: #ec6f3e;
+    font-size: 1vw;
+}
+
+.row-mor-def label {
+    font-size: 1vw;
+    margin-right: 1.3vw;
+    margin-bottom: 0.5vw!important;
+}
+
+.row-mor-def select {
+    border-bottom: 0.2vw solid #efede9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 33vw;
+    background-color: transparent;
+    padding-bottom: 1vw;
+    outline: none;
+}
+
+.row-mor-def select .select-placeholder {
+    font-size: 1.2vw !important;
+    color: grey !important;
+    font-style: italic !important;
+}
+
+.row-def-inputs {
+    display: flex;
+    padding-bottom: 0.1vw;
+}
+
+.row-def-inputs input {
+    /*padding-bottom: 0!important;*/
+}
+
+.row-def-inputs label {
+    margin-left: 1.6vw;
+}
+
+.row-def-inputs div {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column input {
+    width: 100%;
+    margin-bottom: 1.5vw;
+}
+
+.column label {
+    margin-left: 0!important;
+    width: 16%;
+    text-align: right;
+}

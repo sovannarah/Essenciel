@@ -1,0 +1,117 @@
+#ctn-btn-lieu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vw;
+    position: relative;
+}
+
+#ctn-btn-lieu:before {
+    content: "";
+    height: 2vw;
+    width: 40vw;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 20vw);
+    bottom: 0.2vw;
+    box-shadow: 0px 0.2vw 1vw 0.5vw #DCDCDC;
+}
+
+#ctn-btn-lieu:after {
+    content: "";
+    background-color: white;
+    border: none;
+    height: 3.5vw;
+    width: 50vw;
+    position: absolute;
+    left: 0.1vw;
+    bottom: 0;
+}
+#ctn-btn-lieu span {
+    color: #ec6f3e;
+}
+#ctn-btn-lieu button {
+    height: 13vw;
+    text-align: left;
+    margin-top: 5vw;
+
+    margin-left: 1.6vw;
+    margin-right: 1.6vw;
+    width: 10vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
+    border: none;
+}
+
+#ctn-btn-lieu button img {
+    height: 1.6vw;
+    margin-bottom: 2vw;
+}
+
+.add-price-quote {
+    display: flex;
+    width: 100%;
+    padding-top: 1.5vw;
+    font-size: 1vw;
+    color: #4abfcb;
+}
+
+.add-price-quote span {
+    color: #4abfcb !important;
+}
+.add-price-quote img {
+    height: 1.6vw;
+    width: 1.6vw;
+    margin-right: 0.7vw;
+}
+
+#ctn-quote-input {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5vw 6vw 8vw;
+    position: relative;
+}
+
+#ctn-quote-input label {
+    margin-bottom: 1.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+#ctn-quote-input input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 1vw;
+    outline: none;
+}
+
+#ctn-quote-input input::placeholder {
+    font-size: 1.2vw;
+    color: #8a8b8e;
+    font-style: italic;
+}
+
+#ctn-checkbox-quote {
+    display: flex;
+}
+
+#ctn-checkbox-quote .add-price-quote {
+    /*margin: 0;*/
+    width: auto;
+    padding-top: 0;
+    margin-left: 1vw;
+    margin-right: 3vw;
+}
+
+#ctn-checkbox-quote div {
+    display: flex;
+}
+
+.quote-input {
+    outline: none;
+}
+
+

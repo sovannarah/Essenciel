@@ -42,7 +42,7 @@
         <a class="ctn-prices-link">
             <span>Être <br /> contacté </span>
         </a>
-        <a id="redirectQuote" class="ctn-prices-link">
+        <a id="redirectQuote" class="btn-redirect-blue">
             <span>Établissez <br /> votre devis</span>
         </a>
     </div>

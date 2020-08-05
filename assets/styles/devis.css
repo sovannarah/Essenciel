@@ -1,0 +1,20 @@
+#ctn-devis {
+    padding: 6vw;
+    margin-bottom: 6vw;
+}
+
+#ctn-devis h5 {
+    color: #4abfcb;
+    font-size: 1vw;
+}
+
+#ctn-devis ul {
+    margin-bottom: 2vw;
+    padding-left: 1.5vw;
+    margin-left: 0;
+}
+
+#ctn-devis li {
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
+}

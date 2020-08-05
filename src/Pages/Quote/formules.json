@@ -1,0 +1,538 @@
+[
+  {
+    "id": 0,
+    "total": 1890,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un chauffeur porteur"
+        ]
+      },
+      {
+        "title": "Destination des cendres",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille"
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (sans cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "total": 2190,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Toilette et Habillage du défunt selon les choix de la famille, si celle-ci n’est pas assurée par l’hôpital.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Mise à disposition d’un registre de condoléances (sur demande)",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un Chauffeur porteur faisant office de Maître de cérémonie"
+        ]
+      },
+      {
+        "title": "Destination des cendres",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille"
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (sans cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "total": 2190,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Toilette et Habillage du défunt selon les choix de la famille, si celle-ci n’est pas assurée par l’hôpital.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’une équipe de 4 Porteurs dont 1 Porteur-Maître de Cérémonie"
+        ]
+      },
+      {
+        "title": "Autres",
+        "list": [
+          "Ouverture/Fermeture du caveau et fourniture d’un jeu de dalles intermédiaires. "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "total": 2490,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Toilette et Habillage du défunt selon les choix de la famille, si celle-ci n’est pas assurée par l’hôpital.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un chauffeur porteur"
+        ]
+      },
+      {
+        "title": "Destination des cendres",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (sans cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "total": 3190,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Mise à Disposition d’un Corbillard Funéraire pour le transfert du défunt vers le funérarium.",
+          "Mise à Disposition d’un Chauffeur-Porteur.",
+          "Frais de Funérarium Tout Compris.",
+          "Toilette et Habillage du défunt selon les choix de la famille.",
+          "Démarches et formalités Administratives",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un Chauffeur porteur faisant office de Maître de cérémonie"
+        ]
+      },
+      {
+        "title": "Destination des cendres",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (sans cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "total": 3490,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Mise à Disposition d’un Corbillard Funéraire pour le transfert du défunt vers le funérarium.",
+          "Mise à Disposition d’un Chauffeur-Porteur.",
+          "Frais de Funérarium Tout Compris.",
+          "Toilette et Habillage du défunt selon les choix de la famille.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par le Funérarium.",
+          "Mise à disposition d’un registre de condoléances (sur demande)",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un Chauffeur porteur faisant office de Maître de cérémonie"
+        ]
+      },
+      {
+        "title": "Destination des cendres ",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (avec cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "total": 3490,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Mise à Disposition d’un Corbillard Funéraire pour le transfert du défunt vers le funérarium.",
+          "Mise à Disposition d’un Chauffeur-Porteur.",
+          "Frais de Funérarium Tout Compris.",
+          "Toilette et Habillage du défunt selon les choix de la famille.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’une équipe de 4 Porteurs dont 1 Porteur-Maître de Cérémonie"
+        ]
+      },
+      {
+        "title": "Autre ",
+        "list": [
+          "Ouverture/Fermeture du caveau et fourniture d’un jeu de dalles intermédiaires. "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "total": 3790,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Mise à Disposition d’un Corbillard Funéraire pour le transfert du défunt vers le funérarium.",
+          "Mise à Disposition d’un Chauffeur-Porteur.",
+          "Frais de Funérarium Tout Compris.",
+          "Toilette et Habillage du défunt selon les choix de la famille.",
+          "Démarches et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques",
+          "Retrait de Pacemaker réalisé si nécessaire"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise en Bière et fermeture du cercueil, si celle-ci n’est pas assurée par l’hôpital",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’une équipe de 4 Porteurs dont 1 Porteur-Maître de Cérémonie"
+        ]
+      },
+      {
+        "title": "Autre ",
+        "list": [
+          "Démontage/Remontage Pierre Tombale et Creusement 1 place."
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "total": 2090,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Démarches spécifiques IML et formalités Administratives",
+          "Prise en charge des frais de L’Institut Médico-légal"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un chauffeur porteur"
+        ]
+      },
+      {
+        "title": "Destination des cendres ",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (sans cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "total": 2390,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+         "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+         "Démarches spécifiques IML et formalités Administratives",
+         "Prise en charge des frais de L’Institut Médico-légal",
+         "Remise d’un guide des démarches Post-Obsèques"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Urne funéraire en aluminium ou Urne de dispersion en carton"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’un Chauffeur porteur faisant office de Maître de cérémonie"
+        ]
+      },
+      {
+        "title": "Destination des cendres",
+        "list": [
+          "Dispersion des cendres au jardin du souvenir ou Remise de l’urne à la famille "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Frais de Crémation (avec cérémonie)",
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "total": 2390,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Démarches spécifiques IML et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’une équipe de 4 Porteurs dont 1 Porteur-Maître de Cérémonie"
+        ]
+      },
+      {
+        "title": "Autre ",
+        "list": [
+          "Ouverture/Fermeture du caveau et fourniture d’un jeu de dalles intermédiaires. "
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Taxes diverses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "total": 2690,
+    "prestations": [
+      {
+        "title": "Préparation des obsèques",
+        "list": [
+          "Accompagnement pendant toute la durée des obsèques. Nous nous occupons de tout.",
+          "Démarches spécifiques IML et formalités Administratives",
+          "Remise d’un guide des démarches Post-Obsèques"
+        ]
+      },
+      {
+        "title": "Cerceuil et accessoires",
+        "list": [
+          "Cercueil en Peuplier, forme parisienne, teinte naturelle, finition verni clair satiné, équipé de 4 poignées, d’une cuvette bio et de la plaque d’identité.",
+          "Capiton en taffetas blanc",
+          "Mise à disposition d’un registre de condoléances (sur demande)"
+        ]
+      },
+      {
+        "title": "Réalisation du convoi funéraire",
+        "list": [
+          "Mise à disposition d’un Corbillard Funéraire",
+          "Mise à disposition d’une équipe de 4 Porteurs dont 1 Porteur-Maître de Cérémonie"
+        ]
+      },
+      {
+        "title": "Autre ",
+        "list": [
+          "Démontage/Remontage Pierre Tombale et Creusement 1 place."
+        ]
+      },
+      {
+        "title": "Frais et taxes de crémation",
+        "list": [
+          "Taxes diverses"
+        ]
+      }
+    ]
+  }
+]

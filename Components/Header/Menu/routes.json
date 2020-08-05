@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/",
+    "text": "Essenciel"
+  },
+  {
+    "path": "/prestations",
+    "text": "Prestations"
+  },
+  {
+    "path": "/concept",
+    "text": "Concept"
+  },
+  {
+    "path": "/a-propos",
+    "text": "A propos"
+  },
+  {
+    "path": "/aide",
+    "text": "Aide"
+  }
+]

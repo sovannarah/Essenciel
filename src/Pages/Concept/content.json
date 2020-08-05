@@ -3,27 +3,27 @@
     "slider": [
       {
         "img": "01-faq",
-        "txt": "C’est simple le prix est déterminé à l’avance, et ne bougera pas, quoi qu’il arrive."
+        "txt": "C’est simple <strong>le prix est déterminé à l’avance</strong>, et ne bougera pas, quoi qu’il arrive."
       },
       {
         "img": "01-faq",
-        "txt": "Nous proposons le tarif le plus bas. C’est aussi simple que cela."
+        "txt": "Nous proposons <strong>le tarif le plus bas.</strong> C’est aussi simple que cela."
       },
       {
         "img": "01-faq",
-        "txt": "Les démarches et l’organisation des obsèques sont offertes"
+        "txt": "Les démarches et l’organisation des obsèques sont <strong>offertes</strong>"
       },
       {
         "img": "01-faq",
-        "txt": "Vous pouvez organisersereinement les obsèques d’un proche depuis chez vous"
+        "txt": "Vous pouvez <strong>organiser sereinement les obsèques d’un proche depuis chez vous</strong>"
       },
       {
         "img": "01-faq",
-        "txt": "Valeurs Laïques"
+        "txt": "Valeurs <strong>Laïques</strong>"
       },
       {
         "img": "01-faq",
-        "txt": "Un fabriquation française Une gamme de produits écologiques "
+        "txt": "Un fabriquation française. Une gamme de produits écologiques"
       }
     ]
   }

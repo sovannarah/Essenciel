@@ -1,5 +1,6 @@
 <section id="prestations">
-    <div id="prestations-banner">
+    <span id="texteJQ"></span>
+    <div id="prestations-banner" class="banner-double-img">
         <div id="prestations-banner-1">
             <h1>Cremation <br/> avec ou sans ceremonie <br/> de recueillement</h1>
         </div>
@@ -22,7 +23,7 @@
                     </ul>
                 </div>
                 <div class="prestation-row-img-content">
-                    <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $content->img ?>.png"
+                    <img src="http://192.168.1.17/Essenciel/assets/png-x2/<?php echo $content->img ?>.png"
                          alt=""/>
                     <a href=<?php $content->link ?>>
                         <span><?php echo $content->textLink ?></span>

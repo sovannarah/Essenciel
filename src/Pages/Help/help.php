@@ -1,6 +1,6 @@
 <section id="help">
     <div id="help-stn-1">
-        <h2>Comment se déroule <br /> <span>l’organisation d’obsèques ?</span> </h2>
+        <h2>Comment se déroule <br/> <span>l’organisation d’obsèques ?</span></h2>
         <ul>
             <li>
                 <span class="number">01</span>
@@ -12,14 +12,14 @@
                 </p>
             </li>
             <li>
-                <span  class="number">02</span>
+                <span class="number">02</span>
                 <h3>Gérer l'organisation<br/>d'obsèques depuis chez vous</h3>
                 <p>
                     Nous sommes <span>en contact <br/> par courriel, par téléphone.</span>
                 </p>
             </li>
             <li>
-                <span  class="number">03</span>
+                <span class="number">03</span>
                 <h3>Gérer l'organisation<br/>d'obsèques dans notre agence</h3>
                 <p>
                     <span>Nous nous rencontrons </span>
@@ -56,9 +56,32 @@
             <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $content->img ?>.png"
                  alt=""/>
             <?php if (isset($content->bubbleText)) {
-                    echo "<p class='bubble'>" . $content->bubbleText . "</p>";
-                } ?>
+                echo "<p class='bubble'>" . $content->bubbleText . "</p>";
+            } ?>
         </div>
         </div>
     <?php } ?>
+    <div
+    <div id="ctn-help-slider">
+        <button id="btn-slider-help-prev">
+        <img src="http://localhost/Essenciel/assets/png-x2/fl.svg" />
+        </button>
+        <div id="hide-slider-help" onclick="moveSlider()">
+            <ul id="slider-help">
+                <?php
+                $contents = json_decode(file_get_contents(__DIR__ . "/sliderContent.json"));
+                foreach ($contents as $content) {
+                    ?>
+                    <li class="elem-slide-help">
+                        <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
+                        <span><?php echo $content->text; ?></span>
+                        <a href>Ouvrir</a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <button id="btn-slider-help-next" onclick="moveSlider()">
+            <img src="http://localhost/Essenciel/assets/png-x2/fl.svg" />
+        </button>
+    </div>
 </section>

@@ -1,0 +1,65 @@
+[
+  {
+    "lieu": [
+      {
+        "id": 0,
+        "key": "A",
+        "img": "building",
+        "text": "Il se trouve <br /> en établissement <br /> de soin."
+      },
+      {
+        "id": 1,
+        "key": "B",
+        "img": "house",
+        "text": "Il se trouve <br /> à domicile ou en <br /> maison de retraite.",
+        "add": 1300
+      },
+      {
+        "id": 2,
+        "key": "C",
+        "img": "cardic",
+        "text": "Il se trouve <br /> à l’institut <br /> médico légale.",
+        "add": 300
+      }
+    ],
+    "types": [
+      {
+        "id": 0,
+        "key": "A",
+        "img": "building",
+        "text": "Une<br /> crémation",
+        "add": 1800
+      },
+      {
+        "id": 1,
+        "key": "B",
+        "img": "house",
+        "text": "Un<br />enterrement",
+        "add": 2190
+      }
+    ],
+    "accompaniment" : [
+      {
+        "id": 0,
+        "img": "",
+        "text": "Un accompagnement à distance"
+      },
+      {
+        "id": 1,
+        "img": "",
+        "text": "Un accompagnement en agence"
+      }
+    ],
+    "ceremony" : [
+      {
+        "id": 0,
+        "text": "oui",
+        "add": 300
+      },
+      {
+        "id": 1,
+        "text": "non"
+      }
+    ]
+  }
+]

@@ -37,8 +37,9 @@
 
 #ctn-index {
     display: flex;
-    height: 55%;
+
 }
+
 
 #ctn-index-title {
     width: 32%;
@@ -53,7 +54,7 @@
 
 #ctn-index-price {
     width: 68%;
-    height: 115%;
+    height: 10vw;
     display: flex;
     justify-content: space-between;
 }
@@ -92,8 +93,8 @@
 .bg-option {
     color: #eba790;
     font-size: 1vw;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 0.7vw;
+    margin-bottom: 0.7vw;
 }
 
 #menu {
@@ -109,11 +110,14 @@
     margin: 0 auto;
 }
 
+
+
 #menu li {
     display: flex;
     width: 13.5%;
     height: 100%;
 }
+
 
 #menu a {
     margin-top: auto;
@@ -121,24 +125,21 @@
     color: white;
     font-size: 1vw;
     cursor: pointer;
+    position: relative;
 }
 
+#menu .active-link:before {
+    content: "";
+    height: 0.2vw;
+    width: 2.4vw;
+    background-color: white;
+    position: absolute;
+    bottom: -1.3vw;
+    left: calc(50% - 1.2vw);
+}
 #ctn-action-header {
     position: absolute;
     z-index: 1;
     right: 0;
     bottom: -16%;
-    height: 38%;
-    display: flex;
-    background-color: #4bbfcc;
-    width: 38%;
-    box-shadow: 0 0 40px 10px rgba(0,0,0,0.3);
-}
-
-#ctn-action-header span {
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 17%;
-    font-size: 1.1vw;
 }

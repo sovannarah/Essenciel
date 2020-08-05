@@ -124,10 +124,3 @@
     font-size: 1vw;
     margin-left: 23%;
 }
-
-#redirectQuote {
-    color: white;
-    width: 37% !important;
-    background-color: #4bbfcc;
-    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
-}
