@@ -86,10 +86,12 @@
     border-right: none;
     padding-bottom: 1vw;
     outline: none;
+    height: 1.2vw;
+    /*width: 15vw;*/
 }
 
 #ctn-quote-input input::placeholder {
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: #8a8b8e;
     font-style: italic;
 }

@@ -1,6 +1,9 @@
 [
   {
     "id": 0,
+    "id_lieu": 0,
+    "id_types": 0,
+    "id_ceremony": 1,
     "total": 1890,
     "prestations": [
       {
@@ -46,6 +49,9 @@
   {
     "id": 1,
     "total": 2190,
+    "id_lieu": 0,
+    "id_types": 0,
+    "id_ceremony": 0,
     "prestations": [
       {
         "title": "Préparation des obsèques",

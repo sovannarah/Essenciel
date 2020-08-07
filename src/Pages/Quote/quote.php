@@ -1,11 +1,6 @@
 <?php
 $r = json_decode(file_get_contents(__DIR__ . "/request.json"));
-foreach ($r[0] as $key=>$value) {
-    var_dump($key);
-    if (isset($_SESSION[$key])) {
-        $GLOBALS[$key] = $_SESSION[$key];
-    }
-}
+$tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 ?>
 
 <section id="quote">
@@ -16,30 +11,49 @@ foreach ($r[0] as $key=>$value) {
             foreach ($contents as $content) {
                 ?>
                 <li>
-                    <button id="btn-nav-quote-<?php echo $content->page; ?>" value="<?php echo $content->id; ?>" class="<?php if ($content->page === "lieu") {echo 'active-nav-quote';} ?>">
-                        <span><?php echo $content->text; ?></span>
-                    </button>
+                    <a
+                    class="btn-nav-quote <?php if ($tabUrl[3] === $content->page) {
+                        echo "active-nav-quote";
+                    } ?>
+                    id=" btn-nav-quote-<?php echo $content->page; ?>"
+                    value="<?php echo $content->id; ?>" class="<?php if ($content->page === "lieu") {
+                        echo 'active-nav-quote';
+                    } ?>">
+                    <span><?php echo $content->text; ?></span>
+                    </a>
                 </li>
             <?php } ?>
             <li>
-                <button value="<?php echo $content->id; ?>">
-                    <p>
-                        <strong>Besoin d'aide ?</strong><br/><span>Être contacté
+                <a value="<?php echo $content->id; ?>">
+                        <span><strong>Besoin d'aide ?</strong><br/>Être contacté
                     </span>
-                </button>
+                </a>
             </li>
         </ul>
         <div id="formQuote">
             <?php
-                include("Components/Quote/Lieu/lieu.php");
+            include("Components/Quote/" . ucfirst($tabUrl[3]) . "/" . $tabUrl[3] . ".php");
             ?>
         </div>
         <div id="ctnInfoPrice">
+            <div>
+                <?php
+                foreach ($_SESSION["prices"] as $key => $value) {
+                    echo "<span class='d-none' id='info-price-hidden-" . $key . "'>" . $value . "</span>";
+                }
+                ?>
+            </div>
             <div class="info-price">
                 <h3>Montant total</h3>
                 <span class="bg-option">de votre devis</span>
                 <strong class="price-quote price">
-                    ----
+                    <?php
+                    if (!isset($_SESSION["total"])) {
+                        echo "----";
+                    } else {
+                        echo $_SESSION["total"];
+                    }
+                    ?>
                     <span class="euro">€</span>
                 </strong>
             </div>

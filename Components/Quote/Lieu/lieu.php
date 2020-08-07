@@ -5,7 +5,7 @@
     foreach ($contents[0]->lieu as $content) {
         ?>
         <button name="lieu" value="<?php echo $content->id; ?>"
-                class="quote-input <?php if ($_SESSION["lieu"] && $_SESSION["lieu"] == $content->id) {
+                class="quote-input <?php if (isset($_SESSION["lieu"]) && $_SESSION["lieu"] == $content->id) {
                     echo "select-choice";
                 } ?>">
             <img src="http://192.168.1.18/Essenciel/assets/png-x2/<?php echo $content->img ?>.svg" alt=""/>

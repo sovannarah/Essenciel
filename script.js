@@ -6,28 +6,13 @@ let form = {
     ceremony: 0,
 }
 
-let totalQuote = {
-    lieu: 0,
-    types: 0,
-    etablishment: 0,
-    accompaniment: 0,
-    ceremony: 0
-}
-
-
-let currrentPage = 0;
-
 let pages = ["lieu", "types", "devis", "more", "info"];
-let currNamePage = pages[currrentPage]
+
 let request;
 $(function () {
 
-    function addActiveCssQuoteNav() {
-        // $("#btn-nav-quote-" + currNamePage).classList.add('active-nav-quote');
-        // console.log($("#btn-nav-quote-" + currNamePage))
-    }
 
-    $.getJSON("http://localhost/Essenciel/src/Pages/Quote/request.json", function (data){
+    $.getJSON("http://localhost/Essenciel/src/Pages/Quote/request.json", function (data) {
         request = data[0];
     });
 
@@ -38,62 +23,114 @@ $(function () {
         })
     })
 
-    $("#next-quote-form").click(function (e) {
-        currrentPage++;
-        $("#formQuote").empty();
-        $.ajax({
-            url: "Components/Quote/" + pages[currrentPage].charAt(0).toUpperCase() + pages[currrentPage].slice(1) + "/" + pages[currrentPage] + ".php",
-            success: function (html) {
-                $("#formQuote").append(html);
-            }
-        });
-    })
 
-    $("#navQuote button").click(function () {
-        currrentPage = $(this).attr("value");
-        $("#formQuote").empty();
-        $.ajax({
-            url: "Components/Quote/" + pages[currrentPage].charAt(0).toUpperCase() + pages[currrentPage].slice(1) + "/" + pages[currrentPage] + ".php",
-            success: function (html) {
-                $("#formQuote").append(html);
-            }
-        });
-        // console.log($(`#btn-nav-quote-${currNamePage}`).classList.add(''))
-
-    })
-
-    $('#formQuote').on("click", '.quote-input', function () {
+    function changeColorBtnQuote(btn) {
         const btns = $('.quote-input');
         for (let i = 0; i < btns.length; i++) {
             btns[i].classList.remove('select-choice');
         }
-        $(this.classList.add('select-choice'));
+        btn.classList.add('select-choice');
+    }
+
+    function sendTotal(name, id) {
+        const service = request[name][id];
+        if (!service.add) {
+            service.add = 0;
+        }
+        let sessionPrice = parseInt($(".price-quote").text());
+        const priceForName = $(`#info-price-hidden-${name}`);
+        if (priceForName) {
+            sessionPrice = sessionPrice - priceForName.text();
+        }
+        sessionPrice = sessionPrice + service.add;
+        $.post('/Essenciel/quote/total', {"total": {[name]: service.add}}, function (data) {
+            // $('.price-quote').html(sessionPrice + "<span class=\"euro\">€</span>")
+        })
+
+        $.post('/Essenciel/server.php', {"total": {[name]: service.add}}, function (data) {
+            console.log(data)
+            $('.price-quote').html(data + "<span class=\"euro\">€</span>")
+        })
+
+    }
+
+    function addNextTypes(id) {
+        const ctn = $("#ctn-types-next");
+        ctn.empty();
+        let c = request.ceremony[id];
+        console.log(request.ceremony)
+        let html = `<div id="ctn-quote-input" > 
+ <label id="question-ceremony">${c.text}</label>
+            <div id="ctn-checkbox-quote">
+                <div>
+                    <input name="ceremony" value="${c.answer[0].id}" class="quote-input ceremony-input" type="checkbox" id="ceremony-0">
+                        <label for="ceremony-0">${c.answer[0].text}</label>
+                        <div class='add-price-quote'>
+                            <img src='http://192.168.1.18/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
+                            <span>+ 300</span>
+                        </div>
+                </div>
+                <div>
+                    <input name="ceremony" value="${c.answer[1].id}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
+                        <label for="ceremony-1">${c.answer[1].text}</label>
+                </div>
+            </div>
+</div>`
+        ctn.append(html)
+    }
+
+    $('#formQuote').on("click", '.quote-input', function () {
+        changeColorBtnQuote(this)
         const name = $(this).attr("name");
         const id = $(this).attr("value");
-        form[name] = id;
-        $.post('server.php', {[name]: id}, function (data) {
-            console.log(data)
+        $.post('/Essenciel/quote/' + name, {[name]: id}, function (data) {
         })
-        const service = request[name][id];
-        if(service.add) {
-            let total = 0;
-            totalQuote[name] = service.add;
-            for(let value of Object.values(totalQuote)) {
-                total = total + value;
+        sendTotal(name, id);
+        if (name === "ceremony") {
+            $("#ceremony-1").prop('checked', false);
+            $("#ceremony-0").prop('checked', false);
+            $(`#ceremony-${id}`).prop('checked', true);
+        }
+        if (name === "types") {
+            addNextTypes(id);
+        }
+    })
+
+
+    $(".btn-nav-quote").click(function () {
+        const indexLink = $(this).attr("value");
+        const redirectLinkName = pages[indexLink];
+        const nextValidation = [
+            ['lieu'],
+            ['types', 'ceremony'],
+        ]
+        let validNext = true;
+        const keys = [];
+        for (let i = 0; i < indexLink; i++) {
+            nextValidation[i].forEach(key => {
+                keys.push(key)
+            })
+        }
+        $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
+            validNext = data;
+        })
+        if (validNext) {
+            window.location.href = `http://localhost/Essenciel/quote/${redirectLinkName}`;
+        }
+    })
+
+    if ($("ctn-types-next")) {
+        $.post('/Essenciel/server.php', {"types": ""}, function (data) {
+            if (data) {
+                addNextTypes(data);
+                $.post('/Essenciel/server.php', {"ceremony": ""}, function (ceremonyId) {
+                    if (ceremonyId) {
+                        $(`#ceremony-${ceremonyId}`).prop('checked', true);
+                    }
+                })
             }
-            console.log(total)
-            $('.price-quote').html(total + "<span class=\"euro\">€</span>")
-        }
-    })
-
-
-    window.addEventListener('load', () => {
-        const elemsSlideHelp = $('.elem-slide-help');
-        const hideSlideHelp = $('#hide-slider-help');
-        for (let i = 0; i < elemsSlideHelp.length; i++) {
-            elemsSlideHelp[i].style.width = `${hideSlideHelp.offsetWidth}px !important`;
-        }
-    })
+        })
+    }
 
 })
 

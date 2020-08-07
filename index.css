@@ -183,3 +183,11 @@ a {
     width: 74%;
     position: absolute;
 }
+
+.d-none {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: -100;
+}

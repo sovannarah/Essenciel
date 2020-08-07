@@ -26,12 +26,14 @@
     display: flex;
 }
 
-#navQuote li button {
+#navQuote li a {
     background-color: transparent;
     border: none;
     outline: none;
     padding-left: 11.5vw;
     width: 100%;
+    display: flex;
+
     text-align: left;
 }
 
