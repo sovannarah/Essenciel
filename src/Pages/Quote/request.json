@@ -81,7 +81,20 @@
         "img": "",
         "text": "Un accompagnement en agence"
       }
+    ],
+    "civility": [
+      {"id": 0, "text": "Madame"},
+      {"id": 1, "text": "Monsieur"}
+    ],
+    "links": [
+      {"id": 0,"text": "Conjoint.e"},
+      {"id": 1,"text": "Enfant"},
+      {"id": 2,"text": "Grand-parent"},
+      {"id": 3,"text": "Neveu / Nièce"},
+      {"id": 4,"text": "Parent"},
+      {"id": 5,"text": "Frère / Sœur"},
+      {"id": 6,"text": "Oncle / Tante"},
+      {"id": 7,"text": "Autre…"}
     ]
-
   }
 ]

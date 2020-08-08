@@ -6,19 +6,24 @@ let form = {
     ceremony: 0,
 }
 
+const ip = "http://192.168.0.10:8888/Essenciel/";
+
 let pages = ["lieu", "types", "devis", "more", "info"];
 
 let request;
 $(function () {
 
 
-    $.getJSON("http://localhost/Essenciel/src/Pages/Quote/request.json", function (data) {
+    $.getJSON( ip + "src/Pages/Quote/request.json?", function (data) {
         request = data[0];
+        console.log(data)
     });
 
-    $("#ajax-test-0").click(function (e) {
-        e.preventDefault();
-        $.post('server.php', {form}, function (data) {
+    $("#submit-form").click(function (e) {
+        // e.preventDefault();
+        console.log("submit");
+        $.post('/Essenciel/server.php', {form: ""}, function (data) {
+            console.log(data)
             // request = data;
         })
     })
@@ -43,6 +48,7 @@ $(function () {
             sessionPrice = sessionPrice - priceForName.text();
         }
         sessionPrice = sessionPrice + service.add;
+        console.log("trololo")
         $.post('/Essenciel/quote/total', {"total": {[name]: service.add}}, function (data) {
             // $('.price-quote').html(sessionPrice + "<span class=\"euro\">€</span>")
         })
@@ -57,9 +63,9 @@ $(function () {
     function addNextTypes(id) {
         const ctn = $("#ctn-types-next");
         ctn.empty();
+        console.log(request)
         let c = request.ceremony[id];
-        console.log(request.ceremony)
-        let html = `<div id="ctn-quote-input" > 
+        let html = `<div id="ctn-quote-input" >
  <label id="question-ceremony">${c.text}</label>
             <div id="ctn-checkbox-quote">
                 <div>
@@ -78,6 +84,27 @@ $(function () {
 </div>`
         ctn.append(html)
     }
+
+
+
+
+
+    $("#ctn-quote-input").on('change', '.text-field', function(e) {
+        const {name,value} = e.target;
+        $.post('/Essenciel/quote/' + name, {[name]: value}, function (data) {
+        })
+    })
+
+
+    $("#ctn-quote-input").on('change', '.select', function(e) {
+        const {name,value} = e.target;
+        console.log(value)
+        $.post('/Essenciel/quote/' + name, {[name]: value}, function (data) {
+        })
+    })
+
+
+
 
     $('#formQuote').on("click", '.quote-input', function () {
         changeColorBtnQuote(this)
@@ -103,19 +130,23 @@ $(function () {
         const nextValidation = [
             ['lieu'],
             ['types', 'ceremony'],
+            [''],
+            ['accompaniment', 'civi-def', 'def-link']
         ]
         let validNext = true;
         const keys = [];
         for (let i = 0; i < indexLink; i++) {
+            console.log(nextValidation[i])
             nextValidation[i].forEach(key => {
                 keys.push(key)
             })
         }
         $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
+            console.log(data)
             validNext = data;
         })
         if (validNext) {
-            window.location.href = `http://localhost/Essenciel/quote/${redirectLinkName}`;
+            window.location.href = `${ip}quote/${redirectLinkName}`;
         }
     })
 

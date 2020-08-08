@@ -1,7 +1,7 @@
 <header id="header">
     <div id="ctn-header">
         <div id="ctn-logo">
-            <img src="http://localhost/Essenciel/assets/png-x2/logo.png" alt="" />
+            <img src="assets/png-x2/logo.png" alt="" />
             <a href="">Être contacté</a>
         </div>
         <div id="ctn-index">

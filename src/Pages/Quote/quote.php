@@ -1,6 +1,7 @@
 <?php
 $r = json_decode(file_get_contents(__DIR__ . "/request.json"));
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
+var_dump($_SERVER["REQUEST_URI"])
 ?>
 
 <section id="quote">
@@ -65,8 +66,17 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                 civiles, survenu à : Paris, et dans les villes suivantes : Boulogne-Billancourt, Créteil, Issy les
                 Moulineaux, Ivry-sur-Seine, Le Kremlin Bicêtre, Saint-Mandé,  Villejuif.</p>
         </div>
+        <?php
+        if($_SERVER['REQUEST_URI'] !== "/Essenciel/quote/info") {
+            ?>
+
         <button id="next-quote-form" class="btn-redirect-blue">
             <span>Suivant</span>
         </button>
+        <?php } else { ?>
+            <button id="submit-form" class="btn-redirect-blue">
+                <span>Valider</span>
+            </button>
+        <?php } ?>
     </div>
 </section>

@@ -1,3 +1,5 @@
+
+
 <section id="help">
     <div id="help-stn-1">
         <h2>Comment se déroule <br/> <span>l’organisation d’obsèques ?</span></h2>
@@ -53,7 +55,7 @@
             </div>
         </div>
         <div class="help-row-img-content">
-            <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $content->img ?>.png"
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.png"
                  alt=""/>
             <?php if (isset($content->bubbleText)) {
                 echo "<p class='bubble'>" . $content->bubbleText . "</p>";
@@ -64,7 +66,7 @@
     <div
     <div id="ctn-help-slider">
         <button id="btn-slider-help-prev">
-        <img src="http://localhost/Essenciel/assets/png-x2/fl.svg" />
+        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
         </button>
         <div id="hide-slider-help" onclick="moveSlider()">
             <ul id="slider-help">
@@ -73,7 +75,7 @@
                 foreach ($contents as $content) {
                     ?>
                     <li class="elem-slide-help">
-                        <img src="http://localhost/Essenciel/assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
                         <span><?php echo $content->text; ?></span>
                         <a href>Ouvrir</a>
                     </li>
@@ -81,7 +83,7 @@
             </ul>
         </div>
         <button id="btn-slider-help-next" onclick="moveSlider()">
-            <img src="http://localhost/Essenciel/assets/png-x2/fl.svg" />
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
         </button>
     </div>
 </section>

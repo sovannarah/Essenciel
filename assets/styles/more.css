@@ -41,11 +41,13 @@
 .row-def-inputs {
     display: flex;
     padding-bottom: 0.1vw;
+    width: 38vw;
 }
 
 .row-def-inputs input {
-    /*padding-bottom: 0!important;*/
+    border-bottom: 0.2vw solid #efede9!important;
 }
+
 
 .row-def-inputs label {
     margin-left: 1.6vw;
@@ -55,6 +57,13 @@
     display: flex;
 }
 
+.row-def-inputs .ctn-field {
+    width: 50%;
+}
+.ctn-field input {
+    width: 70%;
+    border-bottom: 0.2vw solid #efede9!important;
+}
 .column {
     flex-direction: column;
 }

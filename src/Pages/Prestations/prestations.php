@@ -1,3 +1,5 @@
+
+
 <section id="prestations">
     <span id="texteJQ"></span>
     <div id="prestations-banner" class="banner-double-img">
@@ -23,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="prestation-row-img-content">
-                    <img src="http://192.168.1.17/Essenciel/assets/png-x2/<?php echo $content->img ?>.png"
+                    <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.png"
                          alt=""/>
                     <a href=<?php $content->link ?>>
                         <span><?php echo $content->textLink ?></span>

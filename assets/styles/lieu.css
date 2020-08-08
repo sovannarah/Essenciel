@@ -84,6 +84,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom: 0.1vw solid #efede9!important;
     padding-bottom: 1vw;
     outline: none;
     height: 1.2vw;
