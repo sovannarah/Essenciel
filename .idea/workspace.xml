@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Essenciel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Essenciel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Footer/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Footer/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Info/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Info/info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/More/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/More/more.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Types/types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Types/types.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/lieu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/lieu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/more.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/more.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/quote.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quote.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Concept/concept.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Concept/concept.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Help/help.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Help/help.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/formules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/formules.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/quote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/request.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/request.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +49,13 @@
           <entry key="js" value="2" />
           <entry key="json" value="3" />
           <entry key="php" value="21" />
+          <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="2" />
           <entry key="PHP" value="21" />
@@ -169,22 +150,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+            <state relative-caret-position="483">
+              <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/styles/quote.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/png-x2/logo.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -266,6 +243,17 @@
             <path>
               <item name="Essenciel" type="b2602c69:ProjectViewProjectNode" />
               <item name="Essenciel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Essenciel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Essenciel" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Essenciel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Essenciel" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="png-x2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Essenciel" type="b2602c69:ProjectViewProjectNode" />
@@ -403,12 +391,12 @@
       <workItem from="1595921002693" duration="76000" />
       <workItem from="1596186896018" duration="10000" />
       <workItem from="1596804531052" duration="17785000" />
-      <workItem from="1596845357365" duration="3593000" />
+      <workItem from="1596845357365" duration="5259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21879000" />
+    <option name="totallyTimeSpent" value="23545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -701,10 +689,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+        <state relative-caret-position="483">
+          <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/png-x2/logo.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
