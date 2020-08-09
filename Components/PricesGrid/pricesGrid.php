@@ -1,4 +1,5 @@
 <div id="pricesGrid">
+
     <div id="ctnPricesGrid">
         <div id="prices-col-0">
             <div id="row-0">
@@ -17,33 +18,39 @@
         <table>
             <?php
             $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
-            foreach ($contents as $content) {
-                foreach ($content as $key => $value) {
-                    ?>
-                    <tr class="<?php if ($key === "firstRow") { echo "thead";} ?>">
+            for ($i = 0; $i < count($contents); $i++) {
+                $content = $contents[$i]; ?>
+                <tr class="<?php if ($i == 0) {
+                    echo "thead";
+                } ?>">
                     <?php
-                    foreach ($value as $elem) {
+                    for ($y = 0; $y < count($content); $y++) {
+                        $value = $content[$y];
+                        $txtColor = ($i == 1) ? "txt-black" :  "";
                         ?>
-                        <?php if ($key === "firstRow") { ?>
-                            <th><?php echo $elem ?></th>
-                        <?php } else { ?>
-                            <td class="<?php if ($key === "secondRow") echo "txt-black" ?>"><?php echo $elem ?></td>
-                        <?php } ?>
-                    <?php }
-                }
-                ?> </tr> <?php
-            } ?>
+                        <?php if($i == 0) {
+                            echo "<th>" . $value . "</th>";
+                        } else {
+                            echo "<td class='" . $txtColor . "'>" . $value . "</td>";
+                        }?>
+                    <?php } ?>
+                </tr>
+                <?php
+            }
+            ?>
         </table>
     </div>
+
+
     <div id="ctnPricesRedirect">
         <a class="ctn-prices-link">
-            <span>Découvrir nos <br /> prestations en détail </span>
+            <span>Découvrir nos <br/> prestations en détail </span>
         </a>
         <a class="ctn-prices-link">
-            <span>Être <br /> contacté </span>
+            <span>Être <br/> contacté </span>
         </a>
         <a id="redirectQuote" class="btn-redirect-blue">
-            <span>Établissez <br /> votre devis</span>
+            <span>Établissez <br/> votre devis</span>
         </a>
     </div>
 </div>

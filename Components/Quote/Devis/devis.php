@@ -15,7 +15,6 @@
             return true;
         }
     });
-//    array_values($formule)[0];
         foreach (array_values($formule)[0]->prestations as $prestation) {
     ?>
             <h5><?php echo $prestation->title; ?></h5>

@@ -13,7 +13,7 @@ if(isset($_SESSION["total"]) && isset($_SESSION["prices"])) {
     $_SESSION["total"] = array_sum($_SESSION["prices"]);
 }
 
-$GLOBALS["ip"] = "http://192.168.0.10:8888/Essenciel/";
+$GLOBALS["ip"] = "http://192.168.1.18/Essenciel/";
 ?>
 
 <!DOCTYPE html>
