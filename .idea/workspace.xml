@@ -5,96 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Essenciel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Essenciel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Footer/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Footer/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Header/Menu/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/Menu/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Header/Menu/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/Menu/routes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/PricesGrid/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/Components/PricesGrid/content.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Info/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Info/info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/More/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/More/more.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Types/types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Types/types.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/QuoteForm/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/Components/QuoteForm/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/01-faq.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/01-faq.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/01-sub-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/01-sub-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/02-faq.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/02-faq.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/02-sub-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/02-sub-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/03-faq.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/03-faq.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/03-sub-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/03-sub-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-faq.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-faq.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-left-prestation.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-left-prestation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-right-prestation.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-right-prestation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/banner-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/banner-right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/building.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/building.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/cardic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/cardic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/cendre-cremation-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/cendre-cremation-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/cercueil-accessoire-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/cercueil-accessoire-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/convoi-funeraire-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/convoi-funeraire-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/euroinacircle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/euroinacircle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/fl.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/fl.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/header-banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/header-banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/house.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/house.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/img-right-prestation.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/img-right-prestation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/inhumation-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/inhumation-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/lieu-ou-se-situe-le-defunt-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/lieu-ou-se-situe-le-defunt-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/logo-marianne.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/logo-marianne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/preparation-obseque-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/preparation-obseque-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/png-x2/taxe-cremation-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/png-x2/taxe-cremation-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/concept.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/concept.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/devis.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/devis.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/headerResponsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/headerResponsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/help.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/help.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/lieu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/lieu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/more.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/more.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/prestations.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/prestations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/prestationsResponsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/prestationsResponsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/pricesGrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/pricesGrid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/quote.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quote.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/quoteForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quoteForm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/About/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/About/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Concept/concept.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Concept/concept.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Concept/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Concept/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Help/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Help/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Help/help.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Help/help.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Help/sliderContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Help/sliderContent.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Prestations/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Prestations/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/formules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/formules.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/quote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/request.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/request.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router/RouterException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router/RouterException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +61,7 @@
     <property name="SearchEverywhereHistoryKey" value="quote&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/quote.php&#10;composer&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/composer.json&#10;index&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/index.php&#10;server&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/server.php&#10;request&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/request.json&#10;lieu&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;more&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/more.css&#10;l&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;quot&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/quote.css&#10;row-def&#9;null&#9;null&#10;info&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Info/info.php&#10;scrip&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/script.js&#10;type&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Types/types.php&#10;inde&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/index.php&#10;quote-&#9;null&#9;null&#10;reques&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/request.json&#10;req&#9;null&#9;null&#10;row-def-inputs&#9;null&#9;null&#10;about&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/About/about.php&#10;server.php&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/server.php&#10;script&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/script.js&#10;navQuote&#9;null&#9;null&#10;lieu.css&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;devis&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Devis/devis.php&#10;types&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Types/types.php&#10;help&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Help/help.php&#10;concep&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Concept/concept.php&#10;pres&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Prestations/prestations.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -202,7 +115,7 @@
       <workItem from="1596186896018" duration="10000" />
       <workItem from="1596804531052" duration="17785000" />
       <workItem from="1596845357365" duration="5396000" />
-      <workItem from="1596980432859" duration="3127000" />
+      <workItem from="1596980432859" duration="3861000" />
     </task>
     <servers />
   </component>
