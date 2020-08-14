@@ -33,7 +33,7 @@
                         <div class="col-firstname">John</div>
                         <div class="col-number">00634178339</div>
                         <div class="col-mail">sovannra.hem@gmail.com</div>
-                        <div class="col-total">2190</div>
+                        <div class="col-total">2190 €</div>
                         <div class="col-status">en attente</div>
                         <div class="col-action">dwdw</div>
                     </div>
