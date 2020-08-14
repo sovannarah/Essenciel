@@ -3,9 +3,25 @@
     justify-content: center;
     padding-bottom: 5vw;
     position: relative;
+    /*flex-direction: column;*/
 }
 
-#ctn-btn-lieu:before {
+.error-choice {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+    bottom: 2vw;
+    color: red;
+    font-size: 0.8vw;
+}
+
+#ctn-choice {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#ctn-choice:before {
     content: "";
     height: 2vw;
     width: 40vw;
@@ -17,7 +33,7 @@
     box-shadow: 0px 0.2vw 1vw 0.5vw #DCDCDC;
 }
 
-#ctn-btn-lieu:after {
+#ctn-choice:after {
     content: "";
     background-color: white;
     border: none;
@@ -88,6 +104,7 @@
     padding-bottom: 1vw;
     outline: none;
     height: 1.2vw;
+    font-size: 1vw;
     /*width: 15vw;*/
 }
 
@@ -117,4 +134,27 @@
     outline: none;
 }
 
+.error-input {
+    color: red;
+    margin-top: 1vw;
+    font-size: 0.8vw;
+}
 
+
+#ctn-types-next {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-checkbox {
+    bottom: 6vw!important;
+}
+
+
+.ctn-field .column {
+    width: 100%;
+}
+
+.row-def-inputs .column {
+    width: 100%;
+}

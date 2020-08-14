@@ -1,4 +1,4 @@
-<div id="quoteForm">
+<div id="formQuote" class="footer_quote">
     <div id="quoteFormHeader" class="banner-simple">
         <h1>Établissez votre devis, en moins de XXX <br /> minutes depuis chez vous ! </h1>
         <div>
@@ -11,14 +11,14 @@
             $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
             foreach ($contents as $content) {
                 ?>
-                <button name="lieu" value="<?php echo $content->id; ?>" class="quote-input" >
+                <button name="location" value="<?php echo $content->id + 1; ?>" class="quote-input" >
                     <span><?php echo $content->key; ?>.</span> <?php echo $content->text; ?>
                 </button>
             <?php } ?>
         </div>
-        <button id="btnSubmitQuote" class="btn-redirect-blue">
+        <a href="<?php echo $GLOBALS["ip"] ?>quote/lieu" id="btnSubmitQuote" class="btn-redirect-blue">
             <span>Suivant</span>
-        </button>
+        </a>
     </div>
     <div id="ctnRedirectContact">
         <a href="">

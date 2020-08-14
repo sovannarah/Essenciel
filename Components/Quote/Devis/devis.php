@@ -2,7 +2,6 @@
 <div id="ctn-devis">
     <h4>Prestations</h4>
     <?php
-    $contents = json_decode(file_get_contents($GLOBALS["ip"] . "src/Pages/Quote/formules.json"));
     if ($_SESSION["type_option_answer"] > 2) {
         $_SESSION["type_option_answer"] = $_SESSION["type_option_answer"] - 2;
     }

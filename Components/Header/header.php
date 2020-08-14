@@ -1,3 +1,7 @@
+<?php
+$tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
+?>
+
 <header id="header">
     <div id="ctn-header">
         <div id="ctn-logo">
@@ -6,7 +10,15 @@
         </div>
         <div id="ctn-index">
             <div id="ctn-index-title">
-                <h1>Nos prestations</h1>
+                <?php
+                    $titles = json_decode(file_get_contents(__DIR__ . "/titleHeader.json"));
+                $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
+                    foreach ($titles as $title) {
+                        if($title->url == $tabUrl[count($tabUrl) - 1]) {
+                ?>
+                <h1><?php echo $title->title; ?></h1>
+                <?php }} ?>
+
             </div>
             <div id="ctn-index-price">
                 <div class="info-price">

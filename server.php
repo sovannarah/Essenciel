@@ -17,6 +17,11 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
+if(isset($_POST["total"])) {
+    var_dump("ENCULER!!!");
+    $_SESSION["total"] = $_POST["total"];
+}
+
 if(isset($_POST["type_options"])) {
     $res = $bdd->query("SELECT * FROM type_option WHERE id_type = " . $_POST["type_options"]);
     $data = $res->fetch();
@@ -34,17 +39,17 @@ if(isset($_POST["type_options"])) {
 }
 
 if(isset($_POST["amount"])) {
-    if($_SESSION["type_option_answer"] > 2) {
-        $_SESSION["type_option_answer"]  = $_SESSION["type_option_answer"]  - 2;
+    $type_option_answer = isset($_SESSION["type_option_answer"]) ? $_SESSION["type_option_answer"] : 0;
+    if($type_option_answer > 2) {
+        $type_option_answer  = $_SESSION["type_option_answer"]  - 2;
     }
-    $res = $bdd->query("SELECT * FROM formule WHERE id_location = " . $_SESSION["location"] . " AND id_type= " . $_SESSION['type'] ." AND id_type_option_answer = " . $_SESSION['type_option_answer']);
-//    $_SESSION["total"] = $res->fetch()["total"];
+    $location = isset($_SESSION["location"]) ? $_SESSION["location"] : 0;
+    $type = isset($_SESSION["type"]) ? $_SESSION["type"] : 0;
+    $req = "SELECT * FROM formule WHERE id_location = '" . $location . "' AND id_type= '" . $type ."' AND id_type_option_answer = '" . $type_option_answer . "'";
+    $res = $bdd->query($req);
     echo json_encode($res->fetch());
 }
 
-if (isset($_POST["total"])) {
-    echo $_SESSION['total'];
-}
 
 if(isset($_POST["type_option_answer"])) {
     if(isset($_SESSION["type_option_answer"])) {
@@ -57,16 +62,15 @@ if (isset($_POST["type"])) {
 }
 
 if(isset($_POST["redirect"])) {
-    $valid = true;
+    $valid = [];
     foreach ($_POST["redirect"] as $keys) {
         if($keys !== "") {
             if (!isset($_SESSION[$keys])) {
-                var_dump($keys);
-                $valid = false;
+                $valid[] = $keys;
             }
         }
     }
-    echo $valid;
+    echo json_encode($valid);
 }
 
 

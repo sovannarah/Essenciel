@@ -23,40 +23,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/aboutResponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/helpResponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/pricesGridResponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/quoteFormResponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/quoteResponsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Admin/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Quote/t.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Components/Header/titleHeader.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Quote/steps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/Header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Devis/devis.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/Quote/Info/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Info/info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Lieu/lieu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/More/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/More/more.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Quote/More/more.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Plus/plus.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/Quote/Types/types.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Types/types.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/concept.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/concept.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/headerResponsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/headerResponsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/help.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/help.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/prestations.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/prestations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/prestationsResponsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/prestationsResponsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/pricesGrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/pricesGrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/devis.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/devis.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/lieu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/lieu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/more.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/more.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/quote.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quote.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/quoteForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quoteForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Concept/concept.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Concept/concept.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Help/help.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Help/help.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Prestations/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Prestations/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Prestations/prestations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/formules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/formules.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Quote/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/pages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Quote/quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/quote.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +84,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.H2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Router" />
       <recent name="$PROJECT_DIR$/src" />
@@ -148,7 +137,7 @@
       <workItem from="1596186896018" duration="10000" />
       <workItem from="1596804531052" duration="17785000" />
       <workItem from="1596845357365" duration="5396000" />
-      <workItem from="1596980432859" duration="95803000" />
+      <workItem from="1596980432859" duration="116616000" />
     </task>
     <servers />
   </component>
@@ -260,14 +249,18 @@
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
     <state x="2404" y="1268" width="1022" height="737" key="SettingsEditor/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597128433789" />
-    <state x="2607" y="1344" width="618" height="580" key="find.popup" timestamp="1597358012137">
+    <state x="2607" y="1344" width="618" height="580" key="find.popup" timestamp="1597392972567">
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
-    <state x="2607" y="1344" width="618" height="580" key="find.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597358012137" />
-    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1597357880213">
+    <state x="2607" y="1344" width="618" height="580" key="find.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597392972567" />
+    <state x="2564" y="1349" width="700" height="530" key="recent.locations.popup" timestamp="1597391264005">
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
-    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597357880213" />
+    <state x="2564" y="1349" width="700" height="530" key="recent.locations.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597391264005" />
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1597418779978">
+      <screen x="1920" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597418779978" />
     <state x="2640" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595596298241">
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
@@ -277,12 +270,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Components/Quote/More/more.php</url>
+          <url>file://$PROJECT_DIR$/Components/Quote/Plus/plus.php</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
-          <line>69</line>
+          <line>70</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>

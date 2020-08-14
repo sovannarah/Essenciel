@@ -8,17 +8,28 @@ let form = {
 
 const ip = "http://192.168.1.18/Essenciel/";
 
-let pages = ["lieu", "types", "devis", "more", "info"];
+let pages = ["lieu", "types", "devis", "plus", "info"];
 
 $(function () {
 
 
     $("#submit-form").click(function (e) {
         // e.preventDefault();
-        console.log("submit");
-        $.post('/Essenciel/server.php', {form: ""}, function (data) {
-            console.log(data)
+        const submitValid = ["civi" , "last_name", "first_name", "phone_number", "email"];
+        $.post('/Essenciel/server.php', {"redirect": submitValid}, function (data) {
+            const errors = JSON.parse(data);
+            if(errors.length === 0) {
+                // $.post('/Essenciel/server.php', {form: ""}, function (data) {
+                //     console.log(data)
+                // })
+            } else {
+                errors.forEach(field => {
+                    console.log(field)
+                    $(`#error-` + field).removeClass('d-none');
+                })
+            }
         })
+
     })
 
 
@@ -32,18 +43,8 @@ $(function () {
 
     function sendTotal(name, id) {
         $.post('/Essenciel/server.php', {"amount": ''}, function (data) {
-            console.log(data)
             $('.price-quote').html(JSON.parse(data)["total"] + "<span class=\"euro\">€</span>")
-            $.post('/Essenciel/quote/total', {"total": {[name]:JSON.parse(data)["total"]}}, function (data) {
-                // console.log(data)
-            })
         })
-        // $.post('/Essenciel/quote/total', {"total": {[name]: service.add}}, function (data) {
-        //     // $('.price-quote').html(sessionPrice + "<span class=\"euro\">€</span>")
-        // })
-        //
-
-
     }
 
     function addNextTypes(id) {
@@ -68,7 +69,8 @@ $(function () {
                         <label for="ceremony-2">${c.answers[1].type_option_answer}</label>
                 </div>
             </div>
-</div>`
+            
+</div><span id="error-type_option_answer" class="error-choice error-checkbox d-none">*Choix requis</span>`
         ctn.append(html)
         })
     }
@@ -122,14 +124,13 @@ $(function () {
 
 
     $(".btn-nav-quote").click(function () {
-        console.log("TROLOLOL")
         const indexLink = $(this).attr("value");
         const redirectLinkName = pages[indexLink];
         const nextValidation = [
             ['location', 'etablishment_address'],
             ['type', 'type_option_answer'],
             [''],
-            ['accompaniment', 'civi_def', 'last_name-def', 'first_name_def', 'def_link']
+            ['accompaniment', 'civi_def', 'last_name_def', 'first_name_def', 'def_link']
         ]
         let validNext = true;
         const keys = [];
@@ -138,16 +139,22 @@ $(function () {
                 keys.push(key)
             })
         }
-        console.log(keys)
         if (redirectLinkName === "lieu") {
             window.location.href = `${ip}quote/${redirectLinkName}`;
         } else {
             $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
-                console.log(data)
-                console.log(redirectLinkName)
-                validNext = data;
-                if (validNext) {
+                validNext = JSON.parse(data);
+
+                // console.log(validNext.length)
+
+                if (validNext.length == 0) {
+                    console.log("nezt")
                     window.location.href = `${ip}quote/${redirectLinkName}`;
+                } else {
+                    validNext.forEach(field => {
+                        console.log(field)
+                        $(`#error-` + field).removeClass('d-none');
+                    })
                 }
             })
         }
@@ -168,30 +175,21 @@ $(function () {
         })
     }
 
+    let posSlider = 0;
+    let offsetElem = 1
     $("#btn-slider-help-prev").click(function () {
-
         if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().left)) {
-            const hideSlider = $("#hide-slider-help");
-            const sliderWidth = hideSlider.width();
-            const elemPerSlide = 4;
-            const elemWidth = $(".elem-slide-help").width();
-            const dec = elemWidth * elemPerSlide;
-            console.log(dec)
             const slider = $("#slider-help");
-            slider.css("left", `${document.getElementById("slider-help").getBoundingClientRect().right - dec}px`);
+            slider.css("left", `${document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
+            posSlider = posSlider - offsetElem;
         }
     })
 
     $("#btn-slider-help-next").click(function () {
         if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().right)) {
-            const hideSlider = $("#hide-slider-help");
-            const sliderWidth = hideSlider.width();
-            const elemPerSlide = 4;
-            const elemWidth = $(".elem-slide-help").width();
-            const dec = elemWidth * elemPerSlide;
-            console.log(dec)
+            posSlider = posSlider + offsetElem;
             const slider = $("#slider-help");
-            slider.css("left", `-${document.getElementById("slider-help").getBoundingClientRect().left + dec}px`);
+            slider.css("left", `${ document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
         }
     })
 })

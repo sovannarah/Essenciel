@@ -11,7 +11,7 @@
     margin-bottom: auto;
     margin-left: 2vw;
     width: 12.8vw;
-    padding: 2.5vw 1vw;
+    padding: 1vw;
 }
 
 #navQuote {
@@ -101,19 +101,18 @@ position:relative;
 #ctnInfoPrice {
     display: flex;
     width: 23.5vw;
+    position: relative;
 }
 
 #footer-quote-form {
     display: flex;
     position: relative;
+    width: 50.5vw;
+    flex-direction: column;
 }
 
-#ctn-step {
-    margin-left: 24.3vw;
-    width: 38.5vw;
-}
 
-#ctn-step p {
+#ctn-step-info p {
     width: 31vw;
     font-size: 1vw;
     color: #8a8b8e;
@@ -122,5 +121,38 @@ position:relative;
 #next-quote-form {
     position: absolute;
     right: 0;
-    top: -5vw;
+    bottom: 0;
+}
+
+#submit-form {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#ctn-step {
+    display: flex;
+    padding-top: 2vw;
+}
+
+.step-bar {
+    height: 0.25vw;
+    width: 3.5vw;
+    background-color: #8a8b8e;
+    margin-right: 0.7vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.active-step-bar {
+    background-color: #ec6f3e!important;
+}
+
+#ctn-step span {
+    font-size: 1vw;
+}
+
+#ctn-devis h4 {
+    font-size: 1.2vw;
+    margin-bottom: 3vw;
 }

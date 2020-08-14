@@ -1,10 +1,7 @@
-<?php
-//session_unset();
-    var_dump($_SESSION["location"]);
-    var_dump($_SESSION["etablishment_address"]);
-?>
 
 <h2>Où se trouve le défunt?</h2>
+
+<div id="ctn-choice">
 <div id="ctn-btn-lieu">
     <?php
     $res = $GLOBALS["bdd"]->query('SELECT * FROM location');
@@ -28,8 +25,17 @@
     }
     $res->closeCursor();
     ?>
+    </div>
+    <span id="error-location" class="error-choice d-none">*Choix requis</span>
 </div>
 <div id="ctn-quote-input">
     <label for="establishment_address">Dans quel établissement se trouve-t-il?</label>
-    <input id="establishment_address" class="text-field" name="etablishment_address" placeholder="Nom de l'établissement..." type="text"/>
+    <input id="establishment_address" class="text-field" name="etablishment_address" placeholder="<?php
+    if (isset($_SESSION["etablishment_address"]) && $_SESSION["etablishment_address"] !== "") {
+        echo $_SESSION["etablishment_address"];
+    } else {
+        echo "Nom de l'établissement...";
+    }
+    ?>" type="text"/>
+    <span id="error-etablishment_address" class="error-input d-none">*Veuillez saisir l'adresse d'un établissement</span>
 </div>

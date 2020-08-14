@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "url": "lieu"
+  },
+  {
+    "id": 1,
+    "url": "types"
+  },
+  {
+    "id": 2,
+    "url": "devis"
+  },
+  {
+    "id": 3,
+    "url": "plus"
+  },
+  {
+    "id": 4,
+    "url": "info"
+  }
+]

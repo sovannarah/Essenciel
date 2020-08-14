@@ -25,15 +25,12 @@ $DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
 
-try
-{
+try {
     // On se connecte à MySQL
     $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
+} catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
-    die('Erreur : '.$e->getMessage());
+    die('Erreur : ' . $e->getMessage());
 }
 
 ?>
@@ -80,13 +77,7 @@ $router = new App\Router\Router($_GET['url']);
 
 
 $router->post("/quote/:key", function ($key) {
-//    if ($key === "total") {
-//        $_SESSION["prices"][key($_POST[$key])] = $_POST[$key][key($_POST[$key])];
-//        $_SESSION["total"] = array_sum($_SESSION["prices"]);
-//    } else {
-    var_dump($key);
-        $_SESSION[$key] = $_POST[$key];
-//    }
+    $_SESSION[$key] = $_POST[$key];
 });
 
 
