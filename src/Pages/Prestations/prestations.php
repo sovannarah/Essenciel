@@ -4,10 +4,10 @@
     <span id="texteJQ"></span>
     <div id="prestations-banner" class="banner-double-img">
         <div id="prestations-banner-1">
-            <h1>Cremation <br/> avec ou sans ceremonie <br/> de recueillement</h1>
+            <h2>Cremation <br/> avec ou sans ceremonie <br/> de recueillement</h2>
         </div>
         <div id="prestations-banner-2">
-            <h1>Inumation en caveau existant <br/> ou en pleine terre</h1>
+            <h2>Inumation en caveau existant <br/> ou en pleine terre</h2>
         </div>
     </div>
     <div>
@@ -17,7 +17,7 @@
             ?>
             <div class="prestation-row prestation-side-<?php echo $content->side ?>">
                 <div class="prestation-row-main-content">
-                    <h2><?php echo $content->title; ?></h2>
+                    <h3><?php echo $content->title; ?></h3>
                     <ul>
                         <?php foreach ($content->list as $element) { ?>
                             <li><?php echo $element; ?></li>
@@ -27,7 +27,7 @@
                 <div class="prestation-row-img-content">
                     <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.png"
                          alt=""/>
-                    <a href=<?php $content->link ?>>
+                    <a href="<?php echo $content->link ?>">
                         <span><?php echo $content->textLink ?></span>
                     </a>
                 </div>

@@ -1,5 +1,4 @@
 #header {
-    height: 24vw;
     display: flex;
     background-color: green;
     flex-direction: column;
@@ -9,14 +8,15 @@
 }
 
 #ctn-header {
-    height: 62%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+
+    text-shadow: rgba(0,0,0,0.4) 1px 0 20px;
 }
 
 #ctn-logo {
-    height: 45%;
+    height: 7vw;
     display: flex;
     justify-content: space-between;
 }
@@ -33,11 +33,11 @@
     margin-bottom: auto;
     color: white;
     font-size: 1vw;
+    font-weight: bold;
 }
 
 #ctn-index {
     display: flex;
-
 }
 
 
@@ -54,9 +54,12 @@
 
 #ctn-index-price {
     width: 68%;
-    height: 10vw;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 7.5vw;
 }
 
 
@@ -67,6 +70,7 @@
     background-color: #3e3e3e;
     width: 24%;
     position: relative;
+    height: 10vw;
 }
 
 .info-price h3 {
@@ -98,9 +102,12 @@
 }
 
 #menu {
-    height: 38%;
+    height: 9vw ;
     display: flex;
     background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #menu ul {
@@ -137,9 +144,11 @@
     bottom: -1.3vw;
     left: calc(50% - 1.2vw);
 }
+
 #ctn-action-header {
     position: absolute;
     z-index: 1;
     right: 0;
     bottom: -16%;
+    font-weight: bold;
 }

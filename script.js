@@ -10,21 +10,14 @@ const ip = "http://192.168.1.18/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "more", "info"];
 
-let request;
 $(function () {
 
-
-    $.getJSON( ip + "src/Pages/Quote/request.json?", function (data) {
-        request = data[0];
-        console.log(data)
-    });
 
     $("#submit-form").click(function (e) {
         // e.preventDefault();
         console.log("submit");
         $.post('/Essenciel/server.php', {form: ""}, function (data) {
             console.log(data)
-            // request = data;
         })
     })
 
@@ -38,51 +31,46 @@ $(function () {
     }
 
     function sendTotal(name, id) {
-        const service = request[name][id];
-        if (!service.add) {
-            service.add = 0;
-        }
-        let sessionPrice = parseInt($(".price-quote").text());
-        const priceForName = $(`#info-price-hidden-${name}`);
-        if (priceForName) {
-            sessionPrice = sessionPrice - priceForName.text();
-        }
-        sessionPrice = sessionPrice + service.add;
-        console.log("trololo")
-        $.post('/Essenciel/quote/total', {"total": {[name]: service.add}}, function (data) {
-            // $('.price-quote').html(sessionPrice + "<span class=\"euro\">€</span>")
-        })
-
-        $.post('/Essenciel/server.php', {"total": {[name]: service.add}}, function (data) {
+        $.post('/Essenciel/server.php', {"amount": ''}, function (data) {
             console.log(data)
-            $('.price-quote').html(data + "<span class=\"euro\">€</span>")
+            $('.price-quote').html(JSON.parse(data)["total"] + "<span class=\"euro\">€</span>")
+            $.post('/Essenciel/quote/total', {"total": {[name]:JSON.parse(data)["total"]}}, function (data) {
+                // console.log(data)
+            })
         })
+        // $.post('/Essenciel/quote/total', {"total": {[name]: service.add}}, function (data) {
+        //     // $('.price-quote').html(sessionPrice + "<span class=\"euro\">€</span>")
+        // })
+        //
+
 
     }
 
     function addNextTypes(id) {
         const ctn = $("#ctn-types-next");
         ctn.empty();
-        console.log(request)
-        let c = request.ceremony[id];
+        $.post('/Essenciel/server.php', {"type_options": id}, function (data) {
+            // console.log(data);
+            const c = JSON.parse(data);
         let html = `<div id="ctn-quote-input" >
- <label id="question-ceremony">${c.text}</label>
+ <label id="question-ceremony">${c.type_option}</label>
             <div id="ctn-checkbox-quote">
                 <div>
-                    <input name="ceremony" value="${c.answer[0].id}" class="quote-input ceremony-input" type="checkbox" id="ceremony-0">
-                        <label for="ceremony-0">${c.answer[0].text}</label>
+                    <input name="type_option_answer" value="${c.answers[0].id_type_option_answer}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
+                        <label for="ceremony-1">${c.answers[0].type_option_answer}</label>
                         <div class='add-price-quote'>
                             <img src='http://192.168.1.18/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
                             <span>+ 300</span>
                         </div>
                 </div>
                 <div>
-                    <input name="ceremony" value="${c.answer[1].id}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
-                        <label for="ceremony-1">${c.answer[1].text}</label>
+                    <input name="type_option_answer" value="${c.answers[1].id_type_option_answer}" class="quote-input ceremony-input" type="checkbox" id="ceremony-2">
+                        <label for="ceremony-2">${c.answers[1].type_option_answer}</label>
                 </div>
             </div>
 </div>`
         ctn.append(html)
+        })
     }
 
 
@@ -107,55 +95,72 @@ $(function () {
 
 
     $('#formQuote').on("click", '.quote-input', function () {
-        changeColorBtnQuote(this)
+
         const name = $(this).attr("name");
         const id = $(this).attr("value");
+        console.log(name)
+        if(name !== "type_option_answer") {
+            changeColorBtnQuote(this)
+        }
         $.post('/Essenciel/quote/' + name, {[name]: id}, function (data) {
         })
+        console.log(name, id)
         sendTotal(name, id);
-        if (name === "ceremony") {
+        if (name == "type_option_answer") {
+            $("#ceremony-2").prop('checked', false);
             $("#ceremony-1").prop('checked', false);
-            $("#ceremony-0").prop('checked', false);
             $(`#ceremony-${id}`).prop('checked', true);
         }
-        if (name === "types") {
+        if (name === "type") {
             addNextTypes(id);
         }
     })
 
+    // $('#formQuote').on("click", ".type-checkbox", function() {
+    //
+    // })
+
 
     $(".btn-nav-quote").click(function () {
+        console.log("TROLOLOL")
         const indexLink = $(this).attr("value");
         const redirectLinkName = pages[indexLink];
         const nextValidation = [
-            ['lieu'],
-            ['types', 'ceremony'],
+            ['location', 'etablishment_address'],
+            ['type', 'type_option_answer'],
             [''],
-            ['accompaniment', 'civi-def', 'def-link']
+            ['accompaniment', 'civi_def', 'last_name-def', 'first_name_def', 'def_link']
         ]
         let validNext = true;
         const keys = [];
         for (let i = 0; i < indexLink; i++) {
-            console.log(nextValidation[i])
             nextValidation[i].forEach(key => {
                 keys.push(key)
             })
         }
-        $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
-            console.log(data)
-            validNext = data;
-        })
-        if (validNext) {
+        console.log(keys)
+        if (redirectLinkName === "lieu") {
             window.location.href = `${ip}quote/${redirectLinkName}`;
+        } else {
+            $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
+                console.log(data)
+                console.log(redirectLinkName)
+                validNext = data;
+                if (validNext) {
+                    window.location.href = `${ip}quote/${redirectLinkName}`;
+                }
+            })
         }
+
     })
 
     if ($("ctn-types-next")) {
-        $.post('/Essenciel/server.php', {"types": ""}, function (data) {
+        $.post('/Essenciel/server.php', {"type": ""}, function (data) {
             if (data) {
                 addNextTypes(data);
-                $.post('/Essenciel/server.php', {"ceremony": ""}, function (ceremonyId) {
+                $.post('/Essenciel/server.php', {"type_option_answer": ""}, function (ceremonyId) {
                     if (ceremonyId) {
+
                         $(`#ceremony-${ceremonyId}`).prop('checked', true);
                     }
                 })
@@ -163,6 +168,32 @@ $(function () {
         })
     }
 
+    $("#btn-slider-help-prev").click(function () {
+
+        if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().left)) {
+            const hideSlider = $("#hide-slider-help");
+            const sliderWidth = hideSlider.width();
+            const elemPerSlide = 4;
+            const elemWidth = $(".elem-slide-help").width();
+            const dec = elemWidth * elemPerSlide;
+            console.log(dec)
+            const slider = $("#slider-help");
+            slider.css("left", `${document.getElementById("slider-help").getBoundingClientRect().right - dec}px`);
+        }
+    })
+
+    $("#btn-slider-help-next").click(function () {
+        if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().right)) {
+            const hideSlider = $("#hide-slider-help");
+            const sliderWidth = hideSlider.width();
+            const elemPerSlide = 4;
+            const elemWidth = $(".elem-slide-help").width();
+            const dec = elemWidth * elemPerSlide;
+            console.log(dec)
+            const slider = $("#slider-help");
+            slider.css("left", `-${document.getElementById("slider-help").getBoundingClientRect().left + dec}px`);
+        }
+    })
 })
 
 function disabledButtonsConceptSlide(bool) {

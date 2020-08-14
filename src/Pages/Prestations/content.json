@@ -11,7 +11,7 @@
       "Mise en bière et fermeture du cercueil, si celle-ci n'est pas assurée par l'hôpital"
     ],
     "textLink": "Comment préparer des obsèques ?",
-    "link": "",
+    "link": "#",
     "side": "left",
     "img": "img-right-prestation"
   },
@@ -24,7 +24,7 @@
       "Plaque d'identité gravée"
     ],
     "textLink": "Comment choisir un cercueil ?",
-    "link": "",
+    "link": "#",
     "side": "right",
     "img": "cercueil-accessoire-img"
   },
@@ -37,7 +37,7 @@
       "Mise à dispostion de 4 porteurs professionnels habilités (inhumation)"
     ],
     "textLink": "Qu'est-ce qu'un convoi funéraire ?",
-    "link": "",
+    "link": "#",
     "side": "left",
     "img": "convoi-funeraire-img"
   },
@@ -48,7 +48,7 @@
       "Remise de l'Urne à la famille ou Dispersion des Cendres"
     ],
     "textLink": "Que faire des cendres après incinération ?",
-    "link": "",
+    "link": "#",
     "side": "right",
     "img": "cendre-cremation-img"
   },
@@ -60,7 +60,7 @@
       "Taxe de vacation de police"
     ],
     "textLink": "A quoi correspondent ses taxes ?",
-    "link": "",
+    "link": "#",
     "side": "left",
     "img": "taxe-cremation-img"
   },
@@ -75,7 +75,7 @@
       "Nous prenons en charge le coût supplémentaire lié à la taille de la pierre tombale qui recouvre la sépulture Pleine Terre"
     ],
     "textLink": "Ce qu'il faut savoir sur l'inhumation",
-    "link": "",
+    "link": "#",
     "side": "right",
     "img": "inhumation-img"
   },
@@ -87,7 +87,7 @@
       "au domicile du défunt ou dans une maison de retraite. Nous devons transférer le défunt au funérarium. Le convoi funéraire est au départ de l'hôpital"
     ],
     "textLink": "Qu'en est-il du transport du corps ?",
-    "link": "",
+    "link": "#",
     "side": "left",
     "img": "lieu-ou-se-situe-le-defunt-img"
   }

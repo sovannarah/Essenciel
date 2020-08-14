@@ -1,9 +1,9 @@
 @media all and  (max-width: 576px) {
 
-    h1 {
+    h2 {
         font-size: 4.5vw!important;
     }
-    h2 {
+    h3 {
         font-size: 4vw!important;
     }
 
@@ -13,11 +13,57 @@
 
     .banner-double-img div {
         width: 100%;
-        height: 45vw;
+        height: 30vw;
+        margin-bottom: 3vw;
+        background-size: 100% auto;
+        background-position: center;
+    }
+
+    .banner-double-img h2::before, .banner-double-img h2::after {
+        height: 0.7vw;
+        width: 15vw;
+        transform: translateX(calc(-15vw / 2));
+    }
+
+    .banner-double-img h2::before {
+        top: 4vw;
+    }
+
+    .banner-double-img h2::after {
+        bottom: 4vw;
     }
 
     .banner-simple {
         height: 45vw;
+    }
+
+    .banner-simple h1::before, .banner-simple h1::after {
+        height: 0.7vw;
+        width: 15vw;
+        transform: translateX(calc(-15vw / 2));
+        background-color: white;
+    }
+
+    .banner-simple h1::before {
+        top: 12vw;
+    }
+    .banner-simple h1::after {
+        bottom: 12vw;
+    }
+
+
+    .banner-simple-left h2::before, .banner-simple-left h2::after {
+        height: 0.7vw!important;
+        width: 15vw!important;
+    }
+
+    .btn-redirect-blue {
+        height: 20vw!important;
+        width: 100%!important;
+    }
+
+    .btn-redirect-blue span {
+        font-size: 2.8vw!important;
     }
 }
 

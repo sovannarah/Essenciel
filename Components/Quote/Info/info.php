@@ -9,9 +9,15 @@ $contents = json_decode(file_get_contents($GLOBALS["ip"] . "src/Pages/Quote/requ
         <select id="civi" name="civi" class="select">
             <option value="" class="select-placeholder" disabled selected hidden>Madame, Monsieur...</option>
             <?php
-            foreach ($contents[0]->civility as $civility) {
+            $reqCivi = "SELECT * FROM civilities";
+            $resCivi = $GLOBALS["bdd"]->query($reqCivi);
+            while ($civility = $resCivi->fetch()) {
                 ?>
-                <option value="<?php echo $civility->id; ?>"><?php echo $civility->text; ?></option>
+                <option value="<?php echo $civility["id"]; ?>"
+                    <?php if(isset($_SESSION["civi"]) && ($_SESSION["civi"] == $civility["id"])) {
+                        echo "selected";
+                    } ?>
+                ><?php echo $civility["civility"]; ?></option>
             <?php } ?>
         </select>
     </div>
@@ -19,12 +25,24 @@ $contents = json_decode(file_get_contents($GLOBALS["ip"] . "src/Pages/Quote/requ
         <h5>Comment vous appelez-vous ?</h5>
         <div class="row-def-inputs">
             <div class="ctn-field">
-                <label for="def-last-name">Nom</label>
-                <input id="last-name" name="last-name" class="text-field" placeholder="Nom" type="text"/>
+                <label for="last-name">Nom</label>
+                <input id="last-name" name="last-name" class="text-field" type="text" placeholder="<?php
+                if (isset($_SESSION["last_name"]) && $_SESSION["last_name"] !== "") {
+                    echo $_SESSION["last_name"];
+                } else {
+                    echo "Nom";
+                }
+                ?>"/>
             </div>
             <div class="ctn-field">
-                <label for="def-first-name">Prénom</label>
-                <input id="first-name" name="first-name" class="text-field" placeholder="Prénom" type="text"/>
+                <label for="first-name">Prénom</label>
+                <input id="first-name" name="first-name" class="text-field" type="text" placeholder="<?php
+                if (isset($_SESSION["first_name"]) && $_SESSION["first_name"] !== "") {
+                    echo $_SESSION["first_name"];
+                } else {
+                    echo "Prénom";
+                }
+                ?>"/>
             </div>
         </div>
     </div>
@@ -33,12 +51,24 @@ $contents = json_decode(file_get_contents($GLOBALS["ip"] . "src/Pages/Quote/requ
         <div>
             <div class="row-def-inputs column">
                 <div>
-                    <label for="def-link">Téléphone</label>
-                    <input type="text" class="text-field" name="number" placeholder="06...">
+                    <label for="phone_number">Téléphone</label>
+                    <input id="phone_number" type="text" class="text-field" name="phone_number" placeholder="<?php
+                    if (isset($_SESSION["phone_number"]) && $_SESSION["phone_number"] !== "") {
+                        echo $_SESSION["phone_number"];
+                    } else {
+                        echo "06...";
+                    }
+                    ?>">
                 </div>
                 <div>
-                    <label for="def-link">E-mail</label>
-                    <input type="text" class="text-field" name="email" placeholder="e-mail@email.com...">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="text" class="text-field" name="email" placeholder="<?php
+                    if (isset($_SESSION["email"]) && $_SESSION["email"] !== "") {
+                        echo $_SESSION["email"];
+                    } else {
+                        echo "e-mail@email.com...";
+                    }
+                    ?>">
                 </div>
             </div>
         </div>

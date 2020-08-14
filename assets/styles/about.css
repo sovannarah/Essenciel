@@ -32,6 +32,7 @@
 #aboutBanner-1 span {
     font-size: 1.1vw;
     margin-left: 6vw;
+    font-weight: bold;
 }
 
 #aboutBanner-1 h1 {
@@ -42,6 +43,7 @@
 
 #aboutBanner-1 h1 span {
     color: #4bbecb;
+    font-size: 1.8vw;
 }
 
 #aboutBanner {
@@ -49,16 +51,19 @@
 }
 
 #ctnLocate {
-    height: 27vw;
     display: flex;
     position: relative;
 }
 
+#ctnLocateList {
+    height: 27vw;
+}
+
 #ctnLocateLabel {
-    height: 119%;
+    height: 29vw;
     width: 36.5%;
     position: relative;
-    bottom: 19%;
+    top: -2vw;
     background-color: #f8f8f8;
     display: flex;
 }

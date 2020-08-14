@@ -74,6 +74,9 @@
 
 .help-row {
     display: flex;
+}
+
+.help-row div {
     height: 38vw;
 }
 
@@ -171,27 +174,31 @@
     padding-left: 0;
 }
 
-#slider-help {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    width: auto;
-}
+
 
 #hide-slider-help {
     width: 78vw;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     position: relative;
     overflow: hidden;
 }
 
-#slider-help li {
+#slider-help {
     display: flex;
-    border: 1px solid red;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: auto;
+    transition: all 1s;
+}
+
+#slider-help .elem-slide-help {
+    display: flex;
     height: 16.5vw;
+    width: calc(78vw / 4);
     flex-direction: column;
-    padding: 0 1%;
-    width: 250px !important;
+    padding: 0 ;
     justify-content: space-between;
 }
 

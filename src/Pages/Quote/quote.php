@@ -1,7 +1,8 @@
 <?php
 $r = json_decode(file_get_contents(__DIR__ . "/request.json"));
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
-var_dump($_SERVER["REQUEST_URI"])
+
+var_dump($_SESSION["total"]);
 ?>
 
 <section id="quote">
@@ -12,11 +13,10 @@ var_dump($_SERVER["REQUEST_URI"])
             foreach ($contents as $content) {
                 ?>
                 <li>
-                    <a
-                    class="btn-nav-quote <?php if ($tabUrl[3] === $content->page) {
-                        echo "active-nav-quote";
-                    } ?>
-                    id=" btn-nav-quote-<?php echo $content->page; ?>"
+                    <a class="btn-nav-quote <?php if ($tabUrl[3] === $content->page) {
+                                echo "active-nav-quote";
+                            } ?>
+                    id="btn-nav-quote-<?php echo $content->page; ?>"
                     value="<?php echo $content->id; ?>" class="<?php if ($content->page === "lieu") {
                         echo 'active-nav-quote';
                     } ?>">
@@ -24,7 +24,7 @@ var_dump($_SERVER["REQUEST_URI"])
                     </a>
                 </li>
             <?php } ?>
-            <li>
+            <li class="n-help">
                 <a value="<?php echo $content->id; ?>">
                         <span><strong>Besoin d'aide ?</strong><br/>Être contacté
                     </span>
@@ -33,17 +33,10 @@ var_dump($_SERVER["REQUEST_URI"])
         </ul>
         <div id="formQuote">
             <?php
-            include("Components/Quote/" . ucfirst($tabUrl[3]) . "/" . $tabUrl[3] . ".php");
+            include("Components/Quote/" . ucfirst($tabUrl[count($tabUrl) - 1]) . "/" . $tabUrl[count($tabUrl) - 1] . ".php");
             ?>
         </div>
         <div id="ctnInfoPrice">
-            <div>
-                <?php
-                foreach ($_SESSION["prices"] as $key => $value) {
-                    echo "<span class='d-none' id='info-price-hidden-" . $key . "'>" . $value . "</span>";
-                }
-                ?>
-            </div>
             <div class="info-price">
                 <h3>Montant total</h3>
                 <span class="bg-option">de votre devis</span>
@@ -67,12 +60,12 @@ var_dump($_SERVER["REQUEST_URI"])
                 Moulineaux, Ivry-sur-Seine, Le Kremlin Bicêtre, Saint-Mandé,  Villejuif.</p>
         </div>
         <?php
-        if($_SERVER['REQUEST_URI'] !== "/Essenciel/quote/info") {
+        if ($_SERVER['REQUEST_URI'] !== "/Essenciel/quote/info") {
             ?>
 
-        <button id="next-quote-form" class="btn-redirect-blue">
-            <span>Suivant</span>
-        </button>
+            <button id="next-quote-form" class="btn-redirect-blue">
+                <span>Suivant</span>
+            </button>
         <?php } else { ?>
             <button id="submit-form" class="btn-redirect-blue">
                 <span>Valider</span>

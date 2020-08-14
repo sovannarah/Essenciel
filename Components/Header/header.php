@@ -33,7 +33,7 @@
         </div>
     </div>
     <?php include("Menu/menu.php"); ?>
-    <a href="/Essenciel/quote" id="ctn-action-header" class="btn-redirect-blue">
+    <a href="/Essenciel/quote/lieu" id="ctn-action-header" class="btn-redirect-blue">
         <span>Établissez <br/> un devis</span>
     </a>
 </header>

@@ -55,10 +55,10 @@
     </div>
     <div id="concept-banner" class="banner-double-img">
         <div id="concept-banner-1">
-            <h1>Gérer l'organisation d'obsèques <br/> depuis chez vous</h1>
+            <h2>Gérer l'organisation d'obsèques <br/> depuis chez vous</h2>
         </div>
         <div id="concept-banner-2">
-            <h1>Gérer l'organisation d'obsèques <br/> dans notre agence</h1>
+            <h2>Gérer l'organisation d'obsèques <br/> dans notre agence</h2>
         </div>
     </div>
     <div id="commitmentsRow">

@@ -68,21 +68,21 @@
         <button id="btn-slider-help-prev">
         <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
         </button>
-        <div id="hide-slider-help" onclick="moveSlider()">
-            <ul id="slider-help">
+        <div id="hide-slider-help">
+            <div id="slider-help">
                 <?php
                 $contents = json_decode(file_get_contents(__DIR__ . "/sliderContent.json"));
                 foreach ($contents as $content) {
                     ?>
-                    <li class="elem-slide-help">
+                    <div class="elem-slide-help">
                         <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
                         <span><?php echo $content->text; ?></span>
                         <a href>Ouvrir</a>
-                    </li>
+                    </div>
                 <?php } ?>
-            </ul>
+            </div>
         </div>
-        <button id="btn-slider-help-next" onclick="moveSlider()">
+        <button id="btn-slider-help-next">
             <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
         </button>
     </div>

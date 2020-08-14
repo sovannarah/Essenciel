@@ -39,14 +39,14 @@ select {
     background-size: 100% 100%;
 }
 
-.banner-double-img h1{
+.banner-double-img h2{
     margin: auto;
     font-size: 1.8vw;
     color: white;
     text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
 }
 
-.banner-double-img h1::before{
+.banner-double-img h2::before{
     content: "";
     height: 0.3vw;
     width: 5vw;
@@ -57,7 +57,7 @@ select {
     background-color: white;
 }
 
-.banner-double-img h1::after{
+.banner-double-img h2::after{
     content: "";
     height: 0.3vw;
     width: 5vw;
@@ -73,7 +73,7 @@ select {
     display: flex;
     background-color: #4bbfcc;
     width: 38%!important;
-    box-shadow: 0 0 40px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 2.5vw 1vw rgba(0,0,0,0.3);
     border: none;
 }
 
@@ -83,6 +83,7 @@ select {
     margin-bottom: auto;
     margin-left: 17%;
     font-size: 1.1vw;
+    font-weight: bold;
 }
 
 

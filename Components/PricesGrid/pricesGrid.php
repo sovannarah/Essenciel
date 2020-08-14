@@ -1,11 +1,11 @@
 <div id="pricesGrid">
 
-        <div id="ctnPricesGrid">
-            <div id="prices-col-0">
-                <div id="row-0">
+        <div id="prices-grid" class="prices-grid">
+            <div class="prices-col-0">
+                <div class="row-0">
                     <p>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></p>
                 </div>
-                <div id="row-1" class="prices-row">
+                <div class="prices-row row-1">
                     <p><span>A.</span> Le défunt se trouve en établissement de soins.</p>
                 </div>
                 <div class="prices-row">
@@ -46,12 +46,12 @@
         $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
         for ($i = 0; $i < count($contents); $i++) {
             $content = $contents[$i]; ?>
-            <div id="ctnPricesGrid">
-                <div id="prices-col-0">
-                    <div id="row-0">
+            <div class="prices-grid" >
+                <div class="prices-col-0">
+                    <div class="row-0">
                         <p>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></p>
                     </div>
-                    <div id="row-1" class="prices-row">
+                    <div class="prices-row row-1">
                         <p><span>A.</span> Le défunt se trouve en établissement de soins.</p>
                     </div>
                     <div class="prices-row">
