@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 14 août 2020 à 02:04
+-- Généré le : sam. 15 août 2020 à 22:49
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.8
 
@@ -63,6 +63,25 @@ INSERT INTO `civilities` (`id`, `civility`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `civilities_def`
+--
+
+CREATE TABLE `civilities_def` (
+  `id_civility_def` int(11) NOT NULL,
+  `civility_def` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `civilities_def`
+--
+
+INSERT INTO `civilities_def` (`id_civility_def`, `civility_def`) VALUES
+(1, 'Monsieur'),
+(2, 'Madame');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `devis`
 --
 
@@ -80,16 +99,9 @@ CREATE TABLE `devis` (
   `phone_number` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `id_formule` int(11) NOT NULL,
+  `message` text DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `devis`
---
-
-INSERT INTO `devis` (`id`, `etablishment_address`, `id_accompaniment`, `id_civility_def`, `last_name_def`, `first_name_def`, `id_link`, `id_civility`, `last_name`, `first_name`, `phone_number`, `email`, `id_formule`, `createdAt`) VALUES
-(1, '18', 0, 1, 'fe', 'fe', 3, 1, 'fe', 'fe', 'fe', 'fe', 0, '2020-08-08 09:12:07'),
-(2, '18', 0, 1, 'fe', 'fe', 3, 1, 'fe', 'fe', 'fe', 'fe', 0, '2020-08-08 09:12:20');
 
 -- --------------------------------------------------------
 
@@ -122,15 +134,15 @@ INSERT INTO `formule` (`id`, `id_location`, `id_type`, `id_type_option_answer`, 
 (10, 3, 1, 1, 2390),
 (11, 3, 2, 1, 2390),
 (12, 3, 2, 2, 2690),
-(25, 1, NULL, NULL, 0),
-(26, 2, NULL, NULL, 1300),
-(27, 3, NULL, NULL, 300),
-(28, 1, 1, NULL, 1800),
-(29, 1, 2, NULL, 2190),
-(30, 2, 1, NULL, 3100),
-(31, 2, 2, NULL, 3490),
-(32, 3, 1, NULL, 2100),
-(33, 3, 2, NULL, 2490);
+(25, 1, 0, 0, 0),
+(26, 2, 0, 0, 1300),
+(27, 3, 0, 0, 300),
+(28, 1, 1, 0, 1800),
+(29, 1, 2, 0, 2190),
+(30, 2, 1, 0, 3100),
+(31, 2, 2, 0, 3490),
+(32, 3, 1, 0, 2100),
+(33, 3, 2, 0, 2490);
 
 -- --------------------------------------------------------
 
@@ -526,6 +538,12 @@ ALTER TABLE `civilities`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `civilities_def`
+--
+ALTER TABLE `civilities_def`
+  ADD PRIMARY KEY (`id_civility_def`);
+
+--
 -- Index pour la table `devis`
 --
 ALTER TABLE `devis`
@@ -606,6 +624,12 @@ ALTER TABLE `accompaniments`
 --
 ALTER TABLE `civilities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `civilities_def`
+--
+ALTER TABLE `civilities_def`
+  MODIFY `id_civility_def` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `devis`

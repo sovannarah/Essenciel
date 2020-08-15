@@ -66,6 +66,8 @@ try {
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;s700;900&display=swap" rel="stylesheet"/>
 
+<!--    <script src="https://cdn.jsdelivr.net/npm/match-sorter@4.2.0/dist/match-sorter.cjs.min.js"></script>-->
+
 </head>
 <body id="main">
 <?php

@@ -1,16 +1,23 @@
 <section id="admin">
     <div id="admin-header">
         <h2>Vos dernières <br/><span>DEMANDE DE DEVIS</span></h2>
-        <div>
-            <button>filter</button>
-        </div>
-        <div>
+
+        <div id="ctn-btns-header-admin">
+        <div class="ctn-btn-header-admin">
             <button>
-                Rechercher
+                filter
             </button>
         </div>
+            <div id="ctn-search-quote" class="ctn-btn-header-admin">
+                <input id="text-field-search" class="filter" name="search-quote" type="text"
+                       placeholder="Rechercher..."/>
+                <button>
+                    Rechercher
+                </button>
+            </div>
+        </div>
     </div>
-    <div>
+    <div id="ctn-admin-table">
         <div id="admin-table">
             <div class="thead">
                 <div class="col-date">Date</div>
@@ -22,26 +29,8 @@
                 <div class="col-status">Statut</div>
                 <div class="col-action">dwd</div>
             </div>
-            <div class="tbody">
-            <?php
-            for ($i = 0; $i < 3; $i++) {
-                ?>
-                <div class="tr">
-                    <div class="main-tr">
-                        <div class="col-date">04/08/2020</div>
-                        <div class="col-name">Doe</div>
-                        <div class="col-firstname">John</div>
-                        <div class="col-number">00634178339</div>
-                        <div class="col-mail">sovannra.hem@gmail.com</div>
-                        <div class="col-total">2190 €</div>
-                        <div class="col-status">en attente</div>
-                        <div class="col-action">dwdw</div>
-                    </div>
-                    <div class="clp">
+            <div id="admin-rows" class="tbody">
 
-                    </div>
-                </div>
-            <?php } ?>
             </div>
         </div>
     </div>

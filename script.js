@@ -6,6 +6,8 @@ let form = {
     ceremony: 0,
 }
 
+// console.log(matchSorter)
+
 const ip = "http://192.168.1.18/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
@@ -19,9 +21,9 @@ $(function () {
         $.post('/Essenciel/server.php', {"redirect": submitValid}, function (data) {
             const errors = JSON.parse(data);
             if(errors.length === 0) {
-                // $.post('/Essenciel/server.php', {form: ""}, function (data) {
-                //     console.log(data)
-                // })
+                $.post('/Essenciel/server.php', {form: ""}, function (data) {
+                    console.log(data)
+                })
             } else {
                 errors.forEach(field => {
                     console.log(field)
@@ -181,7 +183,7 @@ $(function () {
         if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().left)) {
             const slider = $("#slider-help");
             slider.css("left", `${document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
-            posSlider = posSlider - offsetElem;
+            posSlider = posSlider - offsetElem;``
         }
     })
 
@@ -192,6 +194,103 @@ $(function () {
             slider.css("left", `${ document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
         }
     })
+
+    function renderRowQuote(data) {
+        $("#admin-rows").empty();
+        data.forEach(row => {
+        let html = `<div class="tr admin-row-quote txt-info">
+                        <div class="main-tr">
+                            <div class="col-date">${row.createdAt}</div>
+                            <div class="col-name">${row.last_name}</div>
+                            <div class="col-firstname">${row.first_name}</div>
+                            <div class="col-number">${row.phone_number}</div>
+                            <div class="col-mail">${row.email}</div>
+                            <div class="col-total">${row.total}€</div>
+                            <div class="col-status">En attente</div>
+                            <div class="col-action">dwdw</div>
+                        </div>
+                        <div class="hide-clp hide-details">
+                            <div class="clp">
+                                <div class="admin-row-1">
+                                    <div>
+                                        <label>Lieu où se situe le défunt</label>
+                                        <span>${row.location}</span>
+                                        <span>${row.etablishment_address}</span>
+                                    </div>
+                                    <div>
+                                        <label>Type d'obsèque</label>
+                                        <span>
+                                        <?php
+                                        switch ($quote["id_type_option_answer"]) {
+                                            case 1:
+                                                echo "Crémation avec cérémonie";
+                                                break;
+                                            case 2:
+                                                echo "Crémation sans cérémonie";
+                                                break;
+                                            case 3:
+                                                echo "Inhumation caveau existant";
+                                                break;
+                                            case 4:
+                                                echo "Inhumation dans une sepulture pleine terre";
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                        ?>
+                                    </span>
+                                    </div>
+                                    <div>
+                                        <label>Accompagnement</label>
+                                        <span>${row.accompaniment}</span>
+                                    </div>
+                                    <div>
+                                        <label>Information sur le défunt</label>
+                                        <span>
+                                        ${row.civility_def} ${row.last_name} ${row.first_name}. Lien avec le client:${row.link}
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="admin-row-2">
+                                    <label>Message du client</label>
+                                    <p>${row.message ? row.message : "Le client n'a pas laissé de messsage."}</p>
+                               </div>
+                            </div>
+                        </div>
+                    </div>`
+            $("#admin-rows").append(html)
+        })
+    }
+
+    $("#admin-rows").on("click", ".admin-row-quote", function() {
+        $hideCtn = $(".hide-clp");
+        $rows = $(".admin-row-quote");
+        $rows.removeClass("txt-black");
+        $rows.addClass("txt-info");
+        $hideCtn.removeClass("show-details");
+        $hideCtn.addClass("hide-details");
+        $(this).removeClass("txt-info");
+        $(this).addClass("txt-black");
+        $(this).find('.hide-clp').addClass("show-details");
+    })
+
+    if($("#admin-rows")) {
+        $.post('/Essenciel/server.php', {"search_quote" : ""}, function (data) {
+            console.log(JSON.parse(data))
+            renderRowQuote(JSON.parse(data))
+        })
+    }
+
+    $("#text-field-search").change(function(e) {
+        const {name, value} = e.target;
+        console.log(value)
+        console.log("totlrtkrotk")
+        $.post("/Essenciel/server.php", {"search_quote": value}, function(data) {
+            console.log(data)
+            renderRowQuote((JSON.parse(data)))
+        })
+    })
+
 })
 
 function disabledButtonsConceptSlide(bool) {
