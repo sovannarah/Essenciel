@@ -3,11 +3,46 @@
         <h2>Vos dernières <br/><span>DEMANDE DE DEVIS</span></h2>
 
         <div id="ctn-btns-header-admin">
-        <div class="ctn-btn-header-admin">
-            <button>
-                filter
-            </button>
-        </div>
+            <div class="ctn-btn-header-admin ctn-filter">
+                <button id="filter-admin">
+                    filter
+                </button>
+                <div id="popover-filter" class="d-none">
+                    <div id="ctn-checkbox-type" class="ctn-ckx">
+                        <label class="title-ckx">TYPES D'OBSEQUES</label>
+                        <div class="ctn-check">
+                            <label>Cremation</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_type" value="1"/>
+                        </div>
+                        <div class="ctn-check">
+                            <label>Enterrement</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_type" value="2"/>
+                        </div>
+                    </div>
+                    <div id="ctn-checkbox-accompaniment" class="ctn-ckx">
+                        <label class="title-ckx">ACCOMPAGNEMENT</label>
+                        <div class="ctn-check">
+                            <label>A distance</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_accompaniment" value="1"/>
+                        </div>
+                        <div class="ctn-check">
+                            <label>En agence</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_accompaniment" value="2"/>
+                        </div>
+                    </div>
+                    <div id="ctn-checkbox-status" class="ctn-ckx">
+                        <label class="title-ckx">STATUT</label>
+                        <div class="ctn-check">
+                            <label>En attente</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_status" value="1"/>
+                        </div>
+                        <div class="ctn-check">
+                            <label>Valider</label>
+                            <input class="checkbox-filter" type="checkbox" name="id_status" value="2"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="ctn-search-quote" class="ctn-btn-header-admin">
                 <input id="text-field-search" class="filter" name="search-quote" type="text"
                        placeholder="Rechercher..."/>

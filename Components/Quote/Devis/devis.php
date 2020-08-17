@@ -5,17 +5,17 @@
     if ($_SESSION["type_option_answer"] > 2) {
         $_SESSION["type_option_answer"] = $_SESSION["type_option_answer"] - 2;
     }
-    $req = "SELECT id FROM formule WHERE id_location = " . $_SESSION["location"] . " AND id_type = " . $_SESSION["type"] . " AND id_type_option_answer = " . $_SESSION["type_option_answer"];
+    $req = "SELECT id_formule FROM formule WHERE id_location = " . $_SESSION["location"] . " AND id_type = " . $_SESSION["type"] . " AND id_type_option_answer = " . $_SESSION["type_option_answer"];
     $res = $GLOBALS["bdd"]->query($req);
     while ($formule = $res->fetch()) {
-        $_SESSION["formule"] = $formule["id"];
+        $_SESSION["formule"] = $formule["id_formule"];
         $reqCat = "SELECT * FROM prestation_category";
         $resCat = $GLOBALS["bdd"]->query($reqCat);
         $results = [];
         while ($cat = $resCat->fetch()) {
             $results[$cat["prestation_category"]] = [];
         }
-        $reqPrest = "SELECT * FROM prestations NATURAL JOIN prestation NATURAL JOIN prestation_category WHERE prestations.id_formule = " . $formule["id"];
+        $reqPrest = "SELECT * FROM prestations NATURAL JOIN prestation NATURAL JOIN prestation_category WHERE prestations.id_formule = " . $formule["id_formule"];
         $resPres = $GLOBALS["bdd"]->query($reqPrest);
 
         while ($data = $resPres->fetch()) {

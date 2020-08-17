@@ -15,7 +15,6 @@ try {
 }
 
 if (isset($_POST["total"])) {
-    var_dump("ENCULER!!!");
     $_SESSION["total"] = $_POST["total"];
 }
 
@@ -73,28 +72,55 @@ if (isset($_POST["redirect"])) {
 
 if (isset($_POST["search_quote"])) {
     $req = "";
-    if ($_POST["search_quote"] !== "") {
-        $req = "SELECT * FROM devis NATURAL JOIN formule NATURAL JOIN accompaniments NATURAL JOIN  civilities NATURAL JOIN links NATURAL JOIN location NATURAL JOIN civilities_def WHERE CONCAT(
-etablishment_address,
-last_name_def,
-first_name_def,
-last_name,
-first_name,
-phone_number,
-email,
-message,
-createdAt,
-id_type_option_answer,
-total,
-accompaniment,
-civility,
-link,
-location,
-civility_def
-) LIKE '%" . $_POST["search_quote"] . "%'";
-    } else {
-        $req = "SELECT * FROM devis NATURAL JOIN formule NATURAL JOIN accompaniments NATURAL JOIN  civilities NATURAL JOIN links NATURAL JOIN location NATURAL JOIN civilities_def";
+    $search = "";
+    $filterType = "";
+    $filterAccompaniment = "";
+    $filterStatus = "";
+    $where = "";
+    if($_POST["search_quote"]["search"] || $_POST["search_quote"]["id_type"] || $_POST["search_quote"]["id_accompaniment"] || $_POST["search_quote"]["id_status"]) {
+        $where = "WHERE ";
     }
+    if ($_POST["search_quote"]["search"]) {
+        $search = "CONCAT(
+        etablishment_address,
+        last_name_def,
+        first_name_def,
+        last_name,
+        first_name,
+        phone_number,
+        email,
+        message,
+        createdAt,
+        id_type_option_answer,
+        total,
+        accompaniment,
+        civility,
+        link,
+        location,
+        civility_def
+        ) LIKE '%" . $_POST["search_quote"]["search"] . "%' ";
+    }
+    if($_POST["search_quote"]["id_type"]) {
+        $filterType = "id_type='" . $_POST["search_quote"]["id_type"] . "' ";
+    }
+    if($_POST["search_quote"]["id_accompaniment"]) {
+        $filterAccompaniment = "id_accompaniment='" . $_POST["search_quote"]["id_accompaniment"] . "' ";
+    }
+    if($_POST["search_quote"]["id_status"]) {
+        $filterStatus = "id_type='" . $_POST["search_quote"]["id_status"] . "' ";
+    }
+    $filter = $filterType . $filterAccompaniment . $filterStatus;
+
+    $filter = str_replace(" ", " AND ", $filter);
+    $filter = substr($filter, 0, -4);
+    $comb = "";
+    if($filter !== "" && $search !== "") {
+           $comb = " AND ";
+    }
+    $combineFilter =  $filter . $comb .  $search;
+    $req = "SELECT * FROM devis NATURAL JOIN formule NATURAL JOIN accompaniments NATURAL JOIN  civilities NATURAL JOIN links NATURAL JOIN location NATURAL JOIN civilities_def " . $where . $combineFilter;
+//    var_dump($req);
+
     $data = [];
     $res = $bdd->query($req);
     while ($r = $res->fetch()) {
@@ -105,9 +131,6 @@ civility_def
 
 
 if (isset($_POST["form"])) {
-
-    var_dump($_SESSION);
-
     $etablishmentAddress = $_SESSION["etablishment_address"];
     $idAccompaniment = $_SESSION["accompaniment"];
     $idCivilityDef = $_SESSION["civi_def"];
@@ -121,8 +144,24 @@ if (isset($_POST["form"])) {
     $email = $_SESSION["email"];
     $idFormule = $_SESSION["formule"];
     $message = isset($_SESSION["message"]) ? $_SESSION["message"] : "";
-    $query = "INSERT INTO users (etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
-  			  VALUES('$etablishmentAddress','$idAccompaniment','$idCivilityDef','$lastNameDef','$firstNameDef','$idLink','$idCivility','$lastName','$firstName','$phoneNumber','$email','$idFormule' ,'$message')";
-    mysqli_query($bdd, $query);
+    $query = $bdd->prepare('INSERT INTO devis (etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
+  			  VALUES(:etablishment_address, :id_accompaniment, :id_civility_def, :last_name_def, :first_name_def, :id_link, :id_civility, :last_name, :first_name, :phone_number, :email, :id_formule, :message)');
+
+    $query->execute(array(
+        'etablishment_address' => $etablishmentAddress,
+        'id_accompaniment' => $idAccompaniment,
+        'id_civility_def' => $idCivilityDef,
+        'last_name_def' => $lastNameDef,
+        'first_name_def' => $firstNameDef,
+        'id_link' => $idLink,
+        'id_civility' => $idCivility,
+        'last_name' => $lastName,
+        'first_name' => $firstName,
+        'phone_number' => $phoneNumber,
+        'email' => $email,
+        'id_formule' => $idFormule,
+        'message' => $message
+    ));
+    var_dump($bdd->errorInfo());
 }
 ?>

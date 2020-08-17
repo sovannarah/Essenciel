@@ -92,7 +92,7 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
             if ($_SERVER['REQUEST_URI'] !== "/Essenciel/quote/info") {
                 ?>
 
-                <button id="next-quote-form" class="btn-redirect-blue">
+                <button id="next-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>" class="btn-redirect-blue">
                     <span>Suivant</span>
                 </button>
             <?php } else { ?>

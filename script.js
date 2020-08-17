@@ -6,8 +6,6 @@ let form = {
     ceremony: 0,
 }
 
-// console.log(matchSorter)
-
 const ip = "http://192.168.1.18/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
@@ -16,7 +14,7 @@ $(function () {
 
 
     $("#submit-form").click(function (e) {
-        // e.preventDefault();
+        e.preventDefault();
         const submitValid = ["civi" , "last_name", "first_name", "phone_number", "email"];
         $.post('/Essenciel/server.php', {"redirect": submitValid}, function (data) {
             const errors = JSON.parse(data);
@@ -26,7 +24,6 @@ $(function () {
                 })
             } else {
                 errors.forEach(field => {
-                    console.log(field)
                     $(`#error-` + field).removeClass('d-none');
                 })
             }
@@ -34,6 +31,35 @@ $(function () {
 
     })
 
+    function redirectLinkQuote(redirectLinkName, indexLink) {
+        const nextValidation = [
+            ['location', 'etablishment_address'],
+            ['type', 'type_option_answer'],
+            [''],
+            ['accompaniment', 'civi_def', 'last_name_def', 'first_name_def', 'def_link']
+        ]
+        let validNext = true;
+        const keys = [];
+        for (let i = 0; i < indexLink; i++) {
+            nextValidation[i].forEach(key => {
+                keys.push(key)
+            })
+        }
+        if (redirectLinkName === "lieu") {
+            window.location.href = `${ip}quote/${redirectLinkName}`;
+        } else {
+            $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
+                validNext = JSON.parse(data);
+                if (validNext.length == 0) {
+                    window.location.href = `${ip}quote/${redirectLinkName}`;
+                } else {
+                    validNext.forEach(field => {
+                        $(`#error-` + field).removeClass('d-none');
+                    })
+                }
+            })
+        }
+    }
 
     function changeColorBtnQuote(btn) {
         const btns = $('.quote-input');
@@ -53,8 +79,8 @@ $(function () {
         const ctn = $("#ctn-types-next");
         ctn.empty();
         $.post('/Essenciel/server.php', {"type_options": id}, function (data) {
-            // console.log(data);
             const c = JSON.parse(data);
+
         let html = `<div id="ctn-quote-input" >
  <label id="question-ceremony">${c.type_option}</label>
             <div id="ctn-checkbox-quote">
@@ -90,7 +116,6 @@ $(function () {
 
     $("#ctn-quote-input").on('change', '.select', function(e) {
         const {name,value} = e.target;
-        console.log(value)
         $.post('/Essenciel/quote/' + name, {[name]: value}, function (data) {
         })
     })
@@ -101,16 +126,18 @@ $(function () {
     $('#formQuote').on("click", '.quote-input', function () {
 
         const name = $(this).attr("name");
-        const id = $(this).attr("value");
-        console.log(name)
+        let id = $(this).attr("value");
         if(name !== "type_option_answer") {
             changeColorBtnQuote(this)
         }
         $.post('/Essenciel/quote/' + name, {[name]: id}, function (data) {
         })
-        console.log(name, id)
         sendTotal(name, id);
         if (name == "type_option_answer") {
+            console.log(id)
+            if(id > 2) {
+                id = id - 2;
+            }
             $("#ceremony-2").prop('checked', false);
             $("#ceremony-1").prop('checked', false);
             $(`#ceremony-${id}`).prop('checked', true);
@@ -120,46 +147,13 @@ $(function () {
         }
     })
 
-    // $('#formQuote').on("click", ".type-checkbox", function() {
-    //
-    // })
+
 
 
     $(".btn-nav-quote").click(function () {
         const indexLink = $(this).attr("value");
         const redirectLinkName = pages[indexLink];
-        const nextValidation = [
-            ['location', 'etablishment_address'],
-            ['type', 'type_option_answer'],
-            [''],
-            ['accompaniment', 'civi_def', 'last_name_def', 'first_name_def', 'def_link']
-        ]
-        let validNext = true;
-        const keys = [];
-        for (let i = 0; i < indexLink; i++) {
-            nextValidation[i].forEach(key => {
-                keys.push(key)
-            })
-        }
-        if (redirectLinkName === "lieu") {
-            window.location.href = `${ip}quote/${redirectLinkName}`;
-        } else {
-            $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
-                validNext = JSON.parse(data);
-
-                // console.log(validNext.length)
-
-                if (validNext.length == 0) {
-                    console.log("nezt")
-                    window.location.href = `${ip}quote/${redirectLinkName}`;
-                } else {
-                    validNext.forEach(field => {
-                        console.log(field)
-                        $(`#error-` + field).removeClass('d-none');
-                    })
-                }
-            })
-        }
+        redirectLinkQuote(redirectLinkName, indexLink);
 
     })
 
@@ -198,6 +192,23 @@ $(function () {
     function renderRowQuote(data) {
         $("#admin-rows").empty();
         data.forEach(row => {
+            let type;
+            switch (row.id_type_option_answer) {
+                case "1":
+                    type = "Crémation avec cérémonie";
+                    break;
+                case "2":
+                    type = "Crémation sans cérémonie";
+                    break;
+                case "3":
+                    type = "Inhumation caveau existant";
+                    break;
+                case "4":
+                    type = "Inhumation dans une sepulture pleine terre";
+                    break;
+                default:
+                    break;
+            }
         let html = `<div class="tr admin-row-quote txt-info">
                         <div class="main-tr">
                             <div class="col-date">${row.createdAt}</div>
@@ -219,25 +230,7 @@ $(function () {
                                     </div>
                                     <div>
                                         <label>Type d'obsèque</label>
-                                        <span>
-                                        <?php
-                                        switch ($quote["id_type_option_answer"]) {
-                                            case 1:
-                                                echo "Crémation avec cérémonie";
-                                                break;
-                                            case 2:
-                                                echo "Crémation sans cérémonie";
-                                                break;
-                                            case 3:
-                                                echo "Inhumation caveau existant";
-                                                break;
-                                            case 4:
-                                                echo "Inhumation dans une sepulture pleine terre";
-                                                break;
-                                            default:
-                                                break;
-                                        }
-                                        ?>
+                                        <span>${type}
                                     </span>
                                     </div>
                                     <div>
@@ -274,21 +267,57 @@ $(function () {
         $(this).find('.hide-clp').addClass("show-details");
     })
 
+    let objSearch = {
+        search: "",
+        id_type: "",
+        id_accompaniment: "",
+        id_status: ""
+    }
     if($("#admin-rows")) {
-        $.post('/Essenciel/server.php', {"search_quote" : ""}, function (data) {
-            console.log(JSON.parse(data))
+        $.post('/Essenciel/server.php', {"search_quote" : objSearch}, function (data) {
+            console.log(data)
             renderRowQuote(JSON.parse(data))
         })
     }
 
     $("#text-field-search").change(function(e) {
+        // console.log('trololo')
         const {name, value} = e.target;
-        console.log(value)
-        console.log("totlrtkrotk")
-        $.post("/Essenciel/server.php", {"search_quote": value}, function(data) {
+        objSearch.search = value;
+        $.post("/Essenciel/server.php", {"search_quote": objSearch}, function(data) {
             console.log(data)
             renderRowQuote((JSON.parse(data)))
         })
+    })
+
+    $('#popover-filter').on("click", ".checkbox-filter", function(e) {
+        const {name, value} = e.target;
+        if(!$(this).prop("checked")) {
+            $(this).prop('checked', false);
+            objSearch[name] = "";
+        }  else {
+            const checkboxes = $(`#ctn-checkbox-${name.split('_')[1]}`).find(".checkbox-filter");
+            for (let i = 0; i < checkboxes.length; i++) {
+                checkboxes.prop('checked', false)
+            }
+            $(this).prop("checked", true);
+            objSearch[name] = value;
+        }
+        $.post("/Essenciel/server.php", {"search_quote": objSearch}, function(data) {
+            console.log(data)
+            renderRowQuote((JSON.parse(data)))
+        })
+    })
+
+    $("#filter-admin").click(function() {
+        $("#popover-filter").toggleClass("d-none");
+    })
+
+    $("#next-quote-form").click(function (e) {
+        e.preventDefault()
+        const nextStepIndex = pages.indexOf(e.target.value);
+        const nextStepName = pages[nextStepIndex + 1];
+        redirectLinkQuote(nextStepName, nextStepIndex + 1)
     })
 
 })
