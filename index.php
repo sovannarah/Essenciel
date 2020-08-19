@@ -24,7 +24,6 @@ $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
-
 try {
     // On se connecte à MySQL
     $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
@@ -72,7 +71,13 @@ try {
 <body id="main">
 <?php
 require "vendor/autoload.php";
-include("Components/Header/header.php");
+if($tabUrl[count($tabUrl) - 1] === "admin") {
+    include("Components/Admin/header.php");
+} else if ($tabUrl[count($tabUrl) - 2] === "quote") {
+    include("Components/Quote/Header/header.php");
+} else {
+    include("Components/Header/header.php");
+}
 
 
 $router = new App\Router\Router($_GET['url']);
@@ -107,7 +112,7 @@ $router->get("/quote/:lieu", function ($lieu) {
 $router->run();
 ?>
 <?php
-if ($lastParams !== "admin") {
+if ($lastParams !== "admin" && $tabUrl[count($tabUrl) - 2] !== "quote") {
     include("Components/QuoteForm/quoteForm.php");
 } ?>
 <?php include("Components/Footer/footer.php") ?>

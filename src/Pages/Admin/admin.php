@@ -1,12 +1,13 @@
 <section id="admin">
+
     <div id="admin-header">
         <h2>Vos dernières <br/><span>DEMANDE DE DEVIS</span></h2>
-
         <div id="ctn-btns-header-admin">
             <div class="ctn-btn-header-admin ctn-filter">
-                <button id="filter-admin">
-                    filter
-                </button>
+                    <button id="filter-admin">
+                        filter
+                        <img src="<?php echo $GLOBALS["ip"]; ?>/assets/png-x2/filter.svg" alt=""/>
+                    </button>
                 <div id="popover-filter" class="d-none">
                     <div id="ctn-checkbox-type" class="ctn-ckx">
                         <label class="title-ckx">TYPES D'OBSEQUES</label>
@@ -47,7 +48,7 @@
                 <input id="text-field-search" class="filter" name="search-quote" type="text"
                        placeholder="Rechercher..."/>
                 <button>
-                    Rechercher
+                    <img src="<?php echo $GLOBALS["ip"]; ?>/assets/png-x2/loupe.svg" alt=""/>
                 </button>
             </div>
         </div>
@@ -58,15 +59,25 @@
                 <div class="col-date">Date</div>
                 <div class="col-name">Nom</div>
                 <div class="col-firstname">Prénom</div>
-                <div class="col-number">N de téléphone</div>
-                <div class="col-mail">E-mail</div>
+                <div class="col-number">
+
+                    N de téléphone
+                </div>
+                <div class="col-mail">
+                    E-mail
+                </div>
                 <div class="col-total">Montant</div>
                 <div class="col-status">Statut</div>
-                <div class="col-action">dwd</div>
+                <div class="col-action"></div>
             </div>
             <div id="admin-rows" class="tbody">
 
             </div>
         </div>
+    </div>
+    <div id="view-quote" class="d-none">
+        <button id="close-view-quote">
+            fermer x
+        </button>
     </div>
 </section>

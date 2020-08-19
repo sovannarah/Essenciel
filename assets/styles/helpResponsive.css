@@ -70,4 +70,28 @@
         font-size: 2.3vw!important;
         width: 50vw!important;
     }
+
+
+    #ctn-help-slider {
+        height: 70vw;
+        margin-bottom: 10vw;
+    }
+
+    #slider-help .elem-slide-help {
+        width: calc(78vw / 1);
+    }
+
+    #slider-help .elem-slide-help span, #slider-help .elem-slide-help a{
+        font-size: 3vw;
+    }
+
+    #ctn-help-slider button {
+        height: 100%;
+        width: 20vw;
+    }
+
+    #ctn-help-slider button img {
+        width: 50%;
+    }
+
 }

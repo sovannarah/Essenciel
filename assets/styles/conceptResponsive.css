@@ -72,5 +72,12 @@
 
     #container-concept-slider {
         margin: 7vw 0;
+        display: none;
     }
+
+    #ctn-concept-slider-4 {
+        display: flex;
+    }
+
+
 }

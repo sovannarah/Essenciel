@@ -69,6 +69,34 @@ if (isset($_POST["redirect"])) {
     echo json_encode($valid);
 }
 
+if(isset($_POST["getQuote"])) {
+    $req = "SELECT * FROM devis WHERE id=". $_POST["getQuote"];
+    $res = $bdd->query($req);
+    $query = $bdd->prepare('INSERT INTO archive (id, etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
+  			  VALUES(:id, :etablishment_address, :id_accompaniment, :id_civility_def, :last_name_def, :first_name_def, :id_link, :id_civility, :last_name, :first_name, :phone_number, :email, :id_formule, :message)');
+    while($data = $res->fetch()) {
+        $query->execute(array(
+            'id' => $data["id"],
+            'etablishment_address' => $data["etablishment_address"],
+            'id_accompaniment' => $data["id_accompaniment"],
+            'id_civility_def' => $data["id_civility_def"],
+            'last_name_def' => $data["last_name_def"],
+            'first_name_def' => $data["first_name_def"],
+            'id_link' => $data["id_link"],
+            'id_civility' => $data["id_civility"],
+            'last_name' => $data["last_name"],
+            'first_name' => $data["first_name"],
+            'phone_number' => $data["phone_number"],
+            'email' => $data["email"],
+            'id_formule' => $data["id_formule"],
+            'message' => $data["message"]
+        ));
+    }
+    $delReq = "DELETE FROM devis WHERE id=". $_POST["getQuote"];
+    $delQuery = $bdd->query($delReq);
+    $delQuery->execute();
+
+}
 
 if (isset($_POST["search_quote"])) {
     $req = "";
@@ -163,5 +191,25 @@ if (isset($_POST["form"])) {
         'message' => $message
     ));
     var_dump($bdd->errorInfo());
+}
+
+if(isset($_POST["getFormule"])) {
+    $req = "SELECT id_formule FROM formule WHERE id_formule = " . $_POST["getFormule"];
+    $res = $bdd->query($req);
+    $results = [];
+    while ($formule = $res->fetch()) {
+        $reqCat = "SELECT * FROM prestation_category";
+        $resCat = $bdd->query($reqCat);
+        while ($cat = $resCat->fetch()) {
+            $results[$cat["prestation_category"]] = [];
+        }
+        $reqPrest = "SELECT * FROM prestations NATURAL JOIN prestation NATURAL JOIN prestation_category WHERE prestations.id_formule = " . $formule["id_formule"];
+        $resPres = $GLOBALS["bdd"]->query($reqPrest);
+
+        while ($data = $resPres->fetch()) {
+            $results[$data["prestation_category"]][] = $data;
+        }
+    }
+    echo json_encode($results);
 }
 ?>

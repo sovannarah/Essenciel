@@ -77,12 +77,13 @@
 }
 
 .help-row div {
-    height: 38vw;
+    /*height: 38vw;*/
 }
 
 .help-row-main-content {
     width: 44%;
     display: flex;
+    margin-bottom: 10vw;
 }
 
 .help-ctn-mrg {
@@ -190,12 +191,13 @@
     position: absolute;
     left: 0;
     right: auto;
-    transition: all 1s;
+    transition: all 0.4s;
+    height: 100%;
 }
 
 #slider-help .elem-slide-help {
     display: flex;
-    height: 16.5vw;
+    height: 100%;
     width: calc(78vw / 4);
     flex-direction: column;
     padding: 0 ;
@@ -206,6 +208,10 @@
     font-size: 1.1vw;
     font-weight: bold;
 }
+#slider-help .elem-slide-help > * {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 #slider-help a {
     color: #4abfcb;
@@ -213,12 +219,14 @@
 }
 #slider-help img {
     height: 58%;
-    width: 100%;
+    width: 90%;
 }
 
 #ctn-help-slider {
     display: flex;
     justify-content: center;
+    height: 16.5vw;
+    margin-bottom: 5vw;
 }
 #ctn-help-slider button{
     height: 11.5vw;

@@ -4,10 +4,42 @@
         flex-direction: column;
     }
 
+    #header-quote {
+        height: 20vw;
+    }
+
+    #ctn-logo-quote img {
+        height: 3.5vw;
+    }
+
+    #ctn-acn-quote a img {
+        height: 2.4vw;
+    }
+    #ctn-acn-quote a span {
+        font-size: 2vw;
+    }
+
+    #header-quote h1 {
+        font-size: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header-quote {
+        margin-bottom: 2vw !important;
+    }
+
     #navQuote {
         display: flex;
     }
 
+    #ctn-quote-input label {
+        width: 100%!important;
+    }
+
+    #ctn-checkbox-quote div {
+        text-align: center;
+    }
     #navQuote li {
         width: calc(100% / 5)!important;
         height: 10vw;
@@ -96,12 +128,51 @@
 
     #ctnInfoPrice {
         width: 100%!important;
+        flex-wrap: wrap;
     }
 
     #ctnQuote .info-price {
-        width: 100%;
+        width: 100%!important;
         margin: auto;
         height: 25vw;
+    }
+
+    #ctnQuote #next-quote-form {
+        position: relative;!important;
+        width: 100%!important;
+    }
+
+    #footer-quote-form {
+        width: 100%!important;
+    }
+
+    #ctn-step {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #ctn-step-info {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .step-bar {
+        height: 0.5vw;
+        margin-right: 1.4vw;
+        width: 7vw;
+    }
+    #footer-quote-form {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    #ctn-step span {
+        font-size: 3vw!important;
+    }
+    #ctn-step-info p {
+        font-size: 3vw!important;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .info-price h3, .bg-option, .info-price .price {
@@ -150,7 +221,9 @@
     }
 
     #ctn-checkbox-quote div .add-price-quote {
-        margin-top: 1vw
+        margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #ctn-devis li, #ctn-devis h5 {
@@ -168,6 +241,10 @@
         font-size: 3vw;
         margin-top: 3vw;
     }
+    #ctn-devis h4 {
+        font-size: 3vw!important;
+    }
+
 
     .row-mor-def h5 {
         font-size: 3vw!important;
@@ -190,8 +267,9 @@
     }
 
     #ctn-quote-input input {
-        width: 100%!important;
+        width: 100%;
         margin-left: 1.6vw;
+        margin-bottom: 3vw!important;
     }
 
     .row-def-inputs div {
@@ -201,4 +279,28 @@
     .column label {
         text-align: left!important;
     }
+
+    #error-etablishment_address {
+        font-size: 2vw!important;
+    }
+
+    #error-location {
+        font-size: 2vw!important;
+    }
+
+    #ctn-quote-input input {
+        border-bottom: 2vw solid #efede9!important;
+        padding-bottom: 2vw!important;
+    }
+
+    .ceremony-input {
+        width: auto!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    #submit-form {
+        position: relative!important;
+    }
+
 }

@@ -20,6 +20,30 @@
         </div>
     </div>
 
+    <div id="ctn-concept-slider-4" class="slider-resp-concept">
+        <button id="btn-slider-concept-prev">
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+        </button>
+        <div id="hide-slider-concept-4">
+            <div id="slider-concept-4">
+                <?php
+                $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
+                foreach ($contents[0] as $c) {
+                    foreach ($c as $content) {
+                    ?>
+                    <div class="elem-slide-concept-4">
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
+                        <span><?php echo $content->txt; ?></span>
+                    </div>
+                <?php }} ?>
+            </div>
+        </div>
+        <button id="btn-slider-concept-next">
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+        </button>
+    </div>
+
+
     <div id="container-concept-slider">
         <div id="ctn-dot-slider">
             <?php

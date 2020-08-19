@@ -15,12 +15,11 @@ $(function () {
 
     $("#submit-form").click(function (e) {
         e.preventDefault();
-        const submitValid = ["civi" , "last_name", "first_name", "phone_number", "email"];
-        $.post('/Essenciel/server.php', {"redirect": submitValid}, function (data) {
+        const submitValid = ["civi", "last_name", "first_name", "phone_number", "email"];
+        $.post(ip + 'server.php', {"redirect": submitValid}, function (data) {
             const errors = JSON.parse(data);
-            if(errors.length === 0) {
+            if (errors.length === 0) {
                 $.post('/Essenciel/server.php', {form: ""}, function (data) {
-                    console.log(data)
                 })
             } else {
                 errors.forEach(field => {
@@ -48,7 +47,7 @@ $(function () {
         if (redirectLinkName === "lieu") {
             window.location.href = `${ip}quote/${redirectLinkName}`;
         } else {
-            $.post('/Essenciel/server.php', {"redirect": keys}, function (data) {
+            $.post(ip + 'server.php', {"redirect": keys}, function (data) {
                 validNext = JSON.parse(data);
                 if (validNext.length == 0) {
                     window.location.href = `${ip}quote/${redirectLinkName}`;
@@ -70,7 +69,7 @@ $(function () {
     }
 
     function sendTotal(name, id) {
-        $.post('/Essenciel/server.php', {"amount": ''}, function (data) {
+        $.post(ip + 'server.php', {"amount": ''}, function (data) {
             $('.price-quote').html(JSON.parse(data)["total"] + "<span class=\"euro\">€</span>")
         })
     }
@@ -78,10 +77,10 @@ $(function () {
     function addNextTypes(id) {
         const ctn = $("#ctn-types-next");
         ctn.empty();
-        $.post('/Essenciel/server.php', {"type_options": id}, function (data) {
+        $.post(ip + 'server.php', {"type_options": id}, function (data) {
             const c = JSON.parse(data);
 
-        let html = `<div id="ctn-quote-input" >
+            let html = `<div id="ctn-quote-input" >
  <label id="question-ceremony">${c.type_option}</label>
             <div id="ctn-checkbox-quote">
                 <div>
@@ -99,43 +98,37 @@ $(function () {
             </div>
             
 </div><span id="error-type_option_answer" class="error-choice error-checkbox d-none">*Choix requis</span>`
-        ctn.append(html)
+            ctn.append(html)
         })
     }
 
 
-
-
-
-    $("#ctn-quote-input").on('change', '.text-field', function(e) {
-        const {name,value} = e.target;
-        $.post('/Essenciel/quote/' + name, {[name]: value}, function (data) {
+    $("#ctn-quote-input").on('change', '.text-field', function (e) {
+        const {name, value} = e.target;
+        $.post(ip + 'quote/' + name, {[name]: value}, function (data) {
         })
     })
 
 
-    $("#ctn-quote-input").on('change', '.select', function(e) {
-        const {name,value} = e.target;
-        $.post('/Essenciel/quote/' + name, {[name]: value}, function (data) {
+    $("#ctn-quote-input").on('change', '.select', function (e) {
+        const {name, value} = e.target;
+        $.post(ip + 'quote/' + name, {[name]: value}, function (data) {
         })
     })
-
-
 
 
     $('#formQuote').on("click", '.quote-input', function () {
 
         const name = $(this).attr("name");
         let id = $(this).attr("value");
-        if(name !== "type_option_answer") {
+        if (name !== "type_option_answer") {
             changeColorBtnQuote(this)
         }
-        $.post('/Essenciel/quote/' + name, {[name]: id}, function (data) {
+        $.post(ip + 'quote/' + name, {[name]: id}, function (data) {
         })
         sendTotal(name, id);
         if (name == "type_option_answer") {
-            console.log(id)
-            if(id > 2) {
+            if (id > 2) {
                 id = id - 2;
             }
             $("#ceremony-2").prop('checked', false);
@@ -148,8 +141,6 @@ $(function () {
     })
 
 
-
-
     $(".btn-nav-quote").click(function () {
         const indexLink = $(this).attr("value");
         const redirectLinkName = pages[indexLink];
@@ -158,10 +149,10 @@ $(function () {
     })
 
     if ($("ctn-types-next")) {
-        $.post('/Essenciel/server.php', {"type": ""}, function (data) {
+        $.post(ip + 'server.php', {"type": ""}, function (data) {
             if (data) {
                 addNextTypes(data);
-                $.post('/Essenciel/server.php', {"type_option_answer": ""}, function (ceremonyId) {
+                $.post(ip + 'server.php', {"type_option_answer": ""}, function (ceremonyId) {
                     if (ceremonyId) {
 
                         $(`#ceremony-${ceremonyId}`).prop('checked', true);
@@ -174,18 +165,38 @@ $(function () {
     let posSlider = 0;
     let offsetElem = 1
     $("#btn-slider-help-prev").click(function () {
-        if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().left)) {
+        if (Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().left)) {
             const slider = $("#slider-help");
             slider.css("left", `${document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
-            posSlider = posSlider - offsetElem;``
+            posSlider = posSlider - offsetElem;
         }
     })
 
     $("#btn-slider-help-next").click(function () {
-        if(Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().right)) {
+        if (Math.round(document.getElementById("hide-slider-help").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-help").getBoundingClientRect().right)) {
             posSlider = posSlider + offsetElem;
             const slider = $("#slider-help");
-            slider.css("left", `${ document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
+            slider.css("left", `${document.getElementById("hide-slider-help").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-help")[posSlider].getBoundingClientRect().left}px`);
+        }
+    })
+
+
+    let posSlider2 = 0;
+    let offsetElem2 = 1
+    $("#btn-slider-concept-prev").click(function () {
+        if (Math.round(document.getElementById("hide-slider-concept-4").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-concept-4").getBoundingClientRect().left)) {
+            const slider = $("#slider-concept-4");
+            slider.css("left", `${document.getElementById("hide-slider-concept-4").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-concept-4")[posSlider2].getBoundingClientRect().left}px`);
+            posSlider2 = posSlider2 - offsetElem2;
+        }
+    })
+
+    $("#btn-slider-concept-next").click(function () {
+        if (Math.round(document.getElementById("hide-slider-concept-4").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-concept-4").getBoundingClientRect().right)) {
+            posSlider2 = posSlider2 + offsetElem2;
+            const slider = $("#slider-concept-4");
+            console.log(document.getElementsByClassName("elem-slide-concept-4"))
+            slider.css("left", `${document.getElementById("hide-slider-concept-4").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-concept-4")[posSlider2].getBoundingClientRect().left}px`);
         }
     })
 
@@ -209,16 +220,31 @@ $(function () {
                 default:
                     break;
             }
-        let html = `<div class="tr admin-row-quote txt-info">
+            const arrDate = row.createdAt.split(' ')[0].split('-')
+            const refactorDate = `${arrDate[2]}/${arrDate[1]}/${arrDate[0]}`;
+            let html = `<div class="tr admin-row-quote txt-info">
                         <div class="main-tr">
-                            <div class="col-date">${row.createdAt}</div>
-                            <div class="col-name">${row.last_name}</div>
-                            <div class="col-firstname">${row.first_name}</div>
-                            <div class="col-number">${row.phone_number}</div>
-                            <div class="col-mail">${row.email}</div>
-                            <div class="col-total">${row.total}€</div>
-                            <div class="col-status">En attente</div>
-                            <div class="col-action">dwdw</div>
+                            <div class="col-admin col-date"><span>${refactorDate}</span></div>
+                            <div class="col-admin col-name"><span>${row.last_name}</span></div>
+                            <div class="col-admin col-firstname"><span>${row.first_name}</span></div>
+                            <div class="col-admin col-number">
+<img src="${ip}/assets/png-x2/phone.svg" alt="" />
+<span>${row.phone_number}</span>
+</div>
+                            <div class="col-admin col-mail">
+<img src="${ip}/assets/png-x2/mail.svg" alt="" />
+<span>${row.email}</span>
+</div>
+                            <div class="col-admin col-total"><span>${row.total}€</span></div>
+                            <div class="col-admin col-status"><span>En attente</span></div>
+                            <div class="col-admin col-action">
+                            <button class="btn-view-quote" value="${row.id_formule}">
+                            <img class="img-btn-view-quote" src="${ip}/assets/png-x2/eye.svg" alt="" />
+                            </button>
+                            <button class="btn-archive-quote" value="${row.id}">
+                            <img class="img-btn-archive-quote" src="${ip}/assets/png-x2/archive.svg" alt="" />
+                            </button>
+</div>
                         </div>
                         <div class="hide-clp hide-details">
                             <div class="clp">
@@ -255,7 +281,11 @@ $(function () {
         })
     }
 
-    $("#admin-rows").on("click", ".admin-row-quote", function() {
+    $("#admin-rows").on("click", ".admin-row-quote", function (e) {
+        console.log(e.target.className)
+        if(e.target.className !== "btn-view-quote" && e.target.className !== "img-btn-view-quote" &&
+            e.target.className !== "btn-archive-quote" && e.target.className !== "img-btn-archive-quote") {
+            console.log('troko')
         $hideCtn = $(".hide-clp");
         $rows = $(".admin-row-quote");
         $rows.removeClass("txt-black");
@@ -264,7 +294,10 @@ $(function () {
         $hideCtn.addClass("hide-details");
         $(this).removeClass("txt-info");
         $(this).addClass("txt-black");
+        console.log($(this).hasClass('hide-details'))
+        $(this).find('.hide-clp').removeClass("hide-details");
         $(this).find('.hide-clp').addClass("show-details");
+        }
     })
 
     let objSearch = {
@@ -273,29 +306,26 @@ $(function () {
         id_accompaniment: "",
         id_status: ""
     }
-    if($("#admin-rows")) {
-        $.post('/Essenciel/server.php', {"search_quote" : objSearch}, function (data) {
-            console.log(data)
+    if ($("#admin-rows")) {
+        $.post(ip + 'server.php', {"search_quote": objSearch}, function (data) {
             renderRowQuote(JSON.parse(data))
         })
     }
 
-    $("#text-field-search").change(function(e) {
-        // console.log('trololo')
+    $("#text-field-search").change(function (e) {
         const {name, value} = e.target;
         objSearch.search = value;
-        $.post("/Essenciel/server.php", {"search_quote": objSearch}, function(data) {
-            console.log(data)
+        $.post(ip + "server.php", {"search_quote": objSearch}, function (data) {
             renderRowQuote((JSON.parse(data)))
         })
     })
 
-    $('#popover-filter').on("click", ".checkbox-filter", function(e) {
+    $('#popover-filter').on("click", ".checkbox-filter", function (e) {
         const {name, value} = e.target;
-        if(!$(this).prop("checked")) {
+        if (!$(this).prop("checked")) {
             $(this).prop('checked', false);
             objSearch[name] = "";
-        }  else {
+        } else {
             const checkboxes = $(`#ctn-checkbox-${name.split('_')[1]}`).find(".checkbox-filter");
             for (let i = 0; i < checkboxes.length; i++) {
                 checkboxes.prop('checked', false)
@@ -303,13 +333,12 @@ $(function () {
             $(this).prop("checked", true);
             objSearch[name] = value;
         }
-        $.post("/Essenciel/server.php", {"search_quote": objSearch}, function(data) {
-            console.log(data)
+        $.post(ip + "server.php", {"search_quote": objSearch}, function (data) {
             renderRowQuote((JSON.parse(data)))
         })
     })
 
-    $("#filter-admin").click(function() {
+    $("#filter-admin").click(function () {
         $("#popover-filter").toggleClass("d-none");
     })
 
@@ -320,6 +349,46 @@ $(function () {
         redirectLinkQuote(nextStepName, nextStepIndex + 1)
     })
 
+    $("#admin-rows").on("click", ".btn-archive-quote", function (e) {
+        console.log("rerere")
+        $value = $(this).attr("value");
+        $.post(ip + "server.php" , {"getQuote": $value}, function(data) {
+            console.log(data)
+        })
+        $.post(ip + 'server.php', {"search_quote": objSearch}, function (data) {
+            renderRowQuote(JSON.parse(data))
+        })
+    })
+
+    $("#admin-rows").on("click", ".btn-view-quote", function (e) {
+        $value = $(this).attr("value");
+        $.post(ip + "server.php", {"getFormule": $value}, function (data) {
+            let rowPerCat = "";
+            for (let [key, value] of Object.entries(JSON.parse(data))) {
+                rowPerCat += '<div>'
+                rowPerCat += `<h5>${key}</h5>`
+                rowPerCat += "<ul>";
+                for (let [row, text] of Object.entries(value)) {
+                    rowPerCat += `<li>${text.prestation}</li>`
+                }
+                rowPerCat += "</ul>";
+                rowPerCat += '</div>';
+            }
+            let html = `
+<div id="main-ctn-quote">
+<h2>Devis</h2>
+                <div id="ctn-devis">
+                    <h4>Prestations</h4><div>${rowPerCat}</div></div>
+</div>`;
+
+            $("#view-quote").removeClass("d-none");
+            $("#view-quote").append(html)
+        })
+    })
+
+    $("#close-view-quote").click(function(e) {
+        $("#view-quote").addClass("d-none");
+    })
 })
 
 function disabledButtonsConceptSlide(bool) {
