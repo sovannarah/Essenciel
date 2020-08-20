@@ -10,8 +10,13 @@ const ip = "http://192.168.1.18/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
 
+
+
 $(function () {
 
+    const paramUrl = window.location.pathname.split("/");
+    const lastParamUrl = paramUrl[paramUrl.length - 1];
+    const pageParamUrl = paramUrl[paramUrl.length - 2];
 
     $("#submit-form").click(function (e) {
         e.preventDefault();
@@ -19,7 +24,30 @@ $(function () {
         $.post(ip + 'server.php', {"redirect": submitValid}, function (data) {
             const errors = JSON.parse(data);
             if (errors.length === 0) {
-                $.post('/Essenciel/server.php', {form: ""}, function (data) {
+                $.post(ip + 'server.php', {form: ""}, function (data) {
+                    if(data === "success") {
+                        window.location.href = `${ip}quote/valide`;
+                    }
+                })
+            } else {
+                errors.forEach(field => {
+                    $(`#error-` + field).removeClass('d-none');
+                })
+            }
+        })
+
+    })
+
+    $("#submit-form-contact").click(function (e) {
+        e.preventDefault();
+        const submitValid = ["civi", "last_name", "first_name", "phone_number", "email"];
+        $.post(ip + 'server.php', {"redirect": submitValid}, function (data) {
+            const errors = JSON.parse(data);
+            if (errors.length === 0) {
+                $.post(ip + 'server.php', {formContact: ""}, function (data) {
+                    if(data === "success") {
+                        window.location.href = `${ip}contact/valide`;
+                    }
                 })
             } else {
                 errors.forEach(field => {
@@ -300,14 +328,17 @@ $(function () {
         }
     })
 
+
     let objSearch = {
+        table: lastParamUrl,
         search: "",
         id_type: "",
         id_accompaniment: "",
         id_status: ""
     }
-    if ($("#admin-rows")) {
+    if (pageParamUrl === "admin" && $("#admin-rows")) {
         $.post(ip + 'server.php', {"search_quote": objSearch}, function (data) {
+            console.log(data)
             renderRowQuote(JSON.parse(data))
         })
     }
@@ -390,7 +421,6 @@ $(function () {
         $("#view-quote").addClass("d-none");
     })
 })
-
 function disabledButtonsConceptSlide(bool) {
     const buttons = document.getElementsByClassName('dot-slide-concept');
     for (let i = 0; i < buttons.length; i++) {

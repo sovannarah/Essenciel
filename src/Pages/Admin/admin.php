@@ -1,7 +1,24 @@
-<section id="admin">
+<?php
+$tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
+$lastParams = $tabUrl[count($tabUrl) - 1];
+?>
+
+<section id="admin">
     <div id="admin-header">
-        <h2>Vos dernières <br/><span>DEMANDE DE DEVIS</span></h2>
+        <h2>
+                <?php
+                if($lastParams === "archive") {
+                    echo "Vos <span>ARCHIVES</span>";
+                } else if ($lastParams === "contacts") {
+                    echo "Vos dernières <br/><span>PRISE DE CONTACT</span>";
+                } else {
+                    echo "Vos dernières <br/><span>DEMANDE DE DEVIS</span>";
+                }
+
+                ?>
+
+        </h2>
         <div id="ctn-btns-header-admin">
             <div class="ctn-btn-header-admin ctn-filter">
                     <button id="filter-admin">

@@ -14,9 +14,11 @@
                             $resCivi = $GLOBALS["bdd"]->query($reqCivi);
                             while ($civility = $resCivi->fetch()) {
                                 ?>
-                                <option value="<?php echo $civility["id"]; ?>"
-                                    <?php if (isset($_SESSION["civi"]) && ($_SESSION["civi"] == $civility["id"])) {
-                                        echo "selected";
+                                <option value="<?php echo $civility["id_civility"]; ?>"
+                                    <?php if (isset($_SESSION["civi"]) ) {
+                                        if($_SESSION["civi"] == $civility["id_civility"]) {
+                                            echo "selected";
+                                        }
                                     } ?>
                                 ><?php echo $civility["civility"]; ?></option>
                             <?php } ?>

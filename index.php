@@ -61,19 +61,17 @@ try {
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/devis.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/more.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/admin.css"/>
+    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/valide.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>index.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;s700;900&display=swap" rel="stylesheet"/>
-
-<!--    <script src="https://cdn.jsdelivr.net/npm/match-sorter@4.2.0/dist/match-sorter.cjs.min.js"></script>-->
-
 </head>
 <body id="main">
 <?php
 require "vendor/autoload.php";
-if($tabUrl[count($tabUrl) - 1] === "admin") {
+if($tabUrl[count($tabUrl) - 2] === "admin") {
     include("Components/Admin/header.php");
-} else if ($tabUrl[count($tabUrl) - 2] === "quote") {
+} else if ($tabUrl[count($tabUrl) - 2] === "quote" || $tabUrl[count($tabUrl) - 2] === "contact") {
     include("Components/Quote/Header/header.php");
 } else {
     include("Components/Header/header.php");
@@ -102,17 +100,29 @@ $router->get('/a-propos', function () {
 $router->get('/aide', function () {
     include('src/Pages/Help/help.php');
 });
-$router->get('/admin', function () {
+$router->get('/admin/devis', function () {
+    include('src/Pages/Admin/admin.php');
+});
+$router->get('/admin/archives', function () {
+    include('src/Pages/Admin/admin.php');
+});
+$router->get('/admin/contacts', function () {
     include('src/Pages/Admin/admin.php');
 });
 $router->get("/quote/:lieu", function ($lieu) {
+    include('src/Pages/Quote/quote.php');
+});
+$router->get("/contact", function () {
+    include('src/Pages/Quote/quote.php');
+});
+$router->get("/contact/valide", function () {
     include('src/Pages/Quote/quote.php');
 });
 
 $router->run();
 ?>
 <?php
-if ($lastParams !== "admin" && $tabUrl[count($tabUrl) - 2] !== "quote") {
+if ($tabUrl[count($tabUrl) - 2] !== "quote" && $tabUrl[count($tabUrl) - 2] !== "admin" && $tabUrl[count($tabUrl) - 1] !== "contact") {
     include("Components/QuoteForm/quoteForm.php");
 } ?>
 <?php include("Components/Footer/footer.php") ?>

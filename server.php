@@ -7,16 +7,16 @@ $DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
 try {
-    // On se connecte à MySQL
     $bdd = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
 } catch (Exception $e) {
-    // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
 }
 
 if (isset($_POST["total"])) {
     $_SESSION["total"] = $_POST["total"];
 }
+
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_POST["type_options"])) {
     $res = $bdd->query("SELECT * FROM type_option WHERE id_type = " . $_POST["type_options"]);
@@ -69,12 +69,12 @@ if (isset($_POST["redirect"])) {
     echo json_encode($valid);
 }
 
-if(isset($_POST["getQuote"])) {
-    $req = "SELECT * FROM devis WHERE id=". $_POST["getQuote"];
+if (isset($_POST["getQuote"])) {
+    $req = "SELECT * FROM devis WHERE id=" . $_POST["getQuote"];
     $res = $bdd->query($req);
-    $query = $bdd->prepare('INSERT INTO archive (id, etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
+    $query = $bdd->prepare('INSERT INTO archives (id, etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
   			  VALUES(:id, :etablishment_address, :id_accompaniment, :id_civility_def, :last_name_def, :first_name_def, :id_link, :id_civility, :last_name, :first_name, :phone_number, :email, :id_formule, :message)');
-    while($data = $res->fetch()) {
+    while ($data = $res->fetch()) {
         $query->execute(array(
             'id' => $data["id"],
             'etablishment_address' => $data["etablishment_address"],
@@ -92,7 +92,7 @@ if(isset($_POST["getQuote"])) {
             'message' => $data["message"]
         ));
     }
-    $delReq = "DELETE FROM devis WHERE id=". $_POST["getQuote"];
+    $delReq = "DELETE FROM devis WHERE id=" . $_POST["getQuote"];
     $delQuery = $bdd->query($delReq);
     $delQuery->execute();
 
@@ -105,7 +105,7 @@ if (isset($_POST["search_quote"])) {
     $filterAccompaniment = "";
     $filterStatus = "";
     $where = "";
-    if($_POST["search_quote"]["search"] || $_POST["search_quote"]["id_type"] || $_POST["search_quote"]["id_accompaniment"] || $_POST["search_quote"]["id_status"]) {
+    if ($_POST["search_quote"]["search"] || $_POST["search_quote"]["id_type"] || $_POST["search_quote"]["id_accompaniment"] || $_POST["search_quote"]["id_status"]) {
         $where = "WHERE ";
     }
     if ($_POST["search_quote"]["search"]) {
@@ -128,13 +128,13 @@ if (isset($_POST["search_quote"])) {
         civility_def
         ) LIKE '%" . $_POST["search_quote"]["search"] . "%' ";
     }
-    if($_POST["search_quote"]["id_type"]) {
+    if ($_POST["search_quote"]["id_type"]) {
         $filterType = "id_type='" . $_POST["search_quote"]["id_type"] . "' ";
     }
-    if($_POST["search_quote"]["id_accompaniment"]) {
+    if ($_POST["search_quote"]["id_accompaniment"]) {
         $filterAccompaniment = "id_accompaniment='" . $_POST["search_quote"]["id_accompaniment"] . "' ";
     }
-    if($_POST["search_quote"]["id_status"]) {
+    if ($_POST["search_quote"]["id_status"]) {
         $filterStatus = "id_type='" . $_POST["search_quote"]["id_status"] . "' ";
     }
     $filter = $filterType . $filterAccompaniment . $filterStatus;
@@ -142,11 +142,11 @@ if (isset($_POST["search_quote"])) {
     $filter = str_replace(" ", " AND ", $filter);
     $filter = substr($filter, 0, -4);
     $comb = "";
-    if($filter !== "" && $search !== "") {
-           $comb = " AND ";
+    if ($filter !== "" && $search !== "") {
+        $comb = " AND ";
     }
-    $combineFilter =  $filter . $comb .  $search;
-    $req = "SELECT * FROM devis NATURAL JOIN formule NATURAL JOIN accompaniments NATURAL JOIN  civilities NATURAL JOIN links NATURAL JOIN location NATURAL JOIN civilities_def " . $where . $combineFilter;
+    $combineFilter = $filter . $comb . $search;
+    $req = "SELECT * FROM " . $_POST["search_quote"]["table"] . " NATURAL JOIN formule NATURAL JOIN accompaniments NATURAL JOIN  civilities NATURAL JOIN links NATURAL JOIN location NATURAL JOIN civilities_def " . $where . $combineFilter;
 //    var_dump($req);
 
     $data = [];
@@ -157,43 +157,69 @@ if (isset($_POST["search_quote"])) {
     echo json_encode($data);
 }
 
-
-if (isset($_POST["form"])) {
-    $etablishmentAddress = $_SESSION["etablishment_address"];
-    $idAccompaniment = $_SESSION["accompaniment"];
-    $idCivilityDef = $_SESSION["civi_def"];
-    $lastNameDef = $_SESSION["last_name_def"];
-    $firstNameDef = $_SESSION["first_name_def"];
-    $idLink = $_SESSION["def_link"];
-    $idCivility = $_SESSION["civi"];
-    $lastName = $_SESSION["last_name"];
-    $firstName = $_SESSION["first_name"];
-    $phoneNumber = $_SESSION["phone_number"];
-    $email = $_SESSION["email"];
-    $idFormule = $_SESSION["formule"];
-    $message = isset($_SESSION["message"]) ? $_SESSION["message"] : "";
-    $query = $bdd->prepare('INSERT INTO devis (etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
-  			  VALUES(:etablishment_address, :id_accompaniment, :id_civility_def, :last_name_def, :first_name_def, :id_link, :id_civility, :last_name, :first_name, :phone_number, :email, :id_formule, :message)');
-
-    $query->execute(array(
-        'etablishment_address' => $etablishmentAddress,
-        'id_accompaniment' => $idAccompaniment,
-        'id_civility_def' => $idCivilityDef,
-        'last_name_def' => $lastNameDef,
-        'first_name_def' => $firstNameDef,
-        'id_link' => $idLink,
-        'id_civility' => $idCivility,
-        'last_name' => $lastName,
-        'first_name' => $firstName,
-        'phone_number' => $phoneNumber,
-        'email' => $email,
-        'id_formule' => $idFormule,
-        'message' => $message
-    ));
-    var_dump($bdd->errorInfo());
+if (isset($_POST["formContact"])) {
+    try {
+        $idCivility = $_SESSION["civi"];
+        $lastName = $_SESSION["last_name"];
+        $firstName = $_SESSION["first_name"];
+        $phoneNumber = $_SESSION["phone_number"];
+        $email = $_SESSION["email"];
+        $query = $bdd->prepare('INSERT INTO contacts (id_civility, last_name ,first_name, phone_number, email)
+  			  VALUES(:id_civility, :last_name, :first_name, :phone_number, :email)');
+        $query->execute(array(
+            'id_civility' => $idCivility,
+            'last_name' => $lastName,
+            'first_name' => $firstName,
+            'phone_number' => $phoneNumber,
+            'email' => $email,
+        ));
+        echo "success";
+    } catch (PDOException $e) {
+        echo ('Erreur : ' . $e->getMessage());
+    }
 }
 
-if(isset($_POST["getFormule"])) {
+if (isset($_POST["form"])) {
+
+    try {
+        $etablishmentAddress = $_SESSION["etablishment_address"];
+        $idAccompaniment = $_SESSION["accompaniment"];
+        $idCivilityDef = $_SESSION["civi_def"];
+        $lastNameDef = $_SESSION["last_name_def"];
+        $firstNameDef = $_SESSION["first_name_def"];
+        $idLink = $_SESSION["def_link"];
+        $idCivility = $_SESSION["civi"];
+        $lastName = $_SESSION["last_name"];
+        $firstName = $_SESSION["first_name"];
+        $phoneNumber = $_SESSION["phone_number"];
+        $email = $_SESSION["email"];
+        $idFormule = $_SESSION["formule"];
+        $message = isset($_SESSION["message"]) ? $_SESSION["message"] : "";
+        $query = $bdd->prepare('INSERT INTO devis (etablishment_address, id_accompaniment, id_civility_def, last_name_def, first_name_def, id_link, id_civility, last_name,first_name, phone_number, email, id_formule, message)
+  			  VALUES(:etablishment_address, :id_accompaniment, :id_civility_def, :last_name_def, :first_name_def, :id_link, :id_civility, :last_name, :first_name, :phone_number, :email, :id_formule, :message)');
+        $query->execute(array(
+            'etablishment_address' => $etablishmentAddress,
+            'id_accompaniment' => $idAccompaniment,
+            'id_civility_def' => $idCivilityDef,
+            'last_name_def' => $lastNameDef,
+            'first_name_def' => $firstNameDef,
+            'id_link' => $idLink,
+            'id_civility' => $idCivility,
+            'last_name' => $lastName,
+            'first_name' => $firstName,
+            'phone_number' => $phoneNumber,
+            'email' => $email,
+            'id_formule' => $idFormule,
+            'message' => $message
+        ));
+        echo "success";
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+
+}
+
+if (isset($_POST["getFormule"])) {
     $req = "SELECT id_formule FROM formule WHERE id_formule = " . $_POST["getFormule"];
     $res = $bdd->query($req);
     $results = [];

@@ -5,8 +5,8 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 <header id="header">
     <div id="ctn-header">
         <div id="ctn-logo">
-            <img src="assets/png-x2/logo.png" alt="" />
-            <a href="">Être contacté</a>
+            <img src="<?php echo $GLOBALS["ip"] . "assets/png-x2/logo.png"; ?>" alt="" />
+            <a href="<?php echo $GLOBALS["ip"] . "contact"; ?>">Être contacté</a>
         </div>
         <div id="ctn-index">
             <div id="ctn-index-title">

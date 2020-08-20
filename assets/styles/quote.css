@@ -124,6 +124,20 @@ position:relative;
     bottom: 0;
 }
 
+#end-quote-form {
+    position: absolute;
+    right: 0;
+    bottom: -5vw;
+}
+
+
+#submit-form-contact {
+    position: absolute;
+    right: 0;
+    bottom: -5vw;
+}
+
+
 #submit-form {
 
     position: absolute;
@@ -210,4 +224,8 @@ position:relative;
     color: white;
     font-weight: bold;
     text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
+}
+
+.contact-form {
+    margin-left: auto;
 }

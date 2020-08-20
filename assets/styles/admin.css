@@ -5,6 +5,33 @@
 
 }
 
+.tabs-admin {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.tabs-admin a {
+    margin: 0 1vw;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 1vw;
+}
+
+.tabs-admin a span {
+    text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
+}
+
+.active-tab-admin:after {
+    content: "";
+    height: 0.2vw;
+    width: 60%;
+    left: 20%;
+    bottom: -1vw;
+    background-color: white;
+    position: absolute;
+}
+
 #header-admin .d1 {
     display: flex;
     padding-left: 3vw;
@@ -12,6 +39,7 @@
     width: 58%;
     background-image: url("../../assets/png-x2/header-banner.png");
     background-size: 100%;
+    justify-content: space-between;
 }
 
 #header-admin .d1 img {
@@ -20,7 +48,7 @@
     margin-bottom: auto;
 }
 
-#header-admin a {
+#header-admin .back-site-admin {
     height: 6vw;
     width: 26%;
     background-color: #4bbfcc;
