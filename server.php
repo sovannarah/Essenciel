@@ -29,8 +29,8 @@ if (isset($_POST["type_options"])) {
         $data["answers"][$index] = $dataAns;
         $index++;
     }
-    var_dump($data);
-//    echo json_encode($data);
+//    var_dump($data);
+    echo json_encode($data);
     $resAns->closeCursor();
 
 }
