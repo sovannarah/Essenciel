@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : sam. 15 août 2020 à 22:49
+-- Généré le : jeu. 20 août 2020 à 17:26
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.8
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accompaniments` (
-  `id` int(11) NOT NULL,
+  `id_accompaniment` int(11) NOT NULL,
   `img` varchar(255) NOT NULL,
   `accompaniment` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,9 +37,40 @@ CREATE TABLE `accompaniments` (
 -- Déchargement des données de la table `accompaniments`
 --
 
-INSERT INTO `accompaniments` (`id`, `img`, `accompaniment`) VALUES
+INSERT INTO `accompaniments` (`id_accompaniment`, `img`, `accompaniment`) VALUES
 (1, 'building', 'Un accompagnement à distance'),
 (2, 'house', 'Un accompagnement en agence');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `archives`
+--
+
+CREATE TABLE `archives` (
+  `id` int(11) NOT NULL,
+  `etablishment_address` varchar(255) NOT NULL,
+  `id_accompaniment` int(11) NOT NULL,
+  `id_civility_def` int(11) NOT NULL,
+  `last_name_def` varchar(255) NOT NULL,
+  `first_name_def` varchar(255) NOT NULL,
+  `id_link` int(11) NOT NULL,
+  `id_civility` int(11) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `id_formule` int(11) NOT NULL,
+  `message` text DEFAULT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `archives`
+--
+
+INSERT INTO `archives` (`id`, `etablishment_address`, `id_accompaniment`, `id_civility_def`, `last_name_def`, `first_name_def`, `id_link`, `id_civility`, `last_name`, `first_name`, `phone_number`, `email`, `id_formule`, `message`, `createdAt`) VALUES
+(3, 'gegegeege', 2, 1, 'fdew', 'fw', 3, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com', 6, '', '2020-08-18 12:50:44');
 
 -- --------------------------------------------------------
 
@@ -48,7 +79,7 @@ INSERT INTO `accompaniments` (`id`, `img`, `accompaniment`) VALUES
 --
 
 CREATE TABLE `civilities` (
-  `id` int(11) NOT NULL,
+  `id_civility` int(11) NOT NULL,
   `civility` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -56,7 +87,7 @@ CREATE TABLE `civilities` (
 -- Déchargement des données de la table `civilities`
 --
 
-INSERT INTO `civilities` (`id`, `civility`) VALUES
+INSERT INTO `civilities` (`id_civility`, `civility`) VALUES
 (1, 'Madame'),
 (2, 'Monsieur');
 
@@ -82,6 +113,31 @@ INSERT INTO `civilities_def` (`id_civility_def`, `civility_def`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id_contact` int(11) NOT NULL,
+  `id_civility` int(11) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `contacts`
+--
+
+INSERT INTO `contacts` (`id_contact`, `id_civility`, `last_name`, `first_name`, `phone_number`, `email`) VALUES
+(7, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com'),
+(8, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com'),
+(9, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com'),
+(10, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `devis`
 --
 
@@ -103,6 +159,16 @@ CREATE TABLE `devis` (
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `devis`
+--
+
+INSERT INTO `devis` (`id`, `etablishment_address`, `id_accompaniment`, `id_civility_def`, `last_name_def`, `first_name_def`, `id_link`, `id_civility`, `last_name`, `first_name`, `phone_number`, `email`, `id_formule`, `message`, `createdAt`) VALUES
+(4, 'gegegeege', 2, 1, 'fdew', 'fw', 3, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com', 6, '174', '2020-08-17 09:05:17'),
+(5, 'gegegeege', 2, 1, 'fdew', 'fw', 3, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com', 6, '', '2020-08-17 09:09:55'),
+(6, 'gegegeege', 2, 1, 'fdew', 'fw', 3, 2, 'hem', 'sovannara', '0634178339', '3232', 6, '', '2020-08-17 09:10:22'),
+(7, 'gegegeege', 2, 1, 'fdew', 'fw', 3, 2, 'hem', 'sovannara', '0634178339', 'sovannara.hemchan@gmail.com', 11, '', '2020-08-20 09:09:18');
+
 -- --------------------------------------------------------
 
 --
@@ -110,7 +176,7 @@ CREATE TABLE `devis` (
 --
 
 CREATE TABLE `formule` (
-  `id` int(11) NOT NULL,
+  `id_formule` int(11) NOT NULL,
   `id_location` int(11) DEFAULT NULL,
   `id_type` int(11) DEFAULT NULL,
   `id_type_option_answer` int(11) DEFAULT NULL,
@@ -121,7 +187,7 @@ CREATE TABLE `formule` (
 -- Déchargement des données de la table `formule`
 --
 
-INSERT INTO `formule` (`id`, `id_location`, `id_type`, `id_type_option_answer`, `total`) VALUES
+INSERT INTO `formule` (`id_formule`, `id_location`, `id_type`, `id_type_option_answer`, `total`) VALUES
 (1, 1, 1, 2, 1890),
 (2, 1, 1, 1, 2190),
 (3, 1, 2, 1, 2190),
@@ -142,7 +208,8 @@ INSERT INTO `formule` (`id`, `id_location`, `id_type`, `id_type_option_answer`, 
 (30, 2, 1, 0, 3100),
 (31, 2, 2, 0, 3490),
 (32, 3, 1, 0, 2100),
-(33, 3, 2, 0, 2490);
+(33, 3, 2, 0, 2490),
+(34, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -529,19 +596,31 @@ INSERT INTO `type_option_answer` (`id_type_option_answer`, `id_type_option`, `ty
 -- Index pour la table `accompaniments`
 --
 ALTER TABLE `accompaniments`
+  ADD PRIMARY KEY (`id_accompaniment`);
+
+--
+-- Index pour la table `archives`
+--
+ALTER TABLE `archives`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `civilities`
 --
 ALTER TABLE `civilities`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_civility`);
 
 --
 -- Index pour la table `civilities_def`
 --
 ALTER TABLE `civilities_def`
   ADD PRIMARY KEY (`id_civility_def`);
+
+--
+-- Index pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id_contact`);
 
 --
 -- Index pour la table `devis`
@@ -553,7 +632,7 @@ ALTER TABLE `devis`
 -- Index pour la table `formule`
 --
 ALTER TABLE `formule`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_formule`);
 
 --
 -- Index pour la table `links`
@@ -617,13 +696,13 @@ ALTER TABLE `type_option_answer`
 -- AUTO_INCREMENT pour la table `accompaniments`
 --
 ALTER TABLE `accompaniments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_accompaniment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `civilities`
 --
 ALTER TABLE `civilities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_civility` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `civilities_def`
@@ -632,16 +711,22 @@ ALTER TABLE `civilities_def`
   MODIFY `id_civility_def` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT pour la table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT pour la table `devis`
 --
 ALTER TABLE `devis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `formule`
 --
 ALTER TABLE `formule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_formule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT pour la table `links`

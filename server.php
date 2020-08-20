@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//session_unset();
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
@@ -19,7 +19,7 @@ if (isset($_POST["total"])) {
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_POST["type_options"])) {
-    $res = $bdd->query("SELECT * FROM type_option WHERE id_type = " . $_POST["type_options"]);
+    $res = $bdd->query("SELECT * FROM type_option WHERE id_type=" . $_POST["type_options"]);
     $data = $res->fetch();
     $res->closeCursor();
     $resAns = $bdd->query("SELECT * FROM type_option_answer WHERE id_type_option = " . $data["id_type_option"]);
@@ -29,8 +29,9 @@ if (isset($_POST["type_options"])) {
         $data["answers"][$index] = $dataAns;
         $index++;
     }
+    var_dump($data);
+//    echo json_encode($data);
     $resAns->closeCursor();
-    echo json_encode($data);
 
 }
 

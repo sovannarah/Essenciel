@@ -23,19 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Components/Quote/Valide/valide.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/valide.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/Quote/Info/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Quote/Info/info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/quote.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quote.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/quoteResponsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quoteResponsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Admin/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Admin/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Quote/quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/quote.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +122,7 @@
       <workItem from="1596804531052" duration="17785000" />
       <workItem from="1596845357365" duration="5396000" />
       <workItem from="1596980432859" duration="148902000" />
-      <workItem from="1597643822161" duration="76455000" />
+      <workItem from="1597643822161" duration="78790000" />
     </task>
     <servers />
   </component>
@@ -256,10 +246,10 @@
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
     <state x="2579" y="792" key="run.anything.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597829266236" />
-    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1597915965451">
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1597936841262">
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
-    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597915965451" />
+    <state x="2578" y="1339" width="672" height="678" key="search.everywhere.popup/1920.1080.1920.1080/0.1080.1920.1080/3840.0.3840.2160@1920.1080.1920.1080" timestamp="1597936841262" />
     <state x="2640" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595596298241">
       <screen x="1920" y="1080" width="1920" height="1080" />
     </state>
@@ -274,7 +264,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/server.php</url>
-          <line>100</line>
+          <line>101</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -284,18 +274,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
-          <line>125</line>
+          <line>117</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
-          <line>194</line>
+          <line>186</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
-          <line>338</line>
+          <line>330</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>

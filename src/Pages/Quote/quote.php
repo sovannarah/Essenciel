@@ -99,8 +99,10 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                         $type = isset($_SESSION["type"]) ? $_SESSION["type"] : 0;
                         $req = "SELECT * FROM formule WHERE id_location = '" . $location . "' AND id_type= '" . $type . "' AND id_type_option_answer = '" . $type_option_answer . "'";
                         $res = $GLOBALS["bdd"]->query($req)->fetch();
-                        if (!isset($res["total"]) && $res["total"] > 0) {
-                            echo "----";
+                        if ($res != false && !isset($res["total"])) {
+                            if($res["total"] > 0) {
+                                echo "----";
+                            }
                         } else {
                             echo $res["total"];
                         }

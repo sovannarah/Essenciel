@@ -1,10 +1,3 @@
-let form = {
-    lieu: 0,
-    types: 0,
-    etablishment: "",
-    accompaniment: 0,
-    ceremony: 0,
-}
 
 const ip = "http://192.168.1.18/Essenciel/";
 
@@ -107,7 +100,6 @@ $(function () {
         ctn.empty();
         $.post(ip + 'server.php', {"type_options": id}, function (data) {
             const c = JSON.parse(data);
-
             let html = `<div id="ctn-quote-input" >
  <label id="question-ceremony">${c.type_option}</label>
             <div id="ctn-checkbox-quote">
@@ -176,7 +168,7 @@ $(function () {
 
     })
 
-    if ($("ctn-types-next")) {
+    if (lastParamUrl === "type" && $("ctn-types-next")) {
         $.post(ip + 'server.php', {"type": ""}, function (data) {
             if (data) {
                 addNextTypes(data);
