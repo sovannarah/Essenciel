@@ -1,5 +1,5 @@
 
-const ip = "http://192.168.1.18/Essenciel/";
+const ip = "http://localhost:8888/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
 

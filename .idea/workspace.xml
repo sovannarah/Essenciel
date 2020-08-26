@@ -24,10 +24,21 @@
   <component name="ChangeListManager">
     <list default="true" id="12e3a3ba-c93e-4d67-8b6d-bfa15aa92caa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Footer/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Footer/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Header/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Header/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/PricesGrid/pricesGrid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Components/QuoteForm/quoteForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/lieu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/lieu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/pricesGrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/pricesGrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/quoteForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/quoteForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Concept/concept.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Concept/concept.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Quote/quote.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Quote/quote.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="quote&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/quote.php&#10;composer&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/composer.json&#10;index&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/index.php&#10;server&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/server.php&#10;request&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/request.json&#10;lieu&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;more&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/more.css&#10;l&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;quot&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/quote.css&#10;row-def&#9;null&#9;null&#10;info&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Info/info.php&#10;scrip&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/script.js&#10;type&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Types/types.php&#10;inde&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/index.php&#10;quote-&#9;null&#9;null&#10;reques&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Quote/request.json&#10;req&#9;null&#9;null&#10;row-def-inputs&#9;null&#9;null&#10;about&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/About/about.php&#10;server.php&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/server.php&#10;script&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/script.js&#10;navQuote&#9;null&#9;null&#10;lieu.css&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/assets/styles/lieu.css&#10;devis&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Devis/devis.php&#10;types&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/Components/Quote/Types/types.php&#10;help&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Help/help.php&#10;concep&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Concept/concept.php&#10;pres&#9;FILE&#9;file:///Users/dev/Desktop/project/Essenciel/src/Pages/Prestations/prestations.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/png-x2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.H2" />
   </component>
@@ -78,6 +89,18 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/index.php">
       <method v="2" />
@@ -92,7 +115,6 @@
     <list>
       <item itemvalue="JavaScript Debug.index.php" />
       <item itemvalue="JavaScript Debug.prestations.php" />
-      <item itemvalue="PHPUnit.Essenciel" />
     </list>
     <recent_temporary>
       <list>
@@ -101,7 +123,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -123,23 +145,25 @@
       <workItem from="1596845357365" duration="5396000" />
       <workItem from="1596980432859" duration="148902000" />
       <workItem from="1597643822161" duration="78790000" />
+      <workItem from="1598439723950" duration="2452000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2500" y="1316" width="824" height="691" key="#CLI_Interpreters" timestamp="1595655344029">
@@ -258,20 +282,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Components/Quote/Plus/plus.php</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/server.php</url>
-          <line>101</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/server.php</url>
-          <line>10</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
           <line>117</line>
@@ -280,13 +290,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
           <line>186</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
           <line>330</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

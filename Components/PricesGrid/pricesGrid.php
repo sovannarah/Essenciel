@@ -67,7 +67,6 @@
                         $value = $contents[$y][$i];
                         $txtColor = ($y == 1) ? "txt-black" : "";
                         ?>
-
                         <tr class="<?php if ($y == 0) {
                             echo "thead";
                         } ?>">
@@ -90,10 +89,10 @@
         <a class="ctn-prices-link">
             <span>Découvrir nos <br/> prestations en détail </span>
         </a>
-        <a class="ctn-prices-link">
+        <a href="<?php echo $GLOBALS["ip"]; ?>contact" class="ctn-prices-link">
             <span>Être <br/> contacté </span>
         </a>
-        <a id="redirectQuote" class="btn-redirect-blue">
+        <a href="<?php echo $GLOBALS["ip"]; ?>quote/lieu" id="redirectQuote" class="btn-redirect-blue">
             <span>Établissez <br/> votre devis</span>
         </a>
     </div>
