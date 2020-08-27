@@ -88,7 +88,7 @@
     <div id="commitmentsRow">
         <div id="commitmentsRow-1">
             <h3>Nos <br/><span>engagements</span></h3>
-            <a href="">
+            <a class="link txt-black" href="<?php $GLOBALS["ip"]; ?>prestations">
                 <span>Découvrir nos prestations en détail</span>
             </a>
         </div>

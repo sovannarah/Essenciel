@@ -27,7 +27,7 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                     </li>
                 <?php } ?>
                 <li class="n-help">
-                    <a value="<?php echo $content->id; ?>">
+                    <a href="<?php echo $GLOBALS["ip"]; ?>contact">
                         <span><strong>Besoin d'aide ?</strong><br/>Être contacté
                     </span>
                     </a>
@@ -103,7 +103,6 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                             echo "----";
                         } else {
                             echo $res["total"];
-                        }
                         ?>
                         <span class="euro">€</span>
                     </strong>
@@ -115,21 +114,25 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
                 <button id="submit-form" class="btn-redirect-blue">
                     <span>Valider</span>
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
                 </button>
 
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "contact") { ?>
                 <button id="submit-form-contact" class="btn-redirect-blue">
                     <span>Valider</span>
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
                 </button>
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "valide") { ?>
                 <button id="end-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
                         class="btn-redirect-blue">
                     <span>Terminé</span>
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
                 </button>
             <?php } else { ?>
                 <button id="next-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
                         class="btn-redirect-blue">
                     <span>Suivant</span>
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
                 </button>
             <?php } ?>
         </div>

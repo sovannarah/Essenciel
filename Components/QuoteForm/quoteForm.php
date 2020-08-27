@@ -18,10 +18,11 @@
         </div>
         <a href="<?php echo $GLOBALS["ip"] ?>quote/lieu" id="btnSubmitQuote" class="btn-redirect-blue">
             <span>Suivant</span>
+            <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
         </a>
     </div>
     <div id="ctnRedirectContact">
-        <a href="">
+        <a href="<?php echo $GLOBALS["ip"] ?>contact">
             <span>Je souhaiterais être contacté</span>
         </a>
     </div>
