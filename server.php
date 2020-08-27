@@ -7,7 +7,7 @@ $DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
 try {
-    $bdd = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
