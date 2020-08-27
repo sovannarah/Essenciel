@@ -32,7 +32,7 @@
                     foreach ($c as $content) {
                     ?>
                     <div class="elem-slide-concept-4">
-                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-concept/<?php echo $content->img; ?>.webp" alt=""/>
                         <span><?php echo $content->txt; ?></span>
                     </div>
                 <?php }} ?>
@@ -63,7 +63,7 @@
                         ?>
                         <div class="elem-slide-concept elem-slide-concept-<?php echo $y; ?>">
                             <div class="ctn-img-slide-concept">
-                                <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $contents[0]->slider[$x]->img; ?>.png"
+                                <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-concept/<?php echo $contents[0]->slider[$x]->img; ?>.webp"
                                      alt=""/>
                             </div>
                             <p><?php echo $contents[0]->slider[$x]->txt; ?></p>

@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="help-row-img-content">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.png"
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.webp"
                  alt=""/>
             <?php if (isset($content->bubbleText)) {
                 echo "<p class='bubble'>" . $content->bubbleText . "</p>";
@@ -75,7 +75,7 @@
                 foreach ($contents as $content) {
                     ?>
                     <div class="elem-slide-help">
-                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img; ?>.png" alt=""/>
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp" alt=""/>
                         <span><?php echo $content->text; ?></span>
                         <a href>Ouvrir</a>
                     </div>
