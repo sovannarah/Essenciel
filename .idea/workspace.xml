@@ -102,10 +102,10 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
-    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/index.php">
+    <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/index.php">
       <method v="2" />
     </configuration>
-    <configuration name="prestations.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/Pages/Prestations/prestations.php">
+    <configuration name="prestations.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Essenciel/Pages/Prestations/prestations.php">
       <method v="2" />
     </configuration>
     <configuration name="Essenciel" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -113,6 +113,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHPUnit.Essenciel" />
       <item itemvalue="JavaScript Debug.index.php" />
       <item itemvalue="JavaScript Debug.prestations.php" />
     </list>
