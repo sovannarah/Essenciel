@@ -53,21 +53,19 @@
 #pricesGrid tr:after {
     position: absolute;
     content:"";
-    height: 3vw;
-    /*border: 1px solid red;*/
-    margin-top: 5.5%;
+    height: 2vw;
+    margin-top: 6.5%;
     width: 52vw;
     left: 36vw;
     background: white;
 }
-
 
 .thead:before {
     margin-top: 8.6% !important;
 }
 
 .thead:after {
-    margin-top: 7% !important;
+    margin-top: 8% !important;
 }
 
 .txt-black {

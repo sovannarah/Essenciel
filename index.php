@@ -13,7 +13,7 @@ if (isset($_SESSION["total"]) && isset($_SESSION["prices"])) {
     $_SESSION["total"] = array_sum($_SESSION["prices"]);
 }
 
-$GLOBALS["ip"] = "http://localhost:8888/Essenciel/";
+$GLOBALS["ip"] = "http://localhost/Essenciel/";
 
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
@@ -21,12 +21,12 @@ $lastParams = $tabUrl[count($tabUrl) - 1];
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = 'root';
+$DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
 try {
     // On se connecte à MySQL
-    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'root');
+    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
 } catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
@@ -62,6 +62,7 @@ try {
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/more.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/admin.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/valide.css"/>
+	<link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/accueil.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>index.css"/>
     <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;s700;900&display=swap" rel="stylesheet"/>

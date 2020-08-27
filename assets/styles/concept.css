@@ -23,7 +23,7 @@
 }
 
 #conceptRow-Image div {
-    background-image: url("../../assets/png-x2/lieu-ou-se-situe-le-defunt-img.png");
+    background-image: url("../../assets/png-x2/banner-concept-01.webp");
 }
 
 #conceptRowContent {
@@ -51,11 +51,11 @@
 }
 
 #concept-banner-1 {
-    background-image: url("../../assets/png-x2/banner-left.png");
+    background-image: url("../../assets/png-x2/banner-left.webp");
 }
 
 #concept-banner-2 {
-    background-image: url("../../assets/png-x2/banner-right.png");
+    background-image: url("../../assets/png-x2/banner-right.webp");
 }
 
 #commitmentsRow {

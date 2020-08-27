@@ -1,6 +1,6 @@
 <div id="about">
     <div id="aboutBanner-1">
-        <h1>Nous sommes une entreprise indépendante <br/> <span>présente depuis 10ans en région parisienne</span></h1>
+        <h1>Nous sommes une entreprise indépendante <br/> <span>présente depuis 10 ans en région parisienne</span></h1>
         <a href="">
             <span>Découvrez l'ensemble <br/> de nos prestations</span>
         </a>
