@@ -13,7 +13,7 @@ if (isset($_SESSION["total"]) && isset($_SESSION["prices"])) {
     $_SESSION["total"] = array_sum($_SESSION["prices"]);
 }
 
-$GLOBALS["ip"] = "http://localhost:8888/Essenciel/";
+$GLOBALS["ip"] = "http://localhost/Essenciel/";
 
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
@@ -26,7 +26,7 @@ $DATABASE_NAME = 'Essenciel';
 
 try {
     // On se connecte à MySQL
-    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'root');
+    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
 } catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
