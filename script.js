@@ -1,3 +1,10 @@
+let form = {
+    lieu: 0,
+    types: 0,
+    etablishment: "",
+    accompaniment: 0,
+    ceremony: 0,
+}
 
 const ip = "http://localhost:8888/Essenciel/";
 
@@ -100,6 +107,7 @@ $(function () {
         ctn.empty();
         $.post(ip + 'server.php', {"type_options": id}, function (data) {
             const c = JSON.parse(data);
+
             let html = `<div id="ctn-quote-input" >
  <label id="question-ceremony">${c.type_option}</label>
             <div id="ctn-checkbox-quote">
@@ -107,7 +115,7 @@ $(function () {
                     <input name="type_option_answer" value="${c.answers[0].id_type_option_answer}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
                         <label for="ceremony-1">${c.answers[0].type_option_answer}</label>
                         <div class='add-price-quote'>
-                            <img src='http://192.168.1.18/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
+                            <img src='http://localhost/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
                             <span>+ 300</span>
                         </div>
                 </div>
@@ -168,7 +176,7 @@ $(function () {
 
     })
 
-    if (lastParamUrl === "type" && $("ctn-types-next")) {
+    if ($("ctn-types-next")) {
         $.post(ip + 'server.php', {"type": ""}, function (data) {
             if (data) {
                 addNextTypes(data);

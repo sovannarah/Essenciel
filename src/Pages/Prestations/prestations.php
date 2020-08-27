@@ -25,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="prestation-row-img-content">
-                    <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.png"
+                    <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.webp"
                          alt=""/>
                     <a href="<?php echo $content->link ?>">
                         <span><?php echo $content->textLink ?></span>

@@ -38,8 +38,9 @@
     background-color: white;
     border: none;
     height: 3.5vw;
-    width: 99.8%;
+    width: 100%;
     position: absolute;
+    left: 0.1vw;
     bottom: 0;
 }
 #ctn-btn-lieu span {
