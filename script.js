@@ -6,7 +6,7 @@ let form = {
     ceremony: 0,
 }
 
-const ip = "http://localhost/Essenciel/";
+const ip = "http://localhost:8888/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
 
