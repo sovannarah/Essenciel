@@ -1,0 +1,78 @@
+#quoteFormHeader {
+    background-image: url("../../assets/png-x2/banner-footer.webp");
+}
+
+.footer_quote {
+    width: 100%!important;
+    background-color: white!important;
+}
+
+.footer_quote .banner-simple div {
+    background-color: white!important;
+}
+
+#quoteFormHeader span {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2vw;
+}
+
+#ctnQuoteForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#ctnInput {
+    display: flex;
+    width: 49%;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+#ctnInput button {
+    width: 25%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3vw solid #dddddd;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.1vw;
+}
+
+#ctnInput button span {
+    color: #eb703d;
+}
+
+#btnSubmitQuote {
+    height: 10vw;
+}
+
+#ctnRedirectContact {
+    height: 12vw;
+    text-align: center;
+    font-size: 1.1vw;
+    display: flex;
+    color: black;
+}
+
+#ctnRedirectContact a {
+    margin: auto;
+}
+
+.select-choice {
+    color: #4abfcb;
+    border-bottom: 0.3vw solid #4abfcb !important;
+}
+
+/*.select-choice:before {*/
+/*    content: "";*/
+/*    background-image: url("http://localhost/Essenciel/assets/png-x2/");*/
+/*}*/
+
+
+.select-choice span {
+    color: #4abfcb!important;
+}

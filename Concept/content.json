@@ -1,0 +1,30 @@
+[
+  {
+    "slider": [
+      {
+        "img": "slide-01",
+        "txt": "C’est simple <strong>le prix est déterminé à l’avance</strong>, et ne bougera pas, quoi qu’il arrive."
+      },
+      {
+        "img": "slide-02",
+        "txt": "Nous proposons <strong>le tarif le plus bas.</strong> C’est aussi simple que cela."
+      },
+      {
+        "img": "slide-03",
+        "txt": "Les démarches et l’organisation des obsèques sont <strong>offertes</strong>"
+      },
+      {
+        "img": "slide-04",
+        "txt": "Vous pouvez <strong>organiser sereinement les obsèques d’un proche depuis chez vous</strong>"
+      },
+      {
+        "img": "slide-05",
+        "txt": "Valeurs <strong>Laïques</strong>"
+      },
+      {
+        "img": "slide-06",
+        "txt": "Un fabriquation française. Une gamme de produits écologiques"
+      }
+    ]
+  }
+]

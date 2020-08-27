@@ -1,0 +1,19 @@
+@media all and  (max-width: 576px) {
+
+    #ctnQuoteForm {
+        flex-wrap: wrap;
+    }
+
+    #ctnInput {
+        width: 100%;
+        justify-content: space-around!important;
+    }
+
+    #quoteFormHeader span {
+        font-size: 2vw;
+    }
+    #ctnInput button {
+        height: 25vw;
+        font-size: 2vw;
+    }
+}

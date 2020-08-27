@@ -1,0 +1,307 @@
+
+@media all and  (max-width: 576px) {
+    #ctnQuote {
+        flex-direction: column;
+    }
+
+    #header-quote {
+        height: 20vw;
+    }
+
+    #ctn-logo-quote img {
+        height: 3.5vw;
+    }
+
+    #ctn-acn-quote a img {
+        height: 2.4vw;
+    }
+    #ctn-acn-quote a span {
+        font-size: 2vw;
+    }
+
+    #header-quote h1 {
+        font-size: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header-quote {
+        margin-bottom: 2vw !important;
+    }
+
+    #navQuote {
+        display: flex;
+    }
+
+    #ctn-quote-input label {
+        width: 100%!important;
+    }
+
+    #ctn-checkbox-quote div {
+        text-align: center;
+    }
+    #navQuote li {
+        width: calc(100% / 5)!important;
+        height: 10vw;
+        box-shadow:  inset 7vw 4vw 2vw 1vw #f8f8f8, inset -0.2vw -0vw 2vw -1.5vw dimgrey;
+    }
+    #navQuote li a {
+        padding-left: 3vw!important;
+    }
+    .active-nav-quote:before {
+        display: none;
+    }
+
+    #navQuote li span {
+        font-size: 2vw!important;
+    }
+
+    .n-help {
+        display: none!important;
+    }
+
+    #formQuote {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    #formQuote h2:after {
+        height: 4.5vw;
+        width: 100vw!important;
+    }
+
+    #ctn-btn-lieu:after {
+        width: 100vw!important;
+        height: 4.5vw!important;
+    }
+
+    #ctn-btn-lieu {
+        flex-wrap: wrap;
+        justify-content: space-around!important;
+    }
+
+
+    #ctn-btn-lieu button {
+        height: auto!important;
+        /*border: 1px solid red!important;*/
+        width: auto!important;
+        font-size: 3vw!important;
+        margin-bottom: 5vw!important;
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+    #ctn-btn-lieu button img {
+        height: 5vw  !important;
+        margin-bottom: 4vw!important;
+
+    }
+
+    .add-price-quote {
+        font-size: 3vw!important;
+        /*height: 5vw!important;*/
+    }
+
+
+    #formQuote h2 {
+        padding: 7vw 0;
+        margin-bottom: 5vw;
+    }
+
+    #ctn-quote-input label {
+        font-size: 3vw!important;
+    }
+
+    #ctn-quote-input input {
+        font-size: 3vw!important;
+        height: 3.2vw!important;
+        margin: 3vw 0;
+    }
+
+    #ctn-quote-input input::placeholder {
+        font-size: 3vw!important;
+    }
+
+    #ctn-quote-input {
+        padding: 7vw 12vw 8vw!important;
+    }
+
+    #ctnInfoPrice {
+        width: 100%!important;
+        flex-wrap: wrap;
+    }
+
+    #ctnQuote .info-price {
+        width: 100%!important;
+        margin: auto;
+        height: 25vw;
+    }
+
+    #ctnQuote #next-quote-form {
+        position: relative;!important;
+        width: 100%!important;
+    }
+
+    #footer-quote-form {
+        width: 100%!important;
+    }
+
+    #ctn-step {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #ctn-step-info {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .step-bar {
+        height: 0.5vw;
+        margin-right: 1.4vw;
+        width: 7vw;
+    }
+    #footer-quote-form {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    #ctn-step span {
+        font-size: 3vw!important;
+    }
+    #ctn-step-info p {
+        font-size: 3vw!important;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info-price h3, .bg-option, .info-price .price {
+        font-size: 3vw;
+    }
+
+    .bg-option {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    #footer-quote-form {
+        flex-direction: column;
+    }
+
+    #next-quote-form {
+        position: relative;
+        top:0;
+    }
+
+
+    .active-nav-quote {
+        background-color: #e6f1f3;
+        box-shadow: inset 7vw 4vw 2vw 1vw  #e6f1f3;
+    }
+
+    #ctn-checkbox-quote {
+        margin-top: 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #ctn-checkbox-quote div {
+        flex-wrap: wrap;
+        width: 45%;
+    }
+
+    #ctn-quote-input label {
+        width: 80%;
+        /*margin-top: auto;*/
+        margin-bottom: auto;
+    }
+
+    .ceremony-input {
+        margin-right: 5%!important;
+        margin-top: 0 !important;
+        margin-bottom: auto!important;
+    }
+
+    #ctn-checkbox-quote div .add-price-quote {
+        margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #ctn-devis li, #ctn-devis h5 {
+        font-size: 3vw !important;
+    }
+
+
+    .row-mor-def {
+        margin-top: 2vw!important;
+        margin-bottom: 2vw!important;
+    }
+
+    .row-mor-def select {
+        width: 100%!important;
+        font-size: 3vw;
+        margin-top: 3vw;
+    }
+    #ctn-devis h4 {
+        font-size: 3vw!important;
+    }
+
+
+    .row-mor-def h5 {
+        font-size: 3vw!important;
+    }
+
+    .row-def-inputs {
+        flex-wrap: wrap;
+    }
+
+    .row-def-inputs .ctn-field {
+        flex-wrap: wrap;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    .row-def-inputs {
+        width: 100%!important;
+    }
+    .row-def-inputs div, .row-def-inputs input {
+        width: 100%!important;
+    }
+
+    #ctn-quote-input input {
+        width: 100%;
+        margin-left: 1.6vw;
+        margin-bottom: 3vw!important;
+    }
+
+    .row-def-inputs div {
+        flex-wrap: wrap;
+    }
+
+    .column label {
+        text-align: left!important;
+    }
+
+    #error-etablishment_address {
+        font-size: 2vw!important;
+    }
+
+    #error-location {
+        font-size: 2vw!important;
+    }
+
+    #ctn-quote-input input {
+        border-bottom: 2vw solid #efede9!important;
+        padding-bottom: 2vw!important;
+    }
+
+    .ceremony-input {
+        width: auto!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    #submit-form {
+        position: relative!important;
+    }
+
+}

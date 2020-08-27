@@ -1,0 +1,28 @@
+@media all and  (max-width: 576px) {
+    #prices-grid {
+        display: none !important;
+    }
+
+    #mobile-price-grid {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    #ctnPricesRedirect {
+        flex-wrap: wrap;
+    }
+
+    .ctn-prices-link {
+        width: 50%!important;
+        height: 15vw!important;
+        margin-bottom: 5vw;
+    }
+
+    .ctn-prices-link span {
+        font-size: 2vw!important;
+        margin: auto!important;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+

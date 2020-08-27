@@ -1,0 +1,97 @@
+@media all and  (max-width: 576px) {
+    #aboutBanner-1 {
+        height: 30vw
+    }
+
+    #aboutBanner-1 h1 {
+        font-size: 3.5vw !important;
+    }
+    #aboutBanner-1 h1 span {
+        font-size: 3.5vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    #aboutBanner-1 span {
+        font-size: 2vw;
+    }
+
+    #aboutBanner-1 a {
+        bottom: -10vw;
+    }
+
+    #ctnLocate {
+        flex-wrap: wrap;
+    }
+
+    #ctnLocate div {
+        width: 100%;
+        /*height: auto;*/
+    }
+
+    #ctnLocateLabel {
+        height: 18vw;
+    }
+
+    #ctnLocateList {
+        height: auto!important;
+    }
+
+    #ctnLocate ul {
+        height: auto;
+        margin: auto;
+    }
+
+    #ctnLocate li {
+        width: 40%;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        margin-right: 3vw;
+        margin-left: 1vw;
+        height: auto;
+        font-size: 3.1vw;
+    }
+
+    #ctnLocateList p {
+        font-size: 2vw;
+        margin-left: auto;
+        margin-right: 5vw;
+        margin-top: 7vw;
+        margin-bottom: 7vw;
+    }
+    #ctnLocate li span {
+        font-size: 3.1vw;
+    }
+
+    #ctnLocateLabel p {
+        font-size: 2.8vw;
+    }
+
+    #ctnLocateLabel p br {
+        display: none;
+    }
+
+    #orgRow {
+        flex-wrap: wrap;
+    }
+
+    #orgRowCtnImage {
+        width: 75%!important;
+        height: 60vw;
+    }
+
+    #orgRowCtnContent {
+        width: 100%!important;
+        height: 40vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    #orgRowCtnContent p {
+        font-size: 3vw;
+    }
+
+    #orgRowCtnContent h3 {
+        font-size: 4vw;
+    }
+}

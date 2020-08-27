@@ -1,0 +1,161 @@
+#about {
+    margin-bottom: 4vw;
+}
+
+#aboutBanner-1 {
+    height: 20vw;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+#aboutBanner-1::before {
+    content: "";
+    height: 100%;
+    width: 37%;
+    background-color: white;
+    position: absolute;
+}
+
+#aboutBanner-1 a {
+    position: absolute;
+    bottom: -27%;
+    z-index: 1;
+    right: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    width: 37%;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+
+#aboutBanner-1 span {
+    font-size: 1.1vw;
+    margin-left: 6vw;
+    font-weight: bold;
+}
+
+#aboutBanner-1 h1 {
+    margin: auto;
+    font-size: 1.8vw;
+    position: relative;
+}
+
+#aboutBanner-1 h1 span {
+    color: #4bbecb;
+    font-size: 1.8vw;
+}
+
+#aboutBanner {
+    background-image: url("../../assets/png-x2/banner-apropos-01.webp");
+}
+
+#ctnLocate {
+    display: flex;
+    position: relative;
+}
+
+#ctnLocateList {
+    height: 27vw;
+}
+
+#ctnLocateLabel {
+    height: 29vw;
+    width: 36.5%;
+    position: relative;
+    top: -2vw;
+    background-color: #f8f8f8;
+    display: flex;
+}
+
+#ctnLocateLabel p {
+    margin: auto;
+    font-size: 1.6vw;
+}
+
+#ctnLocateList {
+    width: 63.5%;
+}
+
+#ctnLocate ul {
+    width: 83%;
+    height: 60%;
+    margin-top: 9%;
+    display: flex;
+    padding: 0;
+    /*margin: 0;*/
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#ctnLocate li {
+    width: 21%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    font-size: 1.4vw;
+    color: dimgray;
+}
+
+#ctnLocateList li span {
+    color: #4bbecb;
+    font-size: 1.6vw;
+    margin-bottom: 1.5vw;
+    position: relative;
+}
+
+#ctnLocateList li span::after {
+    content: "";
+    width: 72%;
+    height: 0.3vw;
+    top: 52%;
+    right: 0;
+    background-color: #c5e1e4;
+    position: absolute;
+}
+
+#ctnLocateList p {
+    font-size: 1vw;
+    text-align: right;
+    margin-right: 17%;
+    color: #8a8b8e;
+}
+
+
+#orgRow {
+    display: flex;
+    width: 100%;
+}
+
+
+#orgRowCtnImage div {
+    background-image: url("../../assets/png-x2/banner-apropos-02.webp");
+}
+
+
+#orgRowCtnContent {
+    display: flex;
+    width: 50%;
+}
+
+#orgRowCtnContent div {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15%;
+}
+
+#orgRowCtnContent span {
+    color: #ec6f3e;
+}
+
+#orgRowCtnContent h3 {
+    font-size: 1.6vw;
+}
+
+#orgRowCtnContent p {
+    font-size: 1.1vw;
+    color: #868686;
+}

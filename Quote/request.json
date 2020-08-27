@@ -1,0 +1,100 @@
+[
+  {
+    "lieu": [
+      {
+        "id": 0,
+        "key": "A",
+        "img": "building",
+        "text": "Il se trouve <br /> en établissement <br /> de soin."
+      },
+      {
+        "id": 1,
+        "key": "B",
+        "img": "house",
+        "text": "Il se trouve <br /> à domicile ou en <br /> maison de retraite.",
+        "add": 1300
+      },
+      {
+        "id": 2,
+        "key": "C",
+        "img": "cardic",
+        "text": "Il se trouve <br /> à l’institut <br /> médico légale.",
+        "add": 300
+      }
+    ],
+    "types": [
+      {
+        "id": 0,
+        "key": "A",
+        "img": "building",
+        "text": "Une<br /> crémation",
+        "add": 1800
+      },
+      {
+        "id": 1,
+        "key": "B",
+        "img": "house",
+        "text": "Un<br />enterrement",
+        "add": 2190
+      }
+    ],
+    "ceremony" : [
+      {
+        "id": 0,
+        "text": "Souhaitez-vous organiser une cérémonie ?",
+        "answer": [
+          {
+            "id": 0,
+            "text": "oui",
+            "add": 300
+          },
+          {
+            "id": 1,
+            "text": "non"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "text": "et je souhaite que mon proche défunt soit",
+        "answer": [
+          {
+            "id": 0,
+            "text": "placé dans <br /> le caveau familiale existant. ",
+            "add": 300
+          },
+          {
+            "id": 1,
+            "text": "placé dans <br /> une sépulture pleine-terre. "
+          }
+        ]
+      }
+    ],
+    "accompaniment" : [
+      {
+        "id": 0,
+        "img": "",
+        "text": "Un accompagnement à distance"
+      },
+      {
+        "id": 1,
+        "img": "",
+        "text": "Un accompagnement en agence"
+      }
+    ],
+    "civility": [
+      {"id": 0, "text": "Madame"},
+      {"id": 1, "text": "Monsieur"}
+    ],
+    "links": [
+      {"id": 0,"text": "Conjoint.e"},
+      {"id": 1,"text": "Enfant"},
+      {"id": 2,"text": "Grand-parent"},
+      {"id": 3,"text": "Neveu / Nièce"},
+      {"id": 4,"text": "Parent"},
+      {"id": 5,"text": "Frère / Sœur"},
+      {"id": 6,"text": "Oncle / Tante"},
+      {"id": 7,"text": "Autre…"}
+    ]
+  }
+]

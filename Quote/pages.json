@@ -1,0 +1,27 @@
+[
+  {
+    "page": "lieu",
+    "id": 0,
+    "text": "Lieu"
+  },
+  {
+    "page": "types",
+    "id": 1,
+    "text": "Types d'obsèques"
+  },
+  {
+    "page": "devis",
+    "id": 2,
+    "text": "Votre devis"
+  },
+  {
+    "page": "plus",
+    "id": 3,
+    "text": "À propos"
+  },
+  {
+    "page": "info",
+    "id": 4,
+    "text": "Vos coordonnées"
+  }
+]

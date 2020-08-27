@@ -1,0 +1,49 @@
+#ctnMainFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw;
+    background-color: #ededed;
+    height: 11vw;
+}
+
+#footerLinks {
+    width: 63%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footerLinks a {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.2vw;
+    color: #6a6a6a;
+}
+
+#footer-info {
+    color: #616163;
+    font-size: 1vw;
+    width: 33%;
+    display: flex;
+}
+
+#footer-info img {
+    height: 3vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+}
+#footer-info p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#footerEnd {
+    height: 3.5vw;
+    display: flex;
+}
+
+#footerEnd span {
+    margin: auto;
+    font-size: 1vw;
+    color: #8a8b8e;
+}
