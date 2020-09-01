@@ -134,7 +134,7 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                     <span>Suivant</span>
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
                 </button>
-            <?php } ?>
+            <?php } }?>
         </div>
     </div>
 </section>

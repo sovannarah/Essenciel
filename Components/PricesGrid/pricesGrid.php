@@ -89,11 +89,12 @@
         <a class="ctn-prices-link">
             <span>Découvrir nos <br/> prestations en détail </span>
         </a>
-        <a href="<?php echo $GLOBALS["ip"]; ?>contact" class="ctn-prices-link">
+        <a href="<?php echo $GLOBALS["ip"]; ?>contact" class="ctn-prices-link link txt-black">
             <span>Être <br/> contacté </span>
         </a>
-        <a href="<?php echo $GLOBALS["ip"]; ?>quote/lieu" id="redirectQuote" class="btn-redirect-blue">
+        <a href="<?php echo $GLOBALS["ip"]; ?>quote/lieu" id="redirectQuote" class="btn-redirect-blue link text-black">
             <span>Établissez <br/> votre devis</span>
+            <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
         </a>
     </div>
 </div>
