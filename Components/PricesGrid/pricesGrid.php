@@ -94,7 +94,7 @@
         </a>
         <a href="<?php echo $GLOBALS["ip"]; ?>quote/lieu" id="redirectQuote" class="btn-redirect-blue link text-black">
             <span>Établissez <br/> votre devis</span>
-            <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+            <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
         </a>
     </div>
 </div>

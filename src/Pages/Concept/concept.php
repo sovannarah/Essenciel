@@ -22,7 +22,7 @@
 
     <div id="ctn-concept-slider-4" class="slider-resp-concept">
         <button id="btn-slider-concept-prev">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
         </button>
         <div id="hide-slider-concept-4">
             <div id="slider-concept-4">
@@ -39,7 +39,7 @@
             </div>
         </div>
         <button id="btn-slider-concept-next">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
         </button>
     </div>
 

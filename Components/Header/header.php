@@ -47,6 +47,6 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
     <?php include("Menu/menu.php"); ?>
     <a href="/Essenciel/quote/lieu" id="ctn-action-header" class="btn-redirect-blue">
         <span>Établissez <br/> un devis</span>
-        <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+        <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
     </a>
 </header>

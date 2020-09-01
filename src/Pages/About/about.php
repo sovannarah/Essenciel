@@ -1,7 +1,7 @@
 <div id="about">
     <div id="aboutBanner-1">
         <h1>Nous sommes une entreprise indépendante <br/> <span>présente depuis 10 ans en région parisienne</span></h1>
-        <a href="">
+        <a href="" class="link txt-black">
             <span>Découvrez l'ensemble <br/> de nos prestations</span>
         </a>
     </div>

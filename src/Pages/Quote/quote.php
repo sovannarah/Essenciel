@@ -15,14 +15,18 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                 foreach ($contents as $content) {
                     ?>
                     <li>
-                        <a class="btn-nav-quote <?php if ($tabUrl[3] === $content->page) {
+                        <a class="btn-nav-quote
+                        <?php
+                        if ($tabUrl[3] === $content->page) {
                             echo "active-nav-quote";
-                        } ?>
-                    id=" btn-nav-quote-<?php echo $content->page; ?>"
-                        value="<?php echo $content->id; ?>" class="<?php if ($content->page === "lieu") {
+                        }
+                        if ($content->page === "lieu") {
                             echo 'active-nav-quote';
-                        } ?>">
-                        <span><?php echo $content->text; ?></span>
+                        }
+                        ?>"
+                           id="btn-nav-quote-<?php echo $content->page; ?>"
+                           value="<?php echo $content->id; ?>">
+                            <span><?php echo $content->text; ?></span>
                         </a>
                     </li>
                 <?php } ?>
@@ -35,8 +39,12 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
             </ul>
         <?php } ?>
         <div class="<?php
-        if ($tabUrl[count($tabUrl) - 1] === "contact") { echo "contact-form"; }
-        if($tabUrl[count($tabUrl) - 2] === "contact") { echo "ml-auto"; }
+        if ($tabUrl[count($tabUrl) - 1] === "contact") {
+            echo "contact-form";
+        }
+        if ($tabUrl[count($tabUrl) - 2] === "contact") {
+            echo "ml-auto";
+        }
         ?>">
             <div id="formQuote">
                 <?php
@@ -99,7 +107,7 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                         $type = isset($_SESSION["type"]) ? $_SESSION["type"] : 0;
                         $req = "SELECT * FROM formule WHERE id_location = '" . $location . "' AND id_type= '" . $type . "' AND id_type_option_answer = '" . $type_option_answer . "'";
                         $res = $GLOBALS["bdd"]->query($req)->fetch();
-                            echo $res["total"];
+                        echo $res["total"];
                         ?>
                         <span class="euro">€</span>
                     </strong>
@@ -111,27 +119,27 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
                 <button id="submit-form" class="btn-redirect-blue">
                     <span>Valider</span>
-                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
 
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "contact") { ?>
                 <button id="submit-form-contact" class="btn-redirect-blue">
                     <span>Valider</span>
-                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "valide") { ?>
                 <button id="end-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
                         class="btn-redirect-blue">
                     <span>Terminé</span>
-                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
             <?php } else { ?>
                 <button id="next-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
                         class="btn-redirect-blue">
                     <span>Suivant</span>
-                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" />
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
-            <?php } }?>
+            <?php } ?>
         </div>
     </div>
 </section>
