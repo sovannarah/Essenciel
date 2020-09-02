@@ -12,8 +12,8 @@
                             echo "select-choice";
                         } ?>" value="<?php echo $data["id"]; ?>">
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/<?php echo $data["img"]; ?>.svg" alt=""/>
-                    <div>
-                        <?php echo $data["accompaniment"]; ?></div>
+                    <span>
+                        <?php echo $data["accompaniment"]; ?></span>
                 </button>
             <?php } ?>
         </div>

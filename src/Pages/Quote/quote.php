@@ -15,19 +15,16 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                 foreach ($contents as $content) {
                     ?>
                     <li>
-                        <a class="btn-nav-quote
+                        <button class="btn-nav-quote
                         <?php
                         if ($tabUrl[3] === $content->page) {
                             echo "active-nav-quote";
-                        }
-                        if ($content->page === "lieu") {
-                            echo 'active-nav-quote';
                         }
                         ?>"
                            id="btn-nav-quote-<?php echo $content->page; ?>"
                            value="<?php echo $content->id; ?>">
                             <span><?php echo $content->text; ?></span>
-                        </a>
+                        </button>
                     </li>
                 <?php } ?>
                 <li class="n-help">

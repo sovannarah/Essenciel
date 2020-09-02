@@ -11,15 +11,15 @@
                         echo "select-choice";
                     } ?>">
                 <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $data["img_location"]; ?>.svg" alt=""/>
-                <div>
-                    <span><?php echo $data["letter_key"]; ?>.</span>
-                    <?php echo $data["location"]; ?>
-                </div>
+                <span>
+                    <span class="txt-orange"><?php echo $data["letter_key"]; ?>.</span>
+                    <span><?php echo $data["location"]; ?></span>
+                </span>
                 <?php if (isset($data["price_add"])) {
-                    echo "<div class='add-price-quote'>" .
+                    echo "<span class='add-price-quote'>" .
                         "<img src='" . $GLOBALS["ip"] . "assets/png-x2/euroinacircle.svg' alt=''/><span>+ "
                         . $data["price_add"] .
-                        "€</span></div>";
+                        "€</span></span>";
                 } ?>
             </button>
             <?php
