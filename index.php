@@ -13,7 +13,7 @@ if (isset($_SESSION["total"]) && isset($_SESSION["prices"])) {
     $_SESSION["total"] = array_sum($_SESSION["prices"]);
 }
 
-$GLOBALS["ip"] = "http://localhost:8888/Essenciel/";
+$GLOBALS["ip"] = "http://localhost/Essenciel/";
 
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 

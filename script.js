@@ -1,5 +1,5 @@
 
-const ip = "http://localhost:8888/Essenciel/";
+const ip = "http://localhost/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
 
@@ -144,9 +144,9 @@ $(function () {
         if (name !== "type_option_answer") {
             changeColorBtnQuote(this)
         }
-        $.post(ip + 'quote/' + name, {[name]: id}, function (data) {
+        $.post(ip + 'quote/' + name, {[name]: id}, function (data) { sendTotal(name, id);
         })
-        sendTotal(name, id);
+        
         if (name == "type_option_answer") {
             if (id > 2) {
                 id = id - 2;
