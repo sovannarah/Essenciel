@@ -26,7 +26,9 @@ $DATABASE_NAME = 'Essenciel';
 
 try {
     // On se connecte à MySQL
-    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'root');
+
+    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
+
 } catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
     die('Erreur : ' . $e->getMessage());
