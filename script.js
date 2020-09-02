@@ -107,7 +107,7 @@ $(function () {
                     <input name="type_option_answer" value="${c.answers[0].id_type_option_answer}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
                         <label for="ceremony-1">${c.answers[0].type_option_answer}</label>
                         <div class='add-price-quote'>
-                            <img src='http://192.168.1.18/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
+                            <img src='http://localhost/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
                             <span>+ 300</span>
                         </div>
                 </div>
