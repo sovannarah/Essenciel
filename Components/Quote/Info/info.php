@@ -94,4 +94,17 @@
             </div>
         </div>
     </div>
+    <div class="row-mor-def">
+        <h5>Souhaitez-vous laisser un message?</h5>
+        <div>
+            <div class="row-def-inputs column">
+                <div class="mb-5">
+                    <label for="message" class="label-message">Message</label>
+                    <div class="column">
+                        <textarea placeholder="Votre message..." rows="7" name="message" id="message" class="text-area-message"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

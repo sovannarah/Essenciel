@@ -27,7 +27,7 @@ $DATABASE_NAME = 'Essenciel';
 try {
     // On se connecte à MySQL
 
-    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
+    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
 
 } catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
@@ -129,7 +129,8 @@ if ($tabUrl[count($tabUrl) - 2] !== "quote" && $tabUrl[count($tabUrl) - 2] !== "
 } ?>
 <?php include("Components/Footer/footer.php") ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkat0YK800FUWS5LCku2OAl41FHBSOyCw&callback=initMap"
+        type="text/javascript"></script>
 <script src="<?php echo $GLOBALS["ip"]; ?>script.js"></script>
 </body>
 </html>

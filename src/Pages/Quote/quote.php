@@ -118,18 +118,17 @@ $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
                     <span>Valider</span>
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
-
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "contact") { ?>
                 <button id="submit-form-contact" class="btn-redirect-blue">
                     <span>Valider</span>
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
                 </button>
             <?php } else if ($tabUrl[count($tabUrl) - 1] === "valide") { ?>
-                <button id="end-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
+                <a href="<?php echo $GLOBALS["ip"]; ?>" id="end-quote-form"
                         class="btn-redirect-blue">
                     <span>Terminé</span>
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl-w.svg" alt=""/>
-                </button>
+                </a>
             <?php } else { ?>
                 <button id="next-quote-form" value="<?php echo $tabUrl[count($tabUrl) - 1]; ?>"
                         class="btn-redirect-blue">

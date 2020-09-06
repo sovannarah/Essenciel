@@ -8,7 +8,7 @@ $DATABASE_NAME = 'Essenciel';
 
 try {
 
-    $bdd = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
+    $bdd = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
 
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
@@ -161,25 +161,39 @@ if (isset($_POST["search_quote"])) {
 }
 
 if (isset($_POST["formContact"])) {
-    try {
+//    try {
         $idCivility = $_SESSION["civi"];
         $lastName = $_SESSION["last_name"];
         $firstName = $_SESSION["first_name"];
         $phoneNumber = $_SESSION["phone_number"];
         $email = $_SESSION["email"];
-        $query = $bdd->prepare('INSERT INTO contacts (id_civility, last_name ,first_name, phone_number, email)
-  			  VALUES(:id_civility, :last_name, :first_name, :phone_number, :email)');
-        $query->execute(array(
-            'id_civility' => $idCivility,
-            'last_name' => $lastName,
-            'first_name' => $firstName,
-            'phone_number' => $phoneNumber,
-            'email' => $email,
-        ));
-        echo "success";
-    } catch (PDOException $e) {
-        echo ('Erreur : ' . $e->getMessage());
-    }
+        $message = $_SESSION["message"];
+        $mail = 'Nom : ' . $lastName . "\n" .
+                'Prenom : ' . $firstName . "\n" .
+                'Telephone : ' . $phoneNumber . "\n" .
+                'E-mail : ' . $email . "\n" .
+                'Message : ' . $message . "\n" .
+
+        $to      = 'sovannara09@hotmail.fr';
+        $subject = 'le sujet';
+        $headers = 'From: ' . $email . "\r\n" .
+            'Reply-To: webmaster@example.com' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $mail, $headers);
+//        $query = $bdd->prepare('INSERT INTO contacts (id_civility, last_name ,first_name, phone_number, email)
+//  			  VALUES(:id_civility, :last_name, :first_name, :phone_number, :email)');
+//        $query->execute(array(
+//            'id_civility' => $idCivility,
+//            'last_name' => $lastName,
+//            'first_name' => $firstName,
+//            'phone_number' => $phoneNumber,
+//            'email' => $email,
+//        ));
+//        echo "success";
+//    } catch (PDOException $e) {
+//        echo ('Erreur : ' . $e->getMessage());
+//    }
 }
 
 if (isset($_POST["form"])) {
