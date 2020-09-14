@@ -21,12 +21,13 @@ $lastParams = $tabUrl[count($tabUrl) - 1];
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = 'root';
+$DATABASE_PASS = '';
 $DATABASE_NAME = 'Essenciel';
 
 try {
     // On se connecte à MySQL
-    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', 'LyonJoa77');
+
+    $GLOBALS["bdd"] = new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', 'root', '');
 
 } catch (Exception $e) {
     // En cas d'erreur, on affiche un message et on arrête tout
@@ -41,30 +42,30 @@ try {
     <meta charset="utf-8">
     <title>Essenciel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/headerResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/prestations.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/header.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/prestationsResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/pricesGrid.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/pricesGridResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/footer.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/about.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/aboutResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteForm.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteFormResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/concept.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/conceptResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/help.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/helpResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quote.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteResponsive.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/lieu.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/devis.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/more.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/admin.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>assets/styles/valide.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>index.css"/>
-    <link rel="stylesheet" type='text/css' href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/headerResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/prestations.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/header.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/pricesGrid.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/pricesGridResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/footer.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/about.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/aboutResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/prestationsResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteForm.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteFormResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/concept.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/conceptResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/help.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/helpResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quote.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/quoteResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/lieu.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/devis.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/more.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/admin.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>index.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/valide.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;s700;900&display=swap" rel="stylesheet"/>
 </head>
 <body id="main">
@@ -128,7 +129,8 @@ if ($tabUrl[count($tabUrl) - 2] !== "quote" && $tabUrl[count($tabUrl) - 2] !== "
 } ?>
 <?php include("Components/Footer/footer.php") ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>-->
-<script type="text/javascript" src="<?php echo $GLOBALS["ip"]; ?>script.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkat0YK800FUWS5LCku2OAl41FHBSOyCw&callback=initMap"
+        type="text/javascript"></script>
+<script src="<?php echo $GLOBALS["ip"]; ?>script.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <section id="help">
     <div id="help-stn-1">
         <h2>Comment se déroule <br/> <span>l’organisation d’obsèques ?</span></h2>
@@ -36,37 +34,36 @@
     $contents = json_decode(file_get_contents(__DIR__ . "/content.json"));
     foreach ($contents as $content) {
         ?>
-        <div class="help-row help-side-<?php echo $content->side ?>"">
-        <div class="help-row-main-content">
-            <div class="help-ctn-mrg">
-                <?php
-                echo "<h2>" . $content->title . "</h2>";
-                if (isset($content->text)) {
-                    echo "<p>" . $content->text . "</p>";
-                } else {
-                    echo "<label>" . $content->label . "</label>";
-                    echo "<ul>";
-                    foreach ($content->list as $elem) {
-                        echo "<li>" . $elem . "</li>";
+        <div class="help-row help-side-<?php echo $content->side ?>">
+            <div class="help-row-main-content">
+                <div class="help-ctn-mrg">
+                    <?php
+                    echo "<h2>" . $content->title . "</h2>";
+                    if (isset($content->text)) {
+                        echo "<p>" . $content->text . "</p>";
+                    } else {
+                        echo "<label>" . $content->label . "</label>";
+                        echo "<ul>";
+                        foreach ($content->list as $elem) {
+                            echo "<li>" . $elem . "</li>";
+                        }
+                        echo "</ul>";
                     }
-                    echo "</ul>";
-                }
-                ?>
+                    ?>
+                </div>
+            </div>
+            <div class="help-row-img-content">
+                <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.webp"
+                     alt=""/>
+                <?php if (isset($content->bubbleText)) {
+                    echo "<p class='bubble'>" . $content->bubbleText . "</p>";
+                } ?>
             </div>
         </div>
-        <div class="help-row-img-content">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $content->img ?>.webp"
-                 alt=""/>
-            <?php if (isset($content->bubbleText)) {
-                echo "<p class='bubble'>" . $content->bubbleText . "</p>";
-            } ?>
-        </div>
-        </div>
     <?php } ?>
-    <div
     <div id="ctn-help-slider">
         <button id="btn-slider-help-prev">
-        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
         </button>
         <div id="hide-slider-help">
             <div id="slider-help">
@@ -75,15 +72,16 @@
                 foreach ($contents as $content) {
                     ?>
                     <div class="elem-slide-help">
-                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp" alt=""/>
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp"
+                             alt=""/>
                         <span><?php echo $content->text; ?></span>
-                        <a href>Ouvrir</a>
+                        <a href="#">Ouvrir</a>
                     </div>
                 <?php } ?>
             </div>
         </div>
         <button id="btn-slider-help-next">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
         </button>
     </div>
 </section>

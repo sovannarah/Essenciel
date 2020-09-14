@@ -42,7 +42,7 @@
     position: absolute;
     bottom: 0;
 }
-#ctn-btn-lieu span {
+.txt-orange {
     color: #ec6f3e;
 }
 #ctn-btn-lieu button {
@@ -156,4 +156,17 @@
 
 .row-def-inputs .column {
     width: 100%;
+}
+
+.text-area-message {
+    border: none;
+    background-color: #edf1f2;
+    font-size: 1vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+
+}
+
+.label-message {
+    margin-top: 1vw;
 }

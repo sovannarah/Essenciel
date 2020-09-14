@@ -10,10 +10,9 @@
                 <button name="accompaniment"
                         class="quote-input <?php if (isset($_SESSION["accompaniment"]) && $_SESSION["accompaniment"] == $data["id"]) {
                             echo "select-choice";
-                        } ?>" value="<?php echo $data["id"]; ?>">
+                        } ?>" value="<?php echo $data["id_accompaniment"]; ?>">
                     <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/<?php echo $data["img"]; ?>.svg" alt=""/>
-                    <div>
-                        <?php echo $data["accompaniment"]; ?></div>
+                    <span><?php echo $data["accompaniment"]; ?></span>
                 </button>
             <?php } ?>
         </div>
@@ -35,8 +34,8 @@
                                 $resCivi = $GLOBALS["bdd"]->query($reqCivi);
                                 while ($civility = $resCivi->fetch()) {
                                     ?>
-                                    <option value="<?php echo $civility["id"]; ?>"
-                                        <?php if (isset($_SESSION["civi_def"]) && ($_SESSION["civi_def"] == $civility["id"])) {
+                                    <option value="<?php echo $civility["id_civility"]; ?>"
+                                        <?php if (isset($_SESSION["civi_def"]) && ($_SESSION["civi_def"] == $civility["id_civility"])) {
                                             echo "selected";
                                         } ?>
                                     ><?php echo $civility["civility"]; ?></option>

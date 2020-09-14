@@ -17,13 +17,13 @@
                             echo "select-choice";
                         } ?>" value="<?php echo $data["id_type"]; ?>">
                     <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/<?php echo $data["img_type"] ?>.svg" alt=""/>
-                    <div>
-                        <span><?php echo $data["letter_key"]; ?>.</span> <?php echo $data["type"]; ?></div>
+                    <span>
+                        <span><?php echo $data["letter_key"]; ?>.</span> <?php echo $data["type"]; ?></span>
                     <?php if (isset($data["add_price_type"])) {
-                        echo "<div class='add-price-quote'>" .
+                        echo "<span class='add-price-quote'>" .
                             "<img src='" . $GLOBALS["ip"] . "assets/png-x2/euroinacircle.svg' alt=''/><span>+"
                             . $data["add_price_type"] .
-                            "</span></div>";
+                            "</span></span>";
                     } ?>
                 </button>
                 <?php

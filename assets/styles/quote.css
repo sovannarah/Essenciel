@@ -37,14 +37,14 @@
     position: absolute;
 }
 
-#navQuote li a {
+#navQuote li button, #navQuote li a {
     background-color: transparent;
     border: none;
     outline: none;
     padding-left: 11.5vw;
     width: 100%;
     display: flex;
-position:relative;
+    position: relative;
     text-align: left;
 }
 
@@ -111,7 +111,6 @@ position:relative;
     flex-direction: column;
 }
 
-
 #ctn-step-info p {
     width: 31vw;
     font-size: 1vw;
@@ -130,13 +129,11 @@ position:relative;
     bottom: -5vw;
 }
 
-
 #submit-form-contact {
     position: absolute;
     right: 0;
     bottom: -5vw;
 }
-
 
 #submit-form {
 
@@ -144,6 +141,7 @@ position:relative;
     right: 0;
     bottom: 0;
 }
+
 #ctn-step {
     display: flex;
     padding-top: 2vw;
@@ -159,7 +157,7 @@ position:relative;
 }
 
 .active-step-bar {
-    background-color: #ec6f3e!important;
+    background-color: #ec6f3e !important;
 }
 
 #ctn-step span {
@@ -180,10 +178,12 @@ position:relative;
 #header-quote {
     display: flex;
 }
+
 #ctn-acn-quote {
     width: 36vw;
     height: 100%;
 }
+
 #ctn-logo-quote {
     height: 50%;
     display: flex;
@@ -205,10 +205,12 @@ position:relative;
     padding-right: 8vw;
     text-decoration: none;
 }
+
 #ctn-acn-quote a img {
     height: 1.4vw;
     margin-top: auto;
 }
+
 #ctn-acn-quote a span {
     margin-top: auto;
     font-weight: bold;
@@ -223,7 +225,7 @@ position:relative;
     margin-left: 5vw;
     color: white;
     font-weight: bold;
-    text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
+    text-shadow: rgba(0, 0, 0, 0.7) 1px 0 20px;
 }
 
 .contact-form {

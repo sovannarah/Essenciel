@@ -1,8 +1,6 @@
-
 const ip = "http://localhost/Essenciel/";
 
 let pages = ["lieu", "types", "devis", "plus", "info"];
-
 
 
 $(function () {
@@ -18,7 +16,7 @@ $(function () {
             const errors = JSON.parse(data);
             if (errors.length === 0) {
                 $.post(ip + 'server.php', {form: ""}, function (data) {
-                    if(data === "success") {
+                    if (data == "success") {
                         window.location.href = `${ip}quote/valide`;
                     }
                 })
@@ -36,9 +34,11 @@ $(function () {
         const submitValid = ["civi", "last_name", "first_name", "phone_number", "email"];
         $.post(ip + 'server.php', {"redirect": submitValid}, function (data) {
             const errors = JSON.parse(data);
+            console.log(data)
             if (errors.length === 0) {
                 $.post(ip + 'server.php', {formContact: ""}, function (data) {
-                    if(data === "success") {
+
+                    if (data === "success") {
                         window.location.href = `${ip}contact/valide`;
                     }
                 })
@@ -65,6 +65,7 @@ $(function () {
                 keys.push(key)
             })
         }
+        console.log(redirectLinkName)
         if (redirectLinkName === "lieu") {
             window.location.href = `${ip}quote/${redirectLinkName}`;
         } else {
@@ -138,15 +139,14 @@ $(function () {
 
 
     $('#formQuote').on("click", '.quote-input', function () {
-
         const name = $(this).attr("name");
         let id = $(this).attr("value");
         if (name !== "type_option_answer") {
             changeColorBtnQuote(this)
         }
         $.post(ip + 'quote/' + name, {[name]: id}, function (data) {
+            sendTotal(name, id);
         })
-        sendTotal(name, id);
         if (name == "type_option_answer") {
             if (id > 2) {
                 id = id - 2;
@@ -165,7 +165,6 @@ $(function () {
         const indexLink = $(this).attr("value");
         const redirectLinkName = pages[indexLink];
         redirectLinkQuote(redirectLinkName, indexLink);
-
     })
 
     if (lastParamUrl === "type" && $("ctn-types-next")) {
@@ -174,7 +173,6 @@ $(function () {
                 addNextTypes(data);
                 $.post(ip + 'server.php', {"type_option_answer": ""}, function (ceremonyId) {
                     if (ceremonyId) {
-
                         $(`#ceremony-${ceremonyId}`).prop('checked', true);
                     }
                 })
@@ -303,20 +301,20 @@ $(function () {
 
     $("#admin-rows").on("click", ".admin-row-quote", function (e) {
         console.log(e.target.className)
-        if(e.target.className !== "btn-view-quote" && e.target.className !== "img-btn-view-quote" &&
+        if (e.target.className !== "btn-view-quote" && e.target.className !== "img-btn-view-quote" &&
             e.target.className !== "btn-archive-quote" && e.target.className !== "img-btn-archive-quote") {
             console.log('troko')
-        $hideCtn = $(".hide-clp");
-        $rows = $(".admin-row-quote");
-        $rows.removeClass("txt-black");
-        $rows.addClass("txt-info");
-        $hideCtn.removeClass("show-details");
-        $hideCtn.addClass("hide-details");
-        $(this).removeClass("txt-info");
-        $(this).addClass("txt-black");
-        console.log($(this).hasClass('hide-details'))
-        $(this).find('.hide-clp').removeClass("hide-details");
-        $(this).find('.hide-clp').addClass("show-details");
+            $hideCtn = $(".hide-clp");
+            $rows = $(".admin-row-quote");
+            $rows.removeClass("txt-black");
+            $rows.addClass("txt-info");
+            $hideCtn.removeClass("show-details");
+            $hideCtn.addClass("hide-details");
+            $(this).removeClass("txt-info");
+            $(this).addClass("txt-black");
+            console.log($(this).hasClass('hide-details'))
+            $(this).find('.hide-clp').removeClass("hide-details");
+            $(this).find('.hide-clp').addClass("show-details");
         }
     })
 
@@ -369,13 +367,13 @@ $(function () {
         e.preventDefault()
         const nextStepIndex = pages.indexOf(e.target.value);
         const nextStepName = pages[nextStepIndex + 1];
-        redirectLinkQuote(nextStepName, nextStepIndex + 1)
+        redirectLinkQuote(nextStepName, nextStepIndex + 1);
     })
 
     $("#admin-rows").on("click", ".btn-archive-quote", function (e) {
         console.log("rerere")
         $value = $(this).attr("value");
-        $.post(ip + "server.php" , {"getQuote": $value}, function(data) {
+        $.post(ip + "server.php", {"getQuote": $value}, function (data) {
             console.log(data)
         })
         $.post(ip + 'server.php', {"search_quote": objSearch}, function (data) {
@@ -409,10 +407,11 @@ $(function () {
         })
     })
 
-    $("#close-view-quote").click(function(e) {
+    $("#close-view-quote").click(function (e) {
         $("#view-quote").addClass("d-none");
     })
 })
+
 function disabledButtonsConceptSlide(bool) {
     const buttons = document.getElementsByClassName('dot-slide-concept');
     for (let i = 0; i < buttons.length; i++) {
