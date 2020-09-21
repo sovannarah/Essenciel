@@ -1,7 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #636363;
     background-color: #f8f8f8;
 }
 
@@ -77,6 +78,23 @@ select {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.txt-black-bold {
+    color: #636363;
+    font-weight: bold;
+}
+
+.link-cadre {
+    color: #636363;
+    text-decoration: none;
+}
+
+
+.link-cadre img {
+    height: 2vw;
+    transform: rotate(180deg);
+    margin: auto 17% auto auto;
 }
 
 .btn-redirect-blue img{

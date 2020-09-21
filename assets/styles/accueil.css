@@ -1,14 +1,467 @@
+/* Responsive CSS
+-------------------------------------------------- */
+/*
+// Mobile only
+@media (max-width: 576px) {
+    .px-xs-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+//SM
+@media (max-width: 767px) {
+
+    .sub-header-text-container {
+        margin-left: 24%;
+    }
+
+    .faq-item {
+        transition: unset !important;
+    }
+
+}
+
+// Mobile and above
+@media (min-width: 1px) {
+    // Mobile
+    .sub-header-text-container {
+        margin-top: 0.8rem;
+        display: block;
+    }
+
+    .banner-card-white {
+        left: 0;
+        right: 0;
+    }
+
+    #prices-info, #faq-tittle-1 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    #faq-tittle-1, #faq-tittle-2 {
+        width: 100%;
+    }
+
+}
+
+// MD
+@media (min-width: 768px) {
+    .offset-md-30 {
+        margin-left: 28%;
+    }
+
+    .offset-md-60 {
+        margin-left: 55%;
+    }
+
+    .sub-header-text-container {
+        margin-left: 3rem;
+    }
+
+    .banner-card-white {
+        left: 14px;
+        right: 15px;
+    }
+
+    #sub-header > div:nth-child(3) > div {
+        flex: 0 0 45%;
+    }
+
+    #table-prices > tbody > tr > th {
+        padding-left: 10%;
+        padding-right: 2rem;
+    }
+
+    #table-prices th, #table-prices td
+    {
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+        vertical-align: middle;
+    }
+
+    #prices-info {
+        position: absolute;
+        left: 15px;
+        width: 15rem;
+    }
+
+    #prices-info, #faq-tittle-1 {
+        font-size: 1.5rem;
+    }
+
+    #faq-tittle-1, #faq-tittle-2 {
+        width: 80%;
+    }
+
+    .faq-item {
+        height: 16.5rem;
+    }
+
+    .faq-text-container {
+        padding: 1rem;
+        height: 10rem !important;
+        bottom: -6rem !important;
+    }
+
+    #faq-tittle-2 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-card-bigger-footer {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+}
+
+// LG
+@media (min-width: 992px) {
+    .position-lg-absolute {
+        position: absolute;
+    }
+
+    #prices-info {
+        position: absolute;
+        left: 15px;
+        font-size: 1.5rem;
+        width: 20rem;
+    }
+
+    #table-prices > tbody > tr > th {
+        padding-left: 15%;
+        padding-right: 4rem;
+    }
+
+    .faq-text-container {
+        height: 10rem !important;
+        bottom: -4.5rem !important;
+        padding: 1.5rem 2rem 1.5rem 3rem;
+    }
+
+    #faq-tittle-1, #faq-tittle-2 {
+        width: 60%;
+    }
+
+    #faq-tittle-2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #top-header h2 {
+        width: 98%;
+    }
+
+}
+
+// XL
+@media (min-width: 1200px) {
+    .position-xl-absolute {
+        position: absolute;
+    }
+    .sub-header-text-container {
+        margin-top: unset;
+        display: inline-block;
+    }
+
+    #sub-header > div:nth-child(3) > div .sub-header-text-container {
+        position: absolute;
+    }
+
+    .faq-text-container {
+        padding: 3rem 5rem 1rem 7rem;
+        height: 13rem !important;
+        bottom: -6.5rem !important;
+    }
+
+    #faq-tittle-1, #faq-tittle-2 {
+        width: 50%;
+    }
+
+    .faq-item {
+        height: 18.5rem;
+    }
+}*/
+
+/* Sub Header
+-------------------------------------------------- */
+
+/*#sub-header {
+    margin-top: 9.5rem;
+}
+
+.sub-header-img {
+    height: 5.5rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sub-header-text-container > p {
+    margin-bottom: 0.1rem;
+}
+
+.white-stripe-sub-header {
+    $height : 0.38rem;
+    $width : 5rem;
+    height: $height;
+    width: $width;
+    background-color: #FFFFFF;
+    top: calc(50% - (#{$height} / 2));
+    right: calc(-1 * #{$width} / 2);
+    position: absolute;
+}
+
+.white-stripe-thinner {
+    height: 0.34rem;
+    width: 6rem;
+    background-color: #FFFFFF;
+}
+
+.slide-arrows{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.slide-arrows img {
+    display: block;
+    margin-top: 5px;
+    transition: 0.1s;
+    width: 26px;
+}
+
+.slide-arrows img:hover {
+    transform: scale( 1.2 );
+    cursor: pointer;
+}
+
 #prestations-banner {
     margin-top: 9.5vw;
     margin-bottom: 4vw;
 }
 
-#prestations-banner-1 {
-    background-image: url("../../assets/png-x2/banner-left-prestation.webp");
+.container-full-width {
+	position:relative;
+	width:100%;
 }
 
-#prestations-banner-2 {
-    background-image: url("../../assets/png-x2/banner-right-prestation.webp");
+.btn-prestation {
+	display: flex;
+	position: absolute;
+	z-index: 2;
+	top:-17%;
+    /*bottom: 27%;
+    z-index: 1;
+    right: 0;
+    /*background-color: #f8f8f8;
+    background-color: black;
+    width: 37%;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}*/
+
+.sub-header-01:before {
+    content: "";
+    height: 100%;
+    width: 37%;
+    background-color: white;
+    position: absolute;
+}
+
+.sub-header-01 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.sub-header-01 img {
+    height: 5.5vw;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sub-header-01 p:after {
+	content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left:11.2vw;
+    /*transform: translateX(calc(-5vw / 2));*/
+    position: absolute;
+    /*bottom: 2.5vw;*/
+	margin-top: 0.3vw;
+    background-color: white;
+}
+
+.sub-header-01 p {
+	/*bottom: 120%;*/
+    /*margin-bottom: 0.1vw;*/
+    margin-left: 4.5vw;
+    font-size: 0.9vw;
+}
+
+.sub-header-content {
+	padding-top: 6vw;
+	width:85%;
+	display: flex;
+	position: relative;
+	margin-left: 15%;
+	padding-bottom: 2vw;
+}
+
+.sub-header-content-02 {
+	width:70%;
+	display: flex;
+	position: relative;
+	margin-left: 30%;
+	padding-bottom: 2vw;
+}
+
+.sub-header-content-03 {
+	width:55%;
+	display: flex;
+	position: relative;
+	margin-left: 45%;
+	padding-bottom: 6vw;
+}
+
+.white-stripe-sub-header {
+    $height : 0.38rem;
+    $width : 5rem;
+    height: $height;
+    width: $width;
+    background-color: #FFFFFF;
+    top: calc(50% - (#{$height} / 2));
+    right: calc(-1 * #{$width} / 2);
+    position: absolute;
+}
+
+.white-stripe-thinner {
+    height: 0.34rem;
+    width: 6rem;
+    background-color: #FFFFFF;
+}
+
+#banner-top-container{
+	margin-bottom: 16vw;
+}
+
+.link-cadre-right {
+    color: #636363;
+    margin-top: -4.7vw;
+    text-decoration: none;
+    font-size: 0.9vw;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    padding-left: 5%;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    box-shadow: rgba(0,0,0,0.35) 1px 0 20px;
+}
+
+.link-cadre-left {
+    color: #636363;
+    text-decoration: none;
+    font-size: 0.9vw;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    display: block;
+    flex-direction: column;
+    width: 27%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    box-shadow: rgba(0,0,0,0.35) 1px 0 20px;
+}
+
+.container-full-width-2 a {
+    position: absolute;
+    top: -27%;
+    z-index: 1;
+    right: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    width: 37%;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+.container-full-width-2 a span {
+    font-size: 1.1vw;
+    margin-left: 6vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container-full-width-2 {
+	position: relative;
+	display: flex;
+	width:100%;
+	height: 100%;
+	background-color: black;
+	vertical-align:middle;
+}
+
+.banner-left {
+	width:50%;
+	float: left;
+}
+
+.banner-right {
+	width:50%;
+	z-index: 1;
+	float: right;
+}
+
+.container-full-width-2 h2:before {
+	content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    top: 5vw;
+    background-color: white;
+
+}
+
+.container-full-width-2 h2:after {
+	content: "";
+    height: 0.3vw;
+    width: 5vw;
+    left: 50%;
+    transform: translateX(calc(-5vw / 2));
+    position: absolute;
+    bottom: 5vw;
+    background-color: white;
+}
+
+.container-full-width-2 h2 {
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    margin:auto;
+    padding-left: 35%;
+    padding-right: 35%;
+	width:30%;
+	height:100%;
+	text-align: center;
+	color: white;
+	font-size: 1.8vw;
+	text-shadow: rgba(0,0,0,0.7) 1px 0 20px;
+	font-weight: bold;
 }
 
 #ctnPrices {

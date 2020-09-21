@@ -1,8 +1,9 @@
 <div id="about">
     <div id="aboutBanner-1">
         <h1>Nous sommes une entreprise indépendante <br/> <span>présente depuis 10 ans en région parisienne</span></h1>
-        <a href="" class="link txt-black">
+        <a href="" class="link-cadre txt-black">
             <span>Découvrez l'ensemble <br/> de nos prestations</span>
+            <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl.svg" alt=""/>
         </a>
     </div>
     <div id="aboutBanner" class="banner-simple">

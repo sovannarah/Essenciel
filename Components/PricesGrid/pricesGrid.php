@@ -3,7 +3,7 @@
         <div id="prices-grid" class="prices-grid">
             <div class="prices-col-0">
                 <div class="row-0">
-                    <p>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></p>
+                    <p><strong>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></strong></p>
                 </div>
                 <div class="prices-row row-1">
                     <p><span>A.</span> Le défunt se trouve en établissement de soins.</p>
@@ -26,7 +26,7 @@
                         <?php
                         for ($y = 0; $y < count($content); $y++) {
                             $value = $content[$y];
-                            $txtColor = ($i == 1) ? "txt-black" :  "";
+                            $txtColor = ($i == 1) ? "txt-black-bold" :  "";
                             ?>
                             <?php if($i == 0) {
                                 echo "<th>" . $value . "</th>";
@@ -49,7 +49,7 @@
             <div class="prices-grid" >
                 <div class="prices-col-0">
                     <div class="row-0">
-                        <p>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></p>
+                        <p><strong>Nos tarifs sont <span><br/>justes, transparents <br/> et invariables</span></strong></p>
                     </div>
                     <div class="prices-row row-1">
                         <p><span>A.</span> Le défunt se trouve en établissement de soins.</p>

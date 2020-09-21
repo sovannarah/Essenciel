@@ -13,7 +13,7 @@ if (isset($_SESSION["total"]) && isset($_SESSION["prices"])) {
     $_SESSION["total"] = array_sum($_SESSION["prices"]);
 }
 
-$GLOBALS["ip"] = "http://localhost/Essenciel/";
+$GLOBALS["ip"] = "http://localhost:8080/Essenciel/";
 
 $tabUrl = explode("/", $_SERVER["REQUEST_URI"]);
 
@@ -43,6 +43,7 @@ try {
     <title>Essenciel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/headerResponsive.css"/>
+    <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/accueil.css"/>
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/prestations.css"/>
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/header.css"/>
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/pricesGrid.css"/>
@@ -66,7 +67,7 @@ try {
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>index.css"/>
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>responsive.css"/>
     <link rel="stylesheet" href="<?php echo $GLOBALS["ip"]; ?>assets/styles/valide.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;s700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body id="main">
 <?php
@@ -89,6 +90,9 @@ $router->post("/quote/:key", function ($key) {
 
 
 $router->get('/', function () {
+});
+$router->get('/accueil', function () {
+    include('src/Pages/Accueil/accueil.php');
 });
 $router->get('/prestations', function () {
     include('src/Pages/Prestations/prestations.php');
