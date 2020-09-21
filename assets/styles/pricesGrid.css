@@ -79,6 +79,10 @@
     display: flex;
 }
 
+.row-0 p {
+    padding-bottom: 5vw;
+}
+
 .row-1 {
     background-color: #e6f1f3;
     box-shadow: inset 16vw -5vw 3vw #e6f1f3, inset 0 0.8vw 6vw -5vw black;

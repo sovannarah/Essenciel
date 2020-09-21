@@ -1,24 +1,51 @@
 <div id="accueil">
-    <div id="accueil-banner" class="banner-double-img">
-        <div id="accueil-banner-1">
+    <!-- Sub Header -->
+    <div id="sub-header">
+        <div class="sub-header-01">
+            <li class="sub-header-content">
+                <img src="assets/png-x2/01-sub-header.png" alt=""></img>
+                <p><strong>Des obsèques dignes</strong><br>Un service de qualité</p></br>
+            </li>
+
+            <li class="sub-header-content-02">
+                <img src="assets/png-x2/01-sub-header.png" alt=""></img>
+                <p><strong>Le meilleur tarif garanti</strong><br>Des tarifs déterminés en avance</p></br>
+            </li>
+
+            <li class="sub-header-content-03">
+                <img src="assets/png-x2/01-sub-header.png" alt=""></img>
+                <p><strong>Une fabriquation française</strong><br>Une gamme de produits écologiques</p></br>
+            </li>
         </div>
 
-        <div id="accueil-banner-2">
-        </div>
-		
-		<h2>Gérer l’organisation d'obsèques depuis chez vous ou dans notre agence</h2>
+    </div>
+    <!-- End Sub Header -->
 
-        <div id="accueil-btn-left">
-            <span>Avec notre accompagnement à distance  vous n’aurez pas besoin de vous déplacer. En savoir plus</span>
+    <div id="banner-top-container">
+
+        <div class="container-full-width">
+
+            <div class="container-full-width-2">        
+                <img src="assets/png-x2/banner-left.webp" class="banner-left" alt="">
+                <img src="assets/png-x2/banner-right.webp" class="banner-right" alt="">
+                <a href="" class="link-cadre">
+                    <span>Découvrez l'ensemble <br/> de nos prestations</span>
+                    <img src="<?php echo $GLOBALS["ip"] ?>assets/png-x2/fl.svg" alt=""/>
+                </a>
+                <h2><span>Gérer l’organisation d’obsèques depuis chez vous ou dans notre agence</span></h2>
+            </div>
+
+            <div class="link-cadre-left">
+                <span>Avec <strong>notre accompagnement en agence</strong> nous offrons la</span>
+                <span style="color:#ec6f40;">possibilité à nos familles désorientées de nous rencontrer.</span><span> <a style="color:#4abfcb; text-decoration:underline;">En savoir plus</a></span>
+            </div>
+
+            <div class="link-cadre-right">
+                <span>Avec<strong> notre accompagnement à distance</strong></span>
+                <span>vous <span style="color:#ec6f40;">n’aurez pas besoin de vous déplacer</span>. <a style="color:#4abfcb; text-decoration:underline;">En savoir plus</a></span>
+            </div>
         </div>
 
-        <div id="accueil-btn-right">
-            <span>Découvrez l’ensemble de nos prestations</span>
-        </div>
-
-        <div id="accueil-btn-right-bottom">
-            <span>Avec notre accompagnement en agence, nous offrons la possibilité à nos familles  désorientées de nous  rencontrer. En savoir plus</span>
-        </div>
     </div>
  
     <div id="ctnPrices">
