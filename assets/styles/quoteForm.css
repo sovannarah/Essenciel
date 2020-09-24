@@ -67,6 +67,7 @@
 .select-choice {
     color: #4abfcb;
     border-bottom: 0.3vw solid #4abfcb !important;
+    font-weight: bold;
 }
 
 /*.select-choice:before {*/

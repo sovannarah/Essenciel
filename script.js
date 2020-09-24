@@ -108,7 +108,7 @@ $(function () {
                     <input name="type_option_answer" value="${c.answers[0].id_type_option_answer}" class="quote-input ceremony-input" type="checkbox" id="ceremony-1">
                         <label for="ceremony-1">${c.answers[0].type_option_answer}</label>
                         <div class='add-price-quote'>
-                            <img src='http://localhost/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
+                            <img src='http://192.168.1.18/Essenciel/assets/png-x2/euroinacircle.svg' alt=''/>
                             <span>+ 300</span>
                         </div>
                 </div>
@@ -216,6 +216,28 @@ $(function () {
             console.log(document.getElementsByClassName("elem-slide-concept-4"))
             slider.css("left", `${document.getElementById("hide-slider-concept-4").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-concept-4")[posSlider2].getBoundingClientRect().left}px`);
         }
+    })
+
+    let posSlider3 = 0;
+    let offsetElem3 = 1
+    $("#btn-slider-accueil-prev").click(function () {
+        console.log("TEST");
+        //if (Math.round(document.getElementById("hide-slider-accueil").getBoundingClientRect().left) !== Math.round(document.getElementById("slider-accueil").getBoundingClientRect().left)) {
+            console.log("TEST 2");
+            const slider = $("#slider-accueil");
+            slider.css("left", `${document.getElementById("hide-slider-accueil").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-accueil")[posSlider3].getBoundingClientRect().left}px`);
+            posSlider3 = posSlider3 - offsetElem3;
+        //}
+    })
+
+    $("#btn-slider-accueil-next").click(function () {
+        console.log("TEST");
+        //if (Math.round(document.getElementById("hide-slider-accueil").getBoundingClientRect().right) !== Math.round(document.getElementById("slider-accueil").getBoundingClientRect().right)) {
+            console.log("TEST 2");
+            posSlider3 = posSlider3 + offsetElem3;
+            const slider = $("#slider-accueil");
+            slider.css("left", `${document.getElementById("hide-slider-accueil").getBoundingClientRect().left - document.getElementsByClassName("elem-slide-accueil")[posSlider3].getBoundingClientRect().left}px`);
+        //}
     })
 
     function renderRowQuote(data) {

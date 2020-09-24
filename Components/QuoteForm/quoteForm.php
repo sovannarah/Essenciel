@@ -2,7 +2,7 @@
     <div id="quoteFormHeader" class="banner-simple">
         <h1>Établissez votre devis, en moins de XXX <br /> minutes depuis chez vous ! </h1>
         <div>
-            <span>Où se trouve le défunt ?</span>
+            <span><strong>Où se trouve le défunt ?</strong></span>
         </div>
     </div>
     <div id="ctnQuoteForm">

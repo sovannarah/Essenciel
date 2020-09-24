@@ -1,34 +1,42 @@
 [
   {
+    "value": 0,
     "img": "slide-01",
     "text": "Comment se déroulent les obsèques ?"
   },
   {
+    "value": 1,
     "img": "slide-02",
     "text": "Quelles sont les conditions pour bénéficier de ce tartif ?"
   },
   {
+    "value": 2,
     "img": "slide-03",
     "text": "Pour quelles raisons vos services se limitent à Paris et à quelques communes de la proche couronne ?"
   },
   {
-    "img": "slide-04",
+    "value": 3,
+    "img": "slide-03",
     "text": "Comment est-il possible que les tarifs soient fixes alors que les situations peuvent varier ?"
   },
   {
+    "value": 4,
     "img": "slide-01",
     "text": "Décès : Le premier réflexe "
   },
   {
+    "value": 5,
     "img": "slide-02",
     "text": "Administratives et les délais"
   },
   {
+    "value": 6,
     "img": "slide-03",
     "text": "Transport de corps"
   },
   {
-    "img": "slide-04",
+    "value": 7,
+    "img": "slide-03",
     "text": "Chambre funéraire "
   }
 ]

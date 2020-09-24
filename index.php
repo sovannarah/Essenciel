@@ -90,6 +90,7 @@ $router->post("/quote/:key", function ($key) {
 
 
 $router->get('/', function () {
+    include('src/Pages/Accueil/accueil.php');
 });
 $router->get('/accueil', function () {
     include('src/Pages/Accueil/accueil.php');

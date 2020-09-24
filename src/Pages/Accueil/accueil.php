@@ -8,12 +8,12 @@
             </li>
 
             <li class="sub-header-content-02">
-                <img src="assets/png-x2/01-sub-header.png" alt=""></img>
+                <img src="assets/png-x2/02-sub-header.png" alt=""></img>
                 <p><strong>Le meilleur tarif garanti</strong><br>Des tarifs déterminés en avance</p></br>
             </li>
 
             <li class="sub-header-content-03">
-                <img src="assets/png-x2/01-sub-header.png" alt=""></img>
+                <img src="assets/png-x2/03-sub-header.png" alt=""></img>
                 <p><strong>Une fabriquation française</strong><br>Une gamme de produits écologiques</p></br>
             </li>
         </div>
@@ -51,11 +51,32 @@
     <div id="ctnPrices">
         <?php include("Components/PricesGrid/pricesGrid.php"); ?>
     </div>
-
+    <!--
     <div id="ctn-accueil-slider">
-        <button id="btn-slider-accueil-prev">
-        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
-        </button>
+
+        <div id="slidershow-accueil">
+            <?php
+            $contents = json_decode(file_get_contents(__DIR__ . "/sliderContent.json"));
+            foreach ($contents as $content) {
+                if ($content->value == 0) {
+                    ?>
+                    
+                    <div class="elem-slidershow-accueil">
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp"
+                             alt=""/>
+                        <span><?php echo $content->text; ?></span>
+                        <a href="#">Ouvrir</a>
+                    </div>
+
+                <?php } ?>
+            <?php } ?>
+        </div>
+
+        <div id="title-slide">
+            <h2>L'organisation d'obseque</br><font style="color:#ec6f40;">vos questions les plus frequentes</font></h2>
+            <p></br>Toutes nos informations et conseils</br>sur<strong>www.pflestroisroses.fr</strong></p>
+        </div>
+
         <div id="hide-slider-accueil">
             <div id="slider-accueil">
                 <?php
@@ -63,15 +84,22 @@
                 foreach ($contents as $content) {
                     ?>
                     <div class="elem-slide-accueil">
-                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp" alt=""/>
+                        <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/slide-help/<?php echo $content->img; ?>.webp"
+                             alt=""/>
                         <span><?php echo $content->text; ?></span>
-                        <a href>Ouvrir</a>
+                        <a href="#">Ouvrir</a>
                     </div>
                 <?php } ?>
             </div>
         </div>
-        <button id="btn-slider-accueil-next">
-            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" />
+
+        <button id="btn-slider-accueil-prev">
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
         </button>
-    </div>
+
+        <button id="btn-slider-accueil-next">
+            <img src="<?php echo $GLOBALS["ip"]; ?>assets/png-x2/fl.svg" alt=""/>
+        </button> 
+
+    </div>-->
 </div>
